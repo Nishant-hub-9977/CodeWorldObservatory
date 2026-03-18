@@ -1,0 +1,148 @@
+{
+  "executions": [
+    {
+      "id": "exec-mmr9gnrb",
+      "branchId": "branch-A",
+      "interventionObjective": "Implement WorldState capture service",
+      "interventionTitle": "State-Capture Subsystem",
+      "actualOutcome": {
+        "status": "success",
+        "touchedSurfaces": [
+          "lib/services/world-state-capturer.ts",
+          "app/api/snapshot/route.ts"
+        ],
+        "observedIssues": [],
+        "validationBurden": "moderate",
+        "executionReadinessActual": "ready",
+        "operatorNotes": "[Synthetic Seed] Smooth execution match.",
+        "executedAt": "2026-03-15T04:35:02.087Z"
+      },
+      "createdAt": "2026-03-15T04:35:02.087Z"
+    },
+    {
+      "id": "exec-mmswm3z7",
+      "experimentId": "exp-mmswm345-h2e1",
+      "branchId": "branch-phase15-smoke",
+      "interventionObjective": "Validate lineage binding",
+      "interventionTitle": "Phase 15 Smoke Execution",
+      "actualOutcome": {
+        "touchedSurfaces": [
+          "app/api/simulations/route.ts",
+          "app/api/benchmarks/route.ts",
+          "app/api/executions/route.ts"
+        ],
+        "observedIssues": [],
+        "executedAt": "2026-03-16T13:40:53.7286644+05:30",
+        "operatorNotes": "Phase 15 live smoke execution record.",
+        "executionReadinessActual": "ready",
+        "status": "success",
+        "validationBurden": "moderate"
+      },
+      "createdAt": "2026-03-16T08:10:53.731Z"
+    },
+    {
+      "id": "exec-mmswmxfy",
+      "experimentId": "exp-mmswmx9x-t9di",
+      "branchId": "branch-phase15-progression",
+      "interventionObjective": "Validate conservative replay progression",
+      "interventionTitle": "Phase 15 Progression Execution",
+      "actualOutcome": {
+        "touchedSurfaces": [
+          "app/api/world-state/snapshot/route.ts",
+          "app/api/simulations/route.ts",
+          "app/api/benchmarks/route.ts",
+          "app/api/executions/route.ts"
+        ],
+        "observedIssues": [],
+        "executedAt": "2026-03-16T13:41:31.9187848+05:30",
+        "operatorNotes": "Phase 15 progression smoke execution record.",
+        "executionReadinessActual": "ready",
+        "status": "success",
+        "validationBurden": "moderate"
+      },
+      "createdAt": "2026-03-16T08:11:31.918Z"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "cmp-mmr9gnrb",
+      "executionRecordId": "exec-mmr9gnrb",
+      "branchId": "branch-A",
+      "expectedReadiness": "ready",
+      "actualReadiness": "ready",
+      "expectedFragileZones": [
+        "app/api/snapshot"
+      ],
+      "observedIssues": [],
+      "expectedValidationBurden": "moderate",
+      "actualValidationBurden": "moderate",
+      "expectedSurfaces": [
+        "lib/services/world-state-capturer.ts",
+        "app/api/snapshot/route.ts"
+      ],
+      "actualSurfaces": [
+        "lib/services/world-state-capturer.ts",
+        "app/api/snapshot/route.ts"
+      ],
+      "calibrationResult": "aligned",
+      "calibrationNote": "Execution proceeded exactly as projected. Model bounds safely contained the intervention.",
+      "evidenceSufficiencyNote": "Adequate evidence captured.",
+      "comparedAt": "2026-03-15T04:35:02.087Z"
+    },
+    {
+      "id": "cmp-mmswm3z7",
+      "executionRecordId": "exec-mmswm3z7",
+      "branchId": "branch-phase15-smoke",
+      "expectedReadiness": "ready",
+      "actualReadiness": "ready",
+      "expectedFragileZones": [],
+      "observedIssues": [],
+      "expectedValidationBurden": "moderate",
+      "actualValidationBurden": "moderate",
+      "expectedSurfaces": [
+        "app/api/simulations/route.ts",
+        "app/api/benchmarks/route.ts",
+        "app/api/executions/route.ts"
+      ],
+      "actualSurfaces": [
+        "app/api/simulations/route.ts",
+        "app/api/benchmarks/route.ts",
+        "app/api/executions/route.ts"
+      ],
+      "calibrationResult": "aligned",
+      "calibrationNote": "Execution proceeded exactly as projected. Model bounds safely contained the intervention.",
+      "evidenceSufficiencyNote": "Adequate evidence captured.",
+      "comparedAt": "2026-03-16T08:10:53.731Z",
+      "experimentId": "exp-mmswm345-h2e1"
+    },
+    {
+      "id": "cmp-mmswmxfy",
+      "executionRecordId": "exec-mmswmxfy",
+      "branchId": "branch-phase15-progression",
+      "expectedReadiness": "ready",
+      "actualReadiness": "ready",
+      "expectedFragileZones": [],
+      "observedIssues": [],
+      "expectedValidationBurden": "moderate",
+      "actualValidationBurden": "moderate",
+      "expectedSurfaces": [
+        "app/api/world-state/snapshot/route.ts",
+        "app/api/simulations/route.ts",
+        "app/api/benchmarks/route.ts",
+        "app/api/executions/route.ts"
+      ],
+      "actualSurfaces": [
+        "app/api/world-state/snapshot/route.ts",
+        "app/api/simulations/route.ts",
+        "app/api/benchmarks/route.ts",
+        "app/api/executions/route.ts"
+      ],
+      "calibrationResult": "aligned",
+      "calibrationNote": "Execution proceeded exactly as projected. Model bounds safely contained the intervention.",
+      "evidenceSufficiencyNote": "Adequate evidence captured.",
+      "comparedAt": "2026-03-16T08:11:31.918Z",
+      "experimentId": "exp-mmswmx9x-t9di"
+    }
+  ],
+  "lastUpdated": "2026-03-16T08:11:31.919Z"
+}

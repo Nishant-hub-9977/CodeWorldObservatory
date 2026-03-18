@@ -1,0 +1,780 @@
+{
+  "snapshotId": "wss-mmsvw2js",
+  "timestamp": "2026-03-16T07:50:38.824Z",
+  "experimentId": "exp-mmsvw1ra-jo3q",
+  "workspaceSummary": {
+    "workspaceRoot": "D:\\Yann Lecun Project",
+    "totalFiles": 197,
+    "totalDirectories": 67,
+    "totalBytes": 1294175,
+    "topExtensions": [
+      {
+        "extension": ".ts",
+        "fileCount": 91,
+        "totalBytes": 375836
+      },
+      {
+        "extension": ".md",
+        "fileCount": 45,
+        "totalBytes": 271385
+      },
+      {
+        "extension": ".json",
+        "fileCount": 32,
+        "totalBytes": 273950
+      },
+      {
+        "extension": ".tsx",
+        "fileCount": 25,
+        "totalBytes": 237178
+      },
+      {
+        "extension": "(none)",
+        "fileCount": 1,
+        "totalBytes": 565
+      }
+    ]
+  },
+  "dependencyMap": {
+    "edges": [
+      {
+        "from": "components/observatory/ArtifactLedgerPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/BenchmarkHarnessPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/FuturesPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/InterventionsPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/PredictionRealityPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/PrototypeMappingPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/UncertaintyPanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "components/observatory/WorldStatePanel.tsx",
+        "to": "./ObservatoryPanel"
+      },
+      {
+        "from": "lib/services/action-representation.ts",
+        "to": "../types/se-jepa"
+      },
+      {
+        "from": "lib/services/action-representation.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/artifact-ledger.ts",
+        "to": "../types/artifact"
+      },
+      {
+        "from": "lib/services/artifact-ledger.ts",
+        "to": "../data/mock-observatory-data"
+      },
+      {
+        "from": "lib/services/benchmark-harness.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/blocker-pattern-detector.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/blocker-pattern-detector.ts",
+        "to": "../types/research-timeline"
+      },
+      {
+        "from": "lib/services/briefing-snapshot-writer.ts",
+        "to": "../types/research-export"
+      },
+      {
+        "from": "lib/services/calibration-tracker.ts",
+        "to": "../types/research-memory"
+      },
+      {
+        "from": "lib/services/calibration-tracker.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/calibration-trajectory-analyzer.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/calibration-trajectory-analyzer.ts",
+        "to": "../types/research-timeline"
+      },
+      {
+        "from": "lib/services/calibration-trajectory-analyzer.ts",
+        "to": "./calibration-tracker"
+      },
+      {
+        "from": "lib/services/dependency-analyzer.ts",
+        "to": "./foo"
+      },
+      {
+        "from": "lib/services/dependency-analyzer.ts",
+        "to": "../bar/baz"
+      },
+      {
+        "from": "lib/services/dependency-analyzer.ts",
+        "to": "./items"
+      },
+      {
+        "from": "lib/services/dependency-analyzer.ts",
+        "to": "./module"
+      },
+      {
+        "from": "lib/services/dossier-generator.ts",
+        "to": "../types/research-memory"
+      },
+      {
+        "from": "lib/services/dossier-generator.ts",
+        "to": "./experiment-memory"
+      },
+      {
+        "from": "lib/services/dossier-generator.ts",
+        "to": "./session-comparator"
+      },
+      {
+        "from": "lib/services/dossier-generator.ts",
+        "to": "../constants/observatory"
+      },
+      {
+        "from": "lib/services/execution-store.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/experiment-memory.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/experiment-memory.ts",
+        "to": "../types/research-memory"
+      },
+      {
+        "from": "lib/services/experiment-memory.ts",
+        "to": "./calibration-tracker"
+      },
+      {
+        "from": "lib/services/experiment-registry.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/experiment-registry.ts",
+        "to": "../types/experiment-registry"
+      },
+      {
+        "from": "lib/services/export-manifest-builder.ts",
+        "to": "../types/research-export"
+      },
+      {
+        "from": "lib/services/export-manifest-builder.ts",
+        "to": "../constants/observatory"
+      },
+      {
+        "from": "lib/services/future-prototype-mapper.ts",
+        "to": "../types/se-jepa"
+      },
+      {
+        "from": "lib/services/future-prototype-mapper.ts",
+        "to": "../types/future-state"
+      },
+      {
+        "from": "lib/services/futures-generator.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/futures-generator.ts",
+        "to": "../types/future-state"
+      },
+      {
+        "from": "lib/services/futures-generator.ts",
+        "to": "./uncertainty-analyzer"
+      },
+      {
+        "from": "lib/services/intervention-planner.ts",
+        "to": "./scope-analyzer"
+      },
+      {
+        "from": "lib/services/latent-state-encoder.ts",
+        "to": "../types/world-state"
+      },
+      {
+        "from": "lib/services/latent-state-encoder.ts",
+        "to": "../types/latent-state"
+      },
+      {
+        "from": "lib/services/latent-state-encoder.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "../types/latent-state"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./latent-state-encoder"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./strategy-compatibility-analyzer"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./transition-pattern-analyzer"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./world-state-capturer"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./dependency-analyzer"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./observation-encoder"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./action-representation"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./future-prototype-mapper"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./intervention-planner"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./futures-generator"
+      },
+      {
+        "from": "lib/services/latent-transition-chain.ts",
+        "to": "./execution-store"
+      },
+      {
+        "from": "lib/services/mcp-contracts.ts",
+        "to": "../types/mcp"
+      },
+      {
+        "from": "lib/services/observation-encoder.ts",
+        "to": "../types/se-jepa"
+      },
+      {
+        "from": "lib/services/observation-encoder.ts",
+        "to": "../types/world-state"
+      },
+      {
+        "from": "lib/services/prediction-reality-comparator.ts",
+        "to": "../types/future-state"
+      },
+      {
+        "from": "lib/services/prediction-reality-comparator.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/reproducibility-engine.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/reproducibility-engine.ts",
+        "to": "../types/experiment-registry"
+      },
+      {
+        "from": "lib/services/reproducibility-engine.ts",
+        "to": "./experiment-registry"
+      },
+      {
+        "from": "lib/services/reproducibility-engine.ts",
+        "to": "./world-state-capture"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../types/research-export"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../types/latent-state"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../types/research-memory"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../types/world-state"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "../constants/observatory"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./experiment-memory"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./dossier-generator"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./latent-state-encoder"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./strategy-compatibility-analyzer"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./transition-pattern-analyzer"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./world-state-capturer"
+      },
+      {
+        "from": "lib/services/research-brief-generator.ts",
+        "to": "./dependency-analyzer"
+      },
+      {
+        "from": "lib/services/research-dataset-store.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/research-dataset-store.ts",
+        "to": "../types/research-dataset"
+      },
+      {
+        "from": "lib/services/research-dataset-store.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/research-dataset-store.ts",
+        "to": "./experiment-registry"
+      },
+      {
+        "from": "lib/services/research-dataset-store.ts",
+        "to": "./calibration-tracker"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "../types/research-timeline"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "../constants/observatory"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./experiment-memory"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./latent-state-encoder"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./strategy-compatibility-analyzer"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./world-state-capturer"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./dependency-analyzer"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./strategy-shift-detector"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./blocker-pattern-detector"
+      },
+      {
+        "from": "lib/services/research-timeline-builder.ts",
+        "to": "./calibration-trajectory-analyzer"
+      },
+      {
+        "from": "lib/services/scenario-library.ts",
+        "to": "../types/scenario"
+      },
+      {
+        "from": "lib/services/scenario-library.ts",
+        "to": "./experiment-registry"
+      },
+      {
+        "from": "lib/services/session-comparator.ts",
+        "to": "../types/research-memory"
+      },
+      {
+        "from": "lib/services/session-store.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/simulation-gate.ts",
+        "to": "../types/mcp"
+      },
+      {
+        "from": "lib/services/simulation-gate.ts",
+        "to": "./futures-generator"
+      },
+      {
+        "from": "lib/services/simulation-gate.ts",
+        "to": "./artifact-ledger"
+      },
+      {
+        "from": "lib/services/simulation-request-builder.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/simulation-request-builder.ts",
+        "to": "../types/future-state"
+      },
+      {
+        "from": "lib/services/simulation-request-builder.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/simulation-runner.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "../types/se-jepa"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./observation-encoder"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./action-representation"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./future-prototype-mapper"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./intervention-planner"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./futures-generator"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./scope-analyzer"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "./execution-store"
+      },
+      {
+        "from": "lib/services/state-transition-chain.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/statistical-evaluator.ts",
+        "to": "../types/execution"
+      },
+      {
+        "from": "lib/services/statistical-evaluator.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/strategy-compatibility-analyzer.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/strategy-compatibility-analyzer.ts",
+        "to": "../types/latent-state"
+      },
+      {
+        "from": "lib/services/strategy-shift-detector.ts",
+        "to": "../types/research-timeline"
+      },
+      {
+        "from": "lib/services/transition-pattern-analyzer.ts",
+        "to": "../types/simulation"
+      },
+      {
+        "from": "lib/services/transition-pattern-analyzer.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/transition-pattern-analyzer.ts",
+        "to": "../types/latent-state"
+      },
+      {
+        "from": "lib/services/uncertainty-analyzer.ts",
+        "to": "../types/intervention"
+      },
+      {
+        "from": "lib/services/uncertainty-analyzer.ts",
+        "to": "../types/future-state"
+      },
+      {
+        "from": "lib/services/world-state-capture.ts",
+        "to": "../types/world-state"
+      },
+      {
+        "from": "lib/services/world-state-capture.ts",
+        "to": "../types/experiment-registry"
+      },
+      {
+        "from": "lib/services/world-state-capture.ts",
+        "to": "./world-state-capturer"
+      },
+      {
+        "from": "lib/services/world-state-capture.ts",
+        "to": "./dependency-analyzer"
+      },
+      {
+        "from": "lib/services/world-state-capture.ts",
+        "to": "./experiment-registry"
+      },
+      {
+        "from": "lib/types/execution.ts",
+        "to": "./future-state"
+      },
+      {
+        "from": "lib/types/experiment-registry.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/experiment-registry.ts",
+        "to": "./world-state"
+      },
+      {
+        "from": "lib/types/future-state.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/intervention.ts",
+        "to": "./world-state"
+      },
+      {
+        "from": "lib/types/latent-state.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/research-dataset.ts",
+        "to": "./research-memory"
+      },
+      {
+        "from": "lib/types/research-memory.ts",
+        "to": "./simulation"
+      },
+      {
+        "from": "lib/types/research-timeline.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/research-timeline.ts",
+        "to": "./simulation"
+      },
+      {
+        "from": "lib/types/research-timeline.ts",
+        "to": "./execution"
+      },
+      {
+        "from": "lib/types/research-timeline.ts",
+        "to": "./latent-state"
+      },
+      {
+        "from": "lib/types/scenario.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/se-jepa.ts",
+        "to": "./execution"
+      },
+      {
+        "from": "lib/types/se-jepa.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/simulation.ts",
+        "to": "./intervention"
+      },
+      {
+        "from": "lib/types/simulation.ts",
+        "to": "./future-state"
+      }
+    ],
+    "mostConnected": [
+      {
+        "path": "lib/types/intervention.ts",
+        "inbound": 18,
+        "outbound": 1,
+        "total": 19
+      },
+      {
+        "path": "lib/types/simulation.ts",
+        "inbound": 14,
+        "outbound": 2,
+        "total": 16
+      },
+      {
+        "path": "lib/services/latent-transition-chain.ts",
+        "inbound": 0,
+        "outbound": 13,
+        "total": 13
+      },
+      {
+        "path": "lib/services/research-brief-generator.ts",
+        "inbound": 0,
+        "outbound": 13,
+        "total": 13
+      },
+      {
+        "path": "lib/services/research-timeline-builder.ts",
+        "inbound": 0,
+        "outbound": 12,
+        "total": 12
+      }
+    ],
+    "orphanCandidates": [
+      "app/api/artifacts/route.ts",
+      "app/api/benchmarks/route.ts",
+      "app/api/datasets/route.ts",
+      "app/api/datasets/[id]/route.ts",
+      "app/api/executions/route.ts",
+      "app/api/experiments/register/route.ts",
+      "app/api/experiments/route.ts",
+      "app/api/experiments/[id]/route.ts",
+      "app/api/futures/route.ts",
+      "app/api/interventions/route.ts",
+      "app/api/latent-state/route.ts",
+      "app/api/mcp/contracts/route.ts",
+      "app/api/mcp/evaluate/route.ts",
+      "app/api/prototype/se-jepa/route.ts",
+      "app/api/research/brief/route.ts",
+      "app/api/research/dossier/route.ts",
+      "app/api/research/export/route.ts",
+      "app/api/research/memory/route.ts",
+      "app/api/research/replay/route.ts",
+      "app/api/research/statistics/route.ts",
+      "app/api/research/timeline/export/route.ts",
+      "app/api/research/timeline/route.ts",
+      "app/api/research/trends/route.ts",
+      "app/api/scenarios/library/route.ts",
+      "app/api/scenarios/route.ts",
+      "app/api/simulations/route.ts",
+      "app/api/snapshot/route.ts",
+      "app/api/strategy-compatibility/route.ts",
+      "app/api/transition-patterns/route.ts",
+      "app/api/world-state/history/route.ts",
+      "app/api/world-state/snapshot/route.ts",
+      "app/layout.tsx",
+      "app/page.tsx",
+      "components/observatory/ExperimentRegistryPanel.tsx",
+      "components/observatory/ExportManifestPanel.tsx",
+      "components/observatory/LatentStatePanel.tsx",
+      "components/observatory/ResearchBriefPanel.tsx",
+      "components/observatory/ResearchDossierPanel.tsx",
+      "components/observatory/ResearchMemoryPanel.tsx",
+      "components/observatory/ResearchStatisticsPanel.tsx",
+      "components/observatory/ResearchTimelinePanel.tsx",
+      "components/observatory/ScenarioLibraryPanel.tsx",
+      "components/observatory/StrategyCompatibilityPanel.tsx",
+      "components/observatory/TransitionPatternsPanel.tsx",
+      "components/shell/PageShell.tsx",
+      "components/ui/PrincipleCard.tsx",
+      "components/ui/SectionHeader.tsx",
+      "next-env.d.ts",
+      "next.config.ts",
+      "tailwind.config.ts"
+    ],
+    "analyzedFileCount": 116
+  },
+  "keyFiles": [
+    {
+      "path": "artifacts/research/datasets/dataset-exp-mmsvw1ra-jo3q.json",
+      "lastModified": "2026-03-16T07:50:37.818Z",
+      "sha256": "b2c79a2037b329c834e3cedcedab9cc0f4708540cc5e0372cad20700955719fe"
+    },
+    {
+      "path": "artifacts/research/experiments/registry.json",
+      "lastModified": "2026-03-16T07:50:37.804Z",
+      "sha256": "d7aa180091c171205f0b4e8fefa79534399232c11b147b4695419c35117a9a01"
+    },
+    {
+      "path": "tsconfig.tsbuildinfo",
+      "lastModified": "2026-03-16T07:49:10.698Z",
+      "sha256": "7fdcbe9215c3f125533ac2dfa08ffa97739b436b771a66a4c21d37f6f4db15f5"
+    },
+    {
+      "path": "app/page.tsx",
+      "lastModified": "2026-03-16T07:48:56.538Z",
+      "sha256": "a974e9a60cb4708c02073ee9f38276046e84e802d99f4485468f8283d77b1bef"
+    },
+    {
+      "path": "docs/build-phases.md",
+      "lastModified": "2026-03-16T07:48:37.615Z",
+      "sha256": "a01d4717f1101ddd3edb60afbed7734e1ea8a811e2308cb450971cc276ea994d"
+    },
+    {
+      "path": "docs/project-charter.md",
+      "lastModified": "2026-03-16T07:48:37.615Z",
+      "sha256": "76d86f472caf03ef245d2ed75ee5e77e639c8ae719a0f66ca0340ce87ff8a37d"
+    },
+    {
+      "path": "docs/reproducibility-model.md",
+      "lastModified": "2026-03-16T07:48:37.357Z",
+      "sha256": "e9391ddbb8369cdfd69793e53987e3dfb67bc02a63a87e82fa5f8cfdf86b71ad"
+    },
+    {
+      "path": "docs/architecture.md",
+      "lastModified": "2026-03-16T07:48:37.355Z",
+      "sha256": "19777c71e396601eb4c20d8072908d56aba25f897b15336257b9495678b0f240"
+    },
+    {
+      "path": "docs/scenario-library-model.md",
+      "lastModified": "2026-03-16T07:48:37.355Z",
+      "sha256": "1e09dcc81bd67981721e978011ceb6a472366b45ff20d4800c9cd157c41d850c"
+    },
+    {
+      "path": "components/observatory/ExperimentRegistryPanel.tsx",
+      "lastModified": "2026-03-16T07:48:37.348Z",
+      "sha256": "ba5d30c143d067fc3351043e9c39468306e409fce38095b4d189ee053ca78416"
+    }
+  ],
+  "serializedFileStructure": "file:.github/agents/codeworld-observatory.agent.md:.md:8373:2026-03-16T01:41:31.464Z\ndir:.github/agents:1:0\ndir:.github:1:1\nfile:.gitignore:(none):565:2026-03-11T11:16:20.510Z\nfile:app/api/artifacts/route.ts:.ts:453:2026-03-13T05:58:20.103Z\ndir:app/api/artifacts:1:0\nfile:app/api/benchmarks/route.ts:.ts:3269:2026-03-13T12:04:48.589Z\ndir:app/api/benchmarks:1:0\nfile:app/api/datasets/route.ts:.ts:463:2026-03-16T07:32:24.326Z\nfile:app/api/datasets/[id]/route.ts:.ts:767:2026-03-16T07:32:24.326Z\ndir:app/api/datasets/[id]:1:0\ndir:app/api/datasets:2:1\nfile:app/api/executions/route.ts:.ts:6380:2026-03-13T05:58:18.107Z\ndir:app/api/executions:1:0\nfile:app/api/experiments/register/route.ts:.ts:2607:2026-03-16T07:48:37.347Z\ndir:app/api/experiments/register:1:0\nfile:app/api/experiments/route.ts:.ts:465:2026-03-16T07:32:24.325Z\nfile:app/api/experiments/[id]/route.ts:.ts:960:2026-03-16T07:32:24.325Z\ndir:app/api/experiments/[id]:1:0\ndir:app/api/experiments:3:2\nfile:app/api/futures/route.ts:.ts:1254:2026-03-13T05:07:59.901Z\ndir:app/api/futures:1:0\nfile:app/api/interventions/route.ts:.ts:4945:2026-03-12T18:37:12.025Z\ndir:app/api/interventions:1:0\nfile:app/api/latent-state/route.ts:.ts:1091:2026-03-15T06:04:23.532Z\ndir:app/api/latent-state:1:0\nfile:app/api/mcp/contracts/route.ts:.ts:561:2026-03-13T07:55:45.094Z\ndir:app/api/mcp/contracts:1:0\nfile:app/api/mcp/evaluate/route.ts:.ts:1066:2026-03-13T07:55:47.147Z\ndir:app/api/mcp/evaluate:1:0\ndir:app/api/mcp:2:2\nfile:app/api/prototype/se-jepa/route.ts:.ts:966:2026-03-13T11:47:16.359Z\ndir:app/api/prototype/se-jepa:1:0\ndir:app/api/prototype:1:1\nfile:app/api/research/brief/route.ts:.ts:771:2026-03-16T05:29:28.537Z\ndir:app/api/research/brief:1:0\nfile:app/api/research/dossier/route.ts:.ts:1084:2026-03-14T07:31:04.936Z\ndir:app/api/research/dossier:1:0\nfile:app/api/research/export/route.ts:.ts:2177:2026-03-16T06:18:55.315Z\ndir:app/api/research/export:1:0\nfile:app/api/research/memory/route.ts:.ts:732:2026-03-14T07:31:02.639Z\ndir:app/api/research/memory:1:0\nfile:app/api/research/replay/route.ts:.ts:1142:2026-03-16T07:32:24.326Z\ndir:app/api/research/replay:1:0\nfile:app/api/research/statistics/route.ts:.ts:580:2026-03-16T07:32:24.326Z\ndir:app/api/research/statistics:1:0\nfile:app/api/research/timeline/export/route.ts:.ts:896:2026-03-16T06:01:33.729Z\ndir:app/api/research/timeline/export:1:0\nfile:app/api/research/timeline/route.ts:.ts:791:2026-03-16T06:01:33.729Z\ndir:app/api/research/timeline:2:1\nfile:app/api/research/trends/route.ts:.ts:1384:2026-03-15T04:34:18.413Z\ndir:app/api/research/trends:1:0\ndir:app/api/research:9:9\nfile:app/api/scenarios/library/route.ts:.ts:464:2026-03-16T07:32:24.326Z\ndir:app/api/scenarios/library:1:0\nfile:app/api/scenarios/route.ts:.ts:1571:2026-03-16T07:48:37.347Z\ndir:app/api/scenarios:2:1\nfile:app/api/simulations/route.ts:.ts:4900:2026-03-16T04:57:16.697Z\ndir:app/api/simulations:1:0\nfile:app/api/snapshot/route.ts:.ts:2104:2026-03-12T18:22:06.287Z\ndir:app/api/snapshot:1:0\nfile:app/api/strategy-compatibility/route.ts:.ts:1348:2026-03-15T06:04:23.630Z\ndir:app/api/strategy-compatibility:1:0\nfile:app/api/transition-patterns/route.ts:.ts:869:2026-03-15T06:04:23.630Z\ndir:app/api/transition-patterns:1:0\nfile:app/api/world-state/history/route.ts:.ts:488:2026-03-16T07:32:24.326Z\ndir:app/api/world-state/history:1:0\nfile:app/api/world-state/snapshot/route.ts:.ts:813:2026-03-16T07:48:37.347Z\ndir:app/api/world-state/snapshot:1:0\ndir:app/api/world-state:2:2\ndir:app/api:31:35\nfile:app/globals.css:.css:9499:2026-03-16T07:32:24.326Z\nfile:app/layout.tsx:.tsx:1258:2026-03-11T11:17:42.057Z\nfile:app/page.tsx:.tsx:19511:2026-03-16T07:48:56.538Z\ndir:app:34:36\nfile:artifacts/README.md:.md:2038:2026-03-11T11:31:52.443Z\nfile:artifacts/research/briefings/brief-mmsqsgas.json:.json:10000:2026-03-16T05:27:51.999Z\nfile:artifacts/research/briefings/brief-mmsqslnt.json:.json:10000:2026-03-16T05:27:58.955Z\nfile:artifacts/research/briefings/brief-mmsrnj4k.json:.json:13260:2026-03-16T05:52:02.031Z\nfile:artifacts/research/briefings/brief-mmsrot4j.json:.json:13225:2026-03-16T05:53:01.671Z\nfile:artifacts/research/briefings/brief-mmsrzya2.json:.json:13206:2026-03-16T06:01:41.523Z\nfile:artifacts/research/briefings/brief-mmss76w5.json:.json:13263:2026-03-16T06:07:19.932Z\nfile:artifacts/research/briefings/brief-mmss81ep.json:.json:13263:2026-03-16T06:07:58.839Z\ndir:artifacts/research/briefings:7:0\nfile:artifacts/research/datasets/dataset-exp-mmsum4gm.json:.json:470:2026-03-16T07:17:55.990Z\nfile:artifacts/research/datasets/dataset-exp-mmsvw1ra-jo3q.json:.json:495:2026-03-16T07:50:37.818Z\ndir:artifacts/research/datasets:2:0\nfile:artifacts/research/dossier-1773549290773.json:.json:4056:2026-03-15T04:34:50.771Z\nfile:artifacts/research/experiments/registry.json:.json:2218:2026-03-16T07:50:37.804Z\ndir:artifacts/research/experiments:1:0\nfile:artifacts/research/manifests/manifest-mmsqsgcf.json:.json:5754:2026-03-16T05:27:52.003Z\nfile:artifacts/research/manifests/manifest-mmsqslpm.json:.json:6067:2026-03-16T05:27:58.958Z\nfile:artifacts/research/manifests/manifest-mmsrnj73.json:.json:7472:2026-03-16T05:52:02.039Z\nfile:artifacts/research/manifests/manifest-mmsrot7q.json:.json:7820:2026-03-16T05:53:01.682Z\nfile:artifacts/research/manifests/manifest-mmsrzyc3.json:.json:8161:2026-03-16T06:01:41.528Z\nfile:artifacts/research/manifests/manifest-mmss77gc.json:.json:8452:2026-03-16T06:07:19.939Z\nfile:artifacts/research/manifests/manifest-mmss81h3.json:.json:8800:2026-03-16T06:07:58.849Z\ndir:artifacts/research/manifests:7:0\nfile:artifacts/research/world-state/wss-mmsum66i.json:.json:38790:2026-03-16T07:14:57.356Z\ndir:artifacts/research/world-state:1:0\ndir:artifacts/research:19:5\nfile:artifacts/simulations/benchmark-mmr9gnwe.json:.json:1124:2026-03-15T04:35:02.264Z\nfile:artifacts/simulations/session-mmr9gnwd.json:.json:1199:2026-03-15T04:35:02.264Z\nfile:artifacts/simulations/session-mmsoy7jq.json:.json:1281:2026-03-16T04:36:21.303Z\nfile:artifacts/simulations/session-mmsoyazp.json:.json:1281:2026-03-16T04:36:25.765Z\nfile:artifacts/simulations/session-mmsoyh3k.json:.json:1282:2026-03-16T04:36:33.681Z\nfile:artifacts/simulations/session-mmsoyrf6.json:.json:1377:2026-03-16T04:36:47.057Z\nfile:artifacts/simulations/session-mmspqnn7.json:.json:1268:2026-03-16T04:58:28.532Z\nfile:artifacts/simulations/session-mmspqtm8.json:.json:1268:2026-03-16T04:58:36.273Z\ndir:artifacts/simulations:8:0\ndir:artifacts:28:7\nfile:components/observatory/ArtifactLedgerPanel.tsx:.tsx:9095:2026-03-13T05:59:12.750Z\nfile:components/observatory/BenchmarkHarnessPanel.tsx:.tsx:5150:2026-03-13T12:02:34.999Z\nfile:components/observatory/ExperimentRegistryPanel.tsx:.tsx:15009:2026-03-16T07:48:37.348Z\nfile:components/observatory/ExportManifestPanel.tsx:.tsx:12576:2026-03-16T05:54:01.221Z\nfile:components/observatory/FuturesPanel.tsx:.tsx:8698:2026-03-13T05:08:54.837Z\nfile:components/observatory/InterventionsPanel.tsx:.tsx:20498:2026-03-12T18:38:14.667Z\nfile:components/observatory/LatentStatePanel.tsx:.tsx:7877:2026-03-15T06:04:23.630Z\nfile:components/observatory/ObservatoryPanel.tsx:.tsx:2432:2026-03-12T18:23:14.216Z\nfile:components/observatory/PredictionRealityPanel.tsx:.tsx:9350:2026-03-13T05:59:09.907Z\nfile:components/observatory/PrototypeMappingPanel.tsx:.tsx:4898:2026-03-13T11:51:43.595Z\nfile:components/observatory/ResearchBriefPanel.tsx:.tsx:16383:2026-03-16T05:54:01.220Z\nfile:components/observatory/ResearchDossierPanel.tsx:.tsx:8279:2026-03-15T04:59:16.517Z\nfile:components/observatory/ResearchMemoryPanel.tsx:.tsx:12932:2026-03-15T04:59:16.517Z\nfile:components/observatory/ResearchStatisticsPanel.tsx:.tsx:12506:2026-03-16T07:48:37.347Z\nfile:components/observatory/ResearchTimelinePanel.tsx:.tsx:15109:2026-03-16T06:01:33.728Z\nfile:components/observatory/ScenarioLibraryPanel.tsx:.tsx:10727:2026-03-16T07:48:37.347Z\nfile:components/observatory/StrategyCompatibilityPanel.tsx:.tsx:7514:2026-03-15T06:04:23.630Z\nfile:components/observatory/TransitionPatternsPanel.tsx:.tsx:7205:2026-03-15T06:04:23.630Z\nfile:components/observatory/UncertaintyPanel.tsx:.tsx:6968:2026-03-13T05:08:56.876Z\nfile:components/observatory/WorldStatePanel.tsx:.tsx:15446:2026-03-12T18:22:52.070Z\ndir:components/observatory:20:0\nfile:components/shell/PageShell.tsx:.tsx:5139:2026-03-13T07:56:31.447Z\ndir:components/shell:1:0\nfile:components/ui/PrincipleCard.tsx:.tsx:1653:2026-03-11T11:20:05.792Z\nfile:components/ui/SectionHeader.tsx:.tsx:965:2026-03-11T11:20:03.513Z\ndir:components/ui:2:0\ndir:components:23:3\nfile:data/artifact-ledger.json:.json:2968:2026-03-15T04:35:02.087Z\nfile:data/executions.json:.json:1637:2026-03-15T04:35:02.084Z\ndir:data:2:0\nfile:docs/ami-strategic-context.md:.md:4943:2026-03-12T19:00:46.681Z\nfile:docs/antigravity-operating-model.md:.md:7932:2026-03-13T12:07:45.547Z\nfile:docs/architecture.md:.md:27904:2026-03-16T07:48:37.355Z\nfile:docs/benchmark-philosophy.md:.md:9430:2026-03-16T05:29:28.537Z\nfile:docs/build-phases.md:.md:18754:2026-03-16T07:48:37.615Z\nfile:docs/constitution.md:.md:5665:2026-03-11T11:24:15.786Z\nfile:docs/experiment-registry-model.md:.md:1259:2026-03-16T07:48:37.348Z\nfile:docs/latent-state-model.md:.md:6391:2026-03-15T06:04:23.630Z\nfile:docs/project-charter.md:.md:6982:2026-03-16T07:48:37.615Z\nfile:docs/reproducibility-model.md:.md:1452:2026-03-16T07:48:37.357Z\nfile:docs/research/gemini-se-jepa-source.md:.md:28338:2026-03-12T18:59:45.771Z\ndir:docs/research:1:0\nfile:docs/research-dossier-model.md:.md:7454:2026-03-15T04:34:18.413Z\nfile:docs/research-export-model.md:.md:4894:2026-03-16T05:29:28.537Z\nfile:docs/research-timeline-model.md:.md:3506:2026-03-16T06:01:33.729Z\nfile:docs/scenario-library-model.md:.md:1080:2026-03-16T07:48:37.355Z\nfile:docs/se-jepa-mapping.md:.md:12532:2026-03-16T05:29:28.537Z\nfile:docs/simulation-before-write-law.md:.md:10782:2026-03-15T04:34:18.413Z\nfile:docs/ui-system.md:.md:5593:2026-03-11T11:27:36.018Z\nfile:docs/world-model-thesis.md:.md:9197:2026-03-16T06:18:55.316Z\ndir:docs:19:1\nfile:evals/benchmark-dimensions.md:.md:3880:2026-03-13T12:05:54.593Z\nfile:evals/experiment-memory-dimensions.md:.md:6367:2026-03-15T04:34:18.413Z\nfile:evals/export-lineage-integrity.md:.md:4235:2026-03-16T05:29:28.537Z\nfile:evals/latent-state-dimensions.md:.md:3967:2026-03-15T06:04:23.630Z\nfile:evals/prediction-vs-reality-metrics.md:.md:5251:2026-03-13T12:17:39.778Z\nfile:evals/README.md:.md:2024:2026-03-11T11:30:44.231Z\nfile:evals/research-brief-quality.md:.md:5384:2026-03-16T05:29:28.537Z\nfile:evals/research-dossier-metrics.md:.md:2373:2026-03-13T12:17:21.103Z\nfile:evals/se-jepa-prototype-metrics.md:.md:2674:2026-03-13T12:17:42.259Z\nfile:evals/simulation-session-metrics.md:.md:2629:2026-03-13T12:17:36.484Z\nfile:evals/strategy-compatibility-metrics.md:.md:5830:2026-03-15T06:04:23.630Z\nfile:evals/strategy-shift-detection.md:.md:969:2026-03-16T06:01:33.729Z\nfile:evals/timeline-coherence.md:.md:1057:2026-03-16T06:01:33.729Z\ndir:evals:13:0\nfile:lib/constants/observatory.ts:.ts:4623:2026-03-16T07:32:23.980Z\ndir:lib/constants:1:0\nfile:lib/data/mock-observatory-data.ts:.ts:12459:2026-03-11T11:19:32.657Z\ndir:lib/data:1:0\nfile:lib/services/action-representation.ts:.ts:1226:2026-03-13T11:46:40.047Z\nfile:lib/services/artifact-ledger.ts:.ts:1970:2026-03-13T05:57:45.505Z\nfile:lib/services/benchmark-harness.ts:.ts:3655:2026-03-15T04:59:16.517Z\nfile:lib/services/blocker-pattern-detector.ts:.ts:1709:2026-03-16T06:01:33.728Z\nfile:lib/services/briefing-snapshot-writer.ts:.ts:3132:2026-03-16T06:18:55.315Z\nfile:lib/services/calibration-tracker.ts:.ts:4686:2026-03-16T05:54:01.165Z\nfile:lib/services/calibration-trajectory-analyzer.ts:.ts:3293:2026-03-16T06:01:33.728Z\nfile:lib/services/dependency-analyzer.ts:.ts:5786:2026-03-12T18:21:45.704Z\nfile:lib/services/dossier-generator.ts:.ts:9017:2026-03-15T04:59:16.441Z\nfile:lib/services/execution-store.ts:.ts:2064:2026-03-13T05:57:47.546Z\nfile:lib/services/experiment-memory.ts:.ts:11450:2026-03-15T04:59:16.440Z\nfile:lib/services/experiment-registry.ts:.ts:6723:2026-03-16T07:47:42.650Z\nfile:lib/services/export-manifest-builder.ts:.ts:9929:2026-03-16T06:18:55.315Z\nfile:lib/services/future-prototype-mapper.ts:.ts:2309:2026-03-13T11:46:59.355Z\nfile:lib/services/futures-generator.ts:.ts:4403:2026-03-13T05:07:21.243Z\nfile:lib/services/intervention-planner.ts:.ts:13359:2026-03-12T18:36:36.716Z\nfile:lib/services/latent-state-encoder.ts:.ts:15085:2026-03-16T04:27:34.212Z\nfile:lib/services/latent-transition-chain.ts:.ts:6996:2026-03-15T06:04:23.454Z\nfile:lib/services/mcp-contracts.ts:.ts:5160:2026-03-13T07:55:29.039Z\nfile:lib/services/observation-encoder.ts:.ts:1817:2026-03-13T11:46:38.249Z\nfile:lib/services/prediction-reality-comparator.ts:.ts:3842:2026-03-13T05:57:41.233Z\nfile:lib/services/reproducibility-engine.ts:.ts:4907:2026-03-16T07:47:42.720Z\nfile:lib/services/research-brief-generator.ts:.ts:36171:2026-03-16T06:18:55.315Z\nfile:lib/services/research-dataset-store.ts:.ts:6545:2026-03-16T07:47:42.720Z\nfile:lib/services/research-timeline-builder.ts:.ts:11916:2026-03-16T06:18:55.315Z\nfile:lib/services/scenario-library.ts:.ts:2306:2026-03-16T07:32:24.317Z\nfile:lib/services/scope-analyzer.ts:.ts:7599:2026-03-12T18:36:34.887Z\nfile:lib/services/session-comparator.ts:.ts:10079:2026-03-15T04:30:11.104Z\nfile:lib/services/session-store.ts:.ts:2774:2026-03-13T12:01:53.060Z\nfile:lib/services/simulation-gate.ts:.ts:3140:2026-03-13T07:55:31.060Z\nfile:lib/services/simulation-request-builder.ts:.ts:1409:2026-03-13T12:01:26.049Z\nfile:lib/services/simulation-runner.ts:.ts:3065:2026-03-15T04:59:16.494Z\nfile:lib/services/state-transition-chain.ts:.ts:4632:2026-03-15T04:59:16.517Z\nfile:lib/services/statistical-evaluator.ts:.ts:7433:2026-03-16T07:47:42.720Z\nfile:lib/services/strategy-compatibility-analyzer.ts:.ts:12299:2026-03-16T04:27:34.213Z\nfile:lib/services/strategy-shift-detector.ts:.ts:1443:2026-03-16T06:01:33.728Z\nfile:lib/services/transition-pattern-analyzer.ts:.ts:12121:2026-03-16T05:54:01.165Z\nfile:lib/services/uncertainty-analyzer.ts:.ts:3494:2026-03-13T05:07:19.300Z\nfile:lib/services/world-state-capture.ts:.ts:4248:2026-03-16T07:47:42.650Z\nfile:lib/services/world-state-capturer.ts:.ts:6127:2026-03-12T18:21:43.695Z\ndir:lib/services:40:0\nfile:lib/types/artifact.ts:.ts:2593:2026-03-13T05:57:18.061Z\nfile:lib/types/execution.ts:.ts:1975:2026-03-13T05:57:20.138Z\nfile:lib/types/experiment-registry.ts:.ts:1814:2026-03-16T07:32:24.052Z\nfile:lib/types/future-state.ts:.ts:3603:2026-03-13T05:10:48.349Z\nfile:lib/types/intervention.ts:.ts:5952:2026-03-12T18:35:07.075Z\nfile:lib/types/latent-state.ts:.ts:6788:2026-03-15T05:07:03.754Z\nfile:lib/types/mcp.ts:.ts:2213:2026-03-13T07:55:22.770Z\nfile:lib/types/research-dataset.ts:.ts:584:2026-03-16T07:47:42.650Z\nfile:lib/types/research-export.ts:.ts:5447:2026-03-16T05:54:01.166Z\nfile:lib/types/research-memory.ts:.ts:3045:2026-03-15T04:59:16.517Z\nfile:lib/types/research-timeline.ts:.ts:2875:2026-03-16T06:01:33.728Z\nfile:lib/types/scenario.ts:.ts:523:2026-03-16T07:32:24.052Z\nfile:lib/types/se-jepa.ts:.ts:2730:2026-03-13T11:46:35.312Z\nfile:lib/types/simulation.ts:.ts:3528:2026-03-15T04:59:16.441Z\nfile:lib/types/world-state.ts:.ts:4389:2026-03-12T18:20:56.794Z\ndir:lib/types:15:0\ndir:lib:57:4\nfile:mcp/mcp-tools-spec.md:.md:7648:2026-03-13T07:58:19.104Z\nfile:mcp/README.md:.md:2001:2026-03-13T07:58:21.106Z\nfile:mcp/server-plan.md:.md:3610:2026-03-11T11:30:07.125Z\ndir:mcp:3:0\nfile:next-env.d.ts:.ts:253:2026-03-16T06:01:19.768Z\nfile:next.config.ts:.ts:137:2026-03-11T11:15:48.081Z\nfile:package-lock.json:.json:73130:2026-03-13T12:03:23.694Z\nfile:package.json:.json:664:2026-03-13T12:03:23.657Z\nfile:postcss.config.mjs:.mjs:178:2026-03-11T11:59:08.437Z\nfile:prompts/antigravity-master-prompt-v1.md:.md:3809:2026-03-11T11:32:10.509Z\nfile:prompts/implementation-pass-phase1.md:.md:2956:2026-03-11T11:32:33.366Z\nfile:prompts/ui-pass-observatory.md:.md:3460:2026-03-11T11:32:35.591Z\ndir:prompts:3:0\nfile:README.md:.md:6786:2026-03-16T06:18:55.316Z\nfile:skills/artifact-auditor/SKILL.md:.md:2007:2026-03-13T07:57:14.283Z\ndir:skills/artifact-auditor:1:0\nfile:skills/counterfactual-planner/SKILL.md:.md:2662:2026-03-13T07:56:54.387Z\ndir:skills/counterfactual-planner:1:0\nfile:skills/repo-state-capturer/SKILL.md:.md:2093:2026-03-13T07:57:11.181Z\ndir:skills/repo-state-capturer:1:0\nfile:skills/world-model-governor/SKILL.md:.md:3214:2026-03-13T07:56:52.376Z\ndir:skills/world-model-governor:1:0\ndir:skills:4:4\nfile:tailwind.config.ts:.ts:3625:2026-03-11T11:59:10.482Z\nfile:tsconfig.json:.json:699:2026-03-11T11:57:22.827Z\nfile:tsconfig.tsbuildinfo:.tsbuildinfo:125584:2026-03-16T07:49:10.698Z"
+}

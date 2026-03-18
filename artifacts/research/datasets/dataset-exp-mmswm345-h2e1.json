@@ -1,0 +1,18 @@
+{
+  "datasetId": "dataset-exp-mmswm345-h2e1",
+  "experimentId": "exp-mmswm345-h2e1",
+  "scenarioId": null,
+  "simulationResults": [],
+  "benchmarkResults": [],
+  "calibrationData": {
+    "comparisonIds": [],
+    "summary": {
+      "totalEvaluated": 0,
+      "alignmentScore": 0,
+      "movement": "insufficient-evidence",
+      "notes": "Not enough data points to establish a structural baseline."
+    }
+  },
+  "createdAt": "2026-03-16T08:10:52.630Z",
+  "updatedAt": "2026-03-16T08:10:52.621Z"
+}

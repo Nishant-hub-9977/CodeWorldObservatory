@@ -1,0 +1,456 @@
+{
+  "id": "manifest-mmt733h6",
+  "exportedAt": "2026-03-16T13:04:02.394Z",
+  "exportedBy": "agent",
+  "systemVersion": "0.16.0-alpha",
+  "briefId": "brief-mmt733dk",
+  "replayStatusSummary": {
+    "totalExperiments": 6,
+    "baselineOnlyCount": 4,
+    "partialCount": 0,
+    "fullCount": 2,
+    "strongestExperimentId": "exp-mmswmx9x-t9di",
+    "strongestExperimentTitle": "Phase 15 progression smoke",
+    "strongestReplayability": "full",
+    "strongestLineageStatus": "full-replay-package",
+    "evidenceClass": "full-replay-package",
+    "reproducibilityCaveat": "Full replay-package lineage is present for at least one experiment, but that still means artifact-complete lineage rather than exact historical reconstruction."
+  },
+  "artifacts": [
+    {
+      "artifactId": "brief-mmt733dk",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmt733dk.json",
+      "sha256": "df174e0f1496fc64a4eb56badad1e8dda83b4546d02bb2be2f0fe496be73df84",
+      "generatedAt": "2026-03-16T13:04:02.397Z",
+      "sizeBytes": 18879,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "artifactId": "dossier-1773549290773",
+      "artifactType": "dossier",
+      "filePath": "artifacts\\research\\dossier-1773549290773.json",
+      "sha256": "7ab59861f371ba8a57e75d2a2865354c79911ee3ab81c8d8292449994169f06b",
+      "generatedAt": "2026-03-15T04:34:50.771Z",
+      "sizeBytes": 4056,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "artifactId": "benchmark-mmswmxfg",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmswmxfg.json",
+      "sha256": "f94a92fff7ee0c875da67c7a9335e5aac64cfca7ee3c30540ee686446b79162e",
+      "generatedAt": "2026-03-16T08:11:31.905Z",
+      "sizeBytes": 1260,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "benchmark-mmswm3yl",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmswm3yl.json",
+      "sha256": "9ee0ff06aee002a06684dce7c30d0b6ae45bc495df86077c0bdbe290608ce7a9",
+      "generatedAt": "2026-03-16T08:10:53.721Z",
+      "sizeBytes": 1256,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "benchmark-mmr9gnwe",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmr9gnwe.json",
+      "sha256": "18c266c1c0dac675ca0a1ecfe78c1ea97ec2b4b5218c488480132c869a84c116",
+      "generatedAt": "2026-03-15T04:35:02.264Z",
+      "sizeBytes": 1124,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmss81ep",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmss81ep.json",
+      "sha256": "3020918ab681680db9bbdb551177cf45d9bde01aefd531bc25c4a31267897a75",
+      "generatedAt": "2026-03-16T06:07:58.839Z",
+      "sizeBytes": 13263,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmss76w5",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmss76w5.json",
+      "sha256": "41ff093978b49f709cfe783cb43a8678525e4084efb5b888732fc9d15a8f9c73",
+      "generatedAt": "2026-03-16T06:07:19.932Z",
+      "sizeBytes": 13263,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmsrzya2",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrzya2.json",
+      "sha256": "bc52753dcc1c60f813f15050e7032e31e342d2fbfe39f04904be270937a0c54d",
+      "generatedAt": "2026-03-16T06:01:41.523Z",
+      "sizeBytes": 13206,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmsrot4j",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrot4j.json",
+      "sha256": "be61ae8ab8f7ded3a04cbb5f97b4f2c4cb9d7e948f254a00ab1427be7d740a8f",
+      "generatedAt": "2026-03-16T05:53:01.671Z",
+      "sizeBytes": 13225,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmsrnj4k",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrnj4k.json",
+      "sha256": "9c1ecac6e59c0735ff1afeeb047a66d2acc6c81a4437e21ceecdabe11e7ad5ca",
+      "generatedAt": "2026-03-16T05:52:02.031Z",
+      "sizeBytes": 13260,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmsqslnt",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsqslnt.json",
+      "sha256": "807fdc5dfdf4e225d615dcd4498dcba2615dda69f9a8c5537421c786100ddbd8",
+      "generatedAt": "2026-03-16T05:27:58.955Z",
+      "sizeBytes": 10000,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "brief-mmsqsgas",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsqsgas.json",
+      "sha256": "2ded9b9fdcbb41852ad8602c882e499c1d7fd3c9908b4d58204ec959f232aa3a",
+      "generatedAt": "2026-03-16T05:27:51.999Z",
+      "sizeBytes": 10000,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmswmx9x-t9di",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmswmx9x-t9di.json",
+      "sha256": "6ecee970bfe443ff886616777ddd59efa761ffce94e3f4877342f9f43db243b8",
+      "generatedAt": "2026-03-16T08:11:31.705Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmswm345-h2e1",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmswm345-h2e1.json",
+      "sha256": "0a43d7017148fa71f8ce705de87b4c7ce31f36509801c4a6e97c5c2d86f9922e",
+      "generatedAt": "2026-03-16T08:10:52.638Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmsvwxtx-74t9",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvwxtx-74t9.json",
+      "sha256": "5ffc433b27d9730df123abd55113ab87ebc26283eb13f58498d711d0e9b52701",
+      "generatedAt": "2026-03-16T07:51:19.371Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmsvwfro-kt18",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvwfro-kt18.json",
+      "sha256": "b197c3a4ec7d7b759df99f437c7037e5c510c4597ffec5e740fadd866438be5a",
+      "generatedAt": "2026-03-16T07:50:56.074Z",
+      "sizeBytes": 523,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmsvw1ra-jo3q",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvw1ra-jo3q.json",
+      "sha256": "6ad8e5ae3d312c63cee04bfdd50ad3defbcb2390bf4bff0a120c17e0f2649eae",
+      "generatedAt": "2026-03-16T07:50:38.874Z",
+      "sizeBytes": 523,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "dataset-exp-mmsum4gm",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsum4gm.json",
+      "sha256": "3cbed07f964170c59f211278c1fb20e352e7c5598adc13bdb6873c4899a37b1e",
+      "generatedAt": "2026-03-16T07:17:55.990Z",
+      "sizeBytes": 470,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmswmxcl",
+      "artifactType": "replay-package",
+      "filePath": "artifacts\\research\\replay-packages\\replay-mmswmxa1.json",
+      "sha256": "9ae7f51f550572de8d88fce27d4997f6b755d9e0b31fd29c5a314e719bff1ba4",
+      "generatedAt": "2026-03-16T08:11:31.932Z",
+      "sizeBytes": 777,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmswm3vc",
+      "artifactType": "replay-package",
+      "filePath": "artifacts\\research\\replay-packages\\replay-mmswm37m.json",
+      "sha256": "e6625ff17fa61719a99101014be2dc454ba185255848f9216d850ca0b503ae05",
+      "generatedAt": "2026-03-16T08:10:53.746Z",
+      "sizeBytes": 777,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmswmxf7",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmswmxf7.json",
+      "sha256": "65e4d48b75f40576ff8432db802ba9e1953f436f0042ab17748ee84d1cf52ddc",
+      "generatedAt": "2026-03-16T08:11:31.902Z",
+      "sizeBytes": 1323,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmswm3xz",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmswm3xz.json",
+      "sha256": "e07a3494e90ae58340d1887ea42bd6738f717495540e1d5d773fbdee5f1b9e60",
+      "generatedAt": "2026-03-16T08:10:53.690Z",
+      "sizeBytes": 1319,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmspqtm8",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmspqtm8.json",
+      "sha256": "f8bede5434885c0718e64954da64c28665703b16e7981aa001ee39d02da16d78",
+      "generatedAt": "2026-03-16T04:58:36.273Z",
+      "sizeBytes": 1268,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmspqnn7",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmspqnn7.json",
+      "sha256": "1ed474c69baafc5c576caca9cb520dfa88cf64bb0fa7e81030df9271567bb09e",
+      "generatedAt": "2026-03-16T04:58:28.532Z",
+      "sizeBytes": 1268,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmsoyrf6",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyrf6.json",
+      "sha256": "ab418ab06b61d975b516874046ad4aaa3778aedc3759a0c2f5f15a077e61b229",
+      "generatedAt": "2026-03-16T04:36:47.057Z",
+      "sizeBytes": 1377,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmsoyh3k",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyh3k.json",
+      "sha256": "4ce6c770ad83a294f9355b8d095f3966145de7203c71635f5f13eb3040c0d1cb",
+      "generatedAt": "2026-03-16T04:36:33.681Z",
+      "sizeBytes": 1282,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmsoyazp",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyazp.json",
+      "sha256": "e5339ee91546789e6fb5153b2db95391c1aeaee08622a20ca8b30d6cfb4bd2d3",
+      "generatedAt": "2026-03-16T04:36:25.765Z",
+      "sizeBytes": 1281,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmsoy7jq",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoy7jq.json",
+      "sha256": "ba61c0094c5b8b8f6b50beaa10a99c3c4d3bce0b4cf90cc760e0275633d7f818",
+      "generatedAt": "2026-03-16T04:36:21.303Z",
+      "sizeBytes": 1281,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "session-mmr9gnwd",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmr9gnwd.json",
+      "sha256": "6c1159b1e9e4db4c532d09fde23f9eafe6038bce3a7cd48cf4c3fa537ccbc800",
+      "generatedAt": "2026-03-15T04:35:02.264Z",
+      "sizeBytes": 1199,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmswmxcl",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmswmxcl.json",
+      "sha256": "9ca2212a3a959d91c08dee10e6c36be87cd58c518f3207f650fea793b662be14",
+      "generatedAt": "2026-03-16T08:11:31.799Z",
+      "sizeBytes": 41177,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmswm3vc",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmswm3vc.json",
+      "sha256": "459c97439d115d80b373fcb12f5d793c514ef8adfc8dc67358d4c05219bb40d3",
+      "generatedAt": "2026-03-16T08:10:53.597Z",
+      "sizeBytes": 40649,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmsvwxxd",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvwxxd.json",
+      "sha256": "c89a5a438af8868c20cb7909cb90102223850900212204a6a0558c73f8b96033",
+      "generatedAt": "2026-03-16T07:51:19.485Z",
+      "sizeBytes": 39657,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmsvwfuf",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvwfuf.json",
+      "sha256": "f34ac4f3097aa25d01c53707b527e48a4b512ce5e333a5c4071690308161db0d",
+      "generatedAt": "2026-03-16T07:50:56.065Z",
+      "sizeBytes": 39423,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmsvw2js",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvw2js.json",
+      "sha256": "49d4ae5d4c9350ea4811a61d02c2468b5b96a639242c30f2f521fc49806ff258",
+      "generatedAt": "2026-03-16T07:50:38.830Z",
+      "sizeBytes": 39205,
+      "inclusionRole": "context"
+    },
+    {
+      "artifactId": "wss-mmsum66i",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsum66i.json",
+      "sha256": "53ed5bd8dc8376a6cda39033ce5a0fbaeccd185033b4c36becb2909b99583e8f",
+      "generatedAt": "2026-03-16T07:14:57.356Z",
+      "sizeBytes": 38790,
+      "inclusionRole": "context"
+    }
+  ],
+  "evidenceLineage": [
+    {
+      "sourceType": "latent-state",
+      "sourceId": "latent-mmt733h2",
+      "label": "Latent state derivation",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "world-state",
+      "sourceId": "snap-2026-03-16T13:04:02.326Z",
+      "label": "World state snapshot",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "memory",
+      "sourceId": "experiment-memory",
+      "label": "Experiment memory compilation",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmswmx9x-t9di",
+      "label": "Phase 15 progression smoke",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmswm345-h2e1",
+      "label": "Phase 15 lineage smoke",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvwxtx-74t9",
+      "label": "Status code probe",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "dossier",
+      "sourceId": "dossier-1773549290773",
+      "label": "Latest research dossier",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "replay-package",
+      "sourceId": "replay-mmswmxa1",
+      "label": "full-replay-package",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-service-first",
+      "label": "service-first compatibility assessment",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-route-first",
+      "label": "route-first compatibility assessment",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-ui-first",
+      "label": "ui-first compatibility assessment",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-minimal-touch",
+      "label": "minimal-touch compatibility assessment",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-structural-refactor",
+      "label": "structural-refactor compatibility assessment",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "transition-pattern",
+      "sourceId": "tp-001",
+      "label": "Under moderate complexity, contained pressure, and smooth friction, strategy 'mixed' tends to dominate with 'structurally-favorable' outcomes.",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "transition-pattern",
+      "sourceId": "tp-blocker-01",
+      "label": "Governance blocker 'Requires explicit manual review. Risk unacceptably high.' recurs across 9 session branch results, indicating a systemic constraint.",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "memory",
+      "sourceId": "calibration-trend",
+      "label": "Calibration trend derivation",
+      "derivedAt": "2026-03-16T13:04:02.264Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvwfro-kt18",
+      "label": "Hardening verification experiment",
+      "derivedAt": "2026-03-16T13:04:02.393Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvw1ra-jo3q",
+      "label": "Hardening verification experiment",
+      "derivedAt": "2026-03-16T13:04:02.393Z"
+    }
+  ],
+  "totalArtifacts": 35,
+  "evidenceArtifactCount": 2,
+  "contextualArtifactCount": 33,
+  "totalSizeBytes": 367846,
+  "integrityNote": "2 artifact(s) are cited by this brief and 33 are retained for context. All exported artifacts include SHA-256 hashes. Total export size: 359.2 KB.",
+  "integrityGuarantees": [
+    "Every exported artifact is hashed with SHA-256 at export time.",
+    "Artifacts are labeled as either cited by the brief or included for context.",
+    "Evidence lineage is collected deterministically from sections, findings, constraints, and recommendations."
+  ]
+}

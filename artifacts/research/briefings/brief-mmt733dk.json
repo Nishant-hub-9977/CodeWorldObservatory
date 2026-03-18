@@ -1,0 +1,464 @@
+{
+  "id": "brief-mmt733dk",
+  "generatedAt": "2026-03-16T13:04:02.264Z",
+  "systemVersion": "0.16.0-alpha",
+  "phaseActive": 16,
+  "executiveSummary": "The CodeWorld Observatory is operating at Phase 16 (Replay-Aware Research Consumers + Experiment Detail Surface). Current structural posture is pressured. 9 simulation sessions recorded alongside 3 benchmark evaluations. 1 strategy class currently rate as structurally favorable out of 5. Calibration trend is stable. 2 of 6 experiment(s) now expose persisted replay lineage above baseline-only, and 2 have artifact-complete replay-package lineage.",
+  "compositePosture": "pressured",
+  "replayStatusSummary": {
+    "totalExperiments": 6,
+    "baselineOnlyCount": 4,
+    "partialCount": 0,
+    "fullCount": 2,
+    "strongestExperimentId": "exp-mmswmx9x-t9di",
+    "strongestExperimentTitle": "Phase 15 progression smoke",
+    "strongestReplayability": "full",
+    "strongestLineageStatus": "full-replay-package",
+    "evidenceClass": "full-replay-package",
+    "reproducibilityCaveat": "Full replay-package lineage is present for at least one experiment, but that still means artifact-complete lineage rather than exact historical reconstruction."
+  },
+  "summaryCards": [
+    {
+      "label": "Composite Posture",
+      "value": "pressured",
+      "trend": "down",
+      "detail": "Composite posture is pressured: complexity is extreme; dependency pressure is systemic; evidence is thin."
+    },
+    {
+      "label": "Simulation Sessions",
+      "value": 9,
+      "trend": "up",
+      "detail": "3 benchmark evaluations performed"
+    },
+    {
+      "label": "Replay Lineage",
+      "value": "full-replay-package",
+      "trend": "up",
+      "detail": "2 full, 0 partial, 4 baseline-only"
+    },
+    {
+      "label": "Total Files",
+      "value": 214,
+      "trend": "stable",
+      "detail": "Across 68 directories"
+    },
+    {
+      "label": "Evidence Strength",
+      "value": "Adequate",
+      "trend": "stable",
+      "detail": "3 adequate, 0 insufficient"
+    },
+    {
+      "label": "Calibration Alignment",
+      "value": "100%",
+      "trend": "stable",
+      "detail": "3 evaluations; movement: stable"
+    }
+  ],
+  "sections": [
+    {
+      "id": "system-state",
+      "title": "System State Overview",
+      "content": "Structural complexity is extreme with 214 files across 11 module boundaries. Dependency pressure is systemic. Validation burden is heavy. Governance friction is smooth.",
+      "confidence": "high",
+      "evidenceRefs": [
+        {
+          "sourceType": "latent-state",
+          "sourceId": "latent-mmt733h2",
+          "label": "Latent state derivation",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "world-state",
+          "sourceId": "snap-2026-03-16T13:04:02.326Z",
+          "label": "World state snapshot",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "experiment-coverage",
+      "title": "Experiment Coverage",
+      "content": "9 simulation sessions and 3 benchmark runs are on record. 6 experiments now expose experiment-centered lineage. Evidence coverage currently stands at 0 strong, 3 adequate, and 0 insufficient benchmark assessments.",
+      "confidence": "medium",
+      "evidenceRefs": [
+        {
+          "sourceType": "memory",
+          "sourceId": "experiment-memory",
+          "label": "Experiment memory compilation",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmswmx9x-t9di",
+          "label": "Phase 15 progression smoke",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmswm345-h2e1",
+          "label": "Phase 15 lineage smoke",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmsvwxtx-74t9",
+          "label": "Status code probe",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "dossier",
+          "sourceId": "dossier-1773549290773",
+          "label": "Latest research dossier",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "replay-lineage",
+      "title": "Replay and Lineage Status",
+      "content": "4 experiment(s) remain baseline-only, 0 have stored-evidence-chain replay, and 2 have full-replay-package lineage. Strongest current experiment: Phase 15 progression smoke. Current strongest evidence class is full-replay-package. Full replay-package lineage is present for at least one experiment, but that still means artifact-complete lineage rather than exact historical reconstruction.",
+      "confidence": "medium",
+      "evidenceRefs": [
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmswmx9x-t9di",
+          "label": "Phase 15 progression smoke",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "replay-package",
+          "sourceId": "replay-mmswmxa1",
+          "label": "full-replay-package",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "strategy-landscape",
+      "title": "Strategy Landscape",
+      "content": "1 strategy class are currently favorable: minimal-touch. 3 strategy classes remain viable with review: route-first, ui-first, and structural-refactor. 1 strategy class are structurally misaligned: service-first.",
+      "confidence": "high",
+      "evidenceRefs": [
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-service-first",
+          "label": "service-first compatibility assessment",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-route-first",
+          "label": "route-first compatibility assessment",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-ui-first",
+          "label": "ui-first compatibility assessment",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-minimal-touch",
+          "label": "minimal-touch compatibility assessment",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-structural-refactor",
+          "label": "structural-refactor compatibility assessment",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "transition-patterns",
+      "title": "Transition Pattern Memory",
+      "content": "2 recurring transition patterns identified across 9 sessions. Dominant patterns include Under moderate complexity, contained pressure, and smooth friction, strategy 'mixed' tends to dominate with 'structurally-favorable' outcomes. (9 occurrences, high confidence); Governance blocker 'Requires explicit manual review. Risk unacceptably high.' recurs across 9 session branch results, indicating a systemic constraint. (9 occurrences, high confidence).",
+      "confidence": "low",
+      "evidenceRefs": [
+        {
+          "sourceType": "transition-pattern",
+          "sourceId": "tp-001",
+          "label": "Under moderate complexity, contained pressure, and smooth friction, strategy 'mixed' tends to dominate with 'structurally-favorable' outcomes.",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "transition-pattern",
+          "sourceId": "tp-blocker-01",
+          "label": "Governance blocker 'Requires explicit manual review. Risk unacceptably high.' recurs across 9 session branch results, indicating a systemic constraint.",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "calibration-state",
+      "title": "Calibration State",
+      "content": "Prediction-reality calibration covers 3 evaluations. Alignment score is 100.0%, and the trend is stable. Calibration exhibits stable structural alignment across recorded sessions.",
+      "confidence": "medium",
+      "evidenceRefs": [
+        {
+          "sourceType": "memory",
+          "sourceId": "calibration-trend",
+          "label": "Calibration trend derivation",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "finding-pressured-posture",
+      "severity": "important",
+      "title": "Pressured Composite Posture",
+      "summary": "Structural posture remains pressured. Complexity is extreme; dependency pressure is systemic; evidence is thin.",
+      "supportingEvidence": [
+        {
+          "sourceType": "latent-state",
+          "sourceId": "latent-mmt733h2",
+          "label": "Composite posture derivation",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        }
+      ]
+    },
+    {
+      "id": "finding-misaligned-strategies",
+      "severity": "important",
+      "title": "1 Strategy Class Misaligned",
+      "summary": "The following strategies are structurally misaligned with current repo conditions: service-first. Service-first restructuring is most effective when dependency pressure is contained and module boundaries are clear. Current structural conditions introduce friction that may reduce effectiveness.",
+      "supportingEvidence": [
+        {
+          "sourceType": "compatibility",
+          "sourceId": "compat-service-first",
+          "label": "service-first: structurally-misaligned",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        }
+      ]
+    },
+    {
+      "id": "finding-calibration-established",
+      "severity": "informational",
+      "title": "Calibration Trend Established",
+      "summary": "Prediction-reality calibration covers 3 evaluations with a stable trend classification.",
+      "supportingEvidence": [
+        {
+          "sourceType": "memory",
+          "sourceId": "calibration-trend",
+          "label": "Calibration trend",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        }
+      ]
+    },
+    {
+      "id": "finding-baseline-only-experiments",
+      "severity": "important",
+      "title": "Baseline-Only Experiments Remain",
+      "summary": "4 experiment(s) still expose only baseline-only replay lineage. Their evidence chain is insufficient for stored-evidence-chain replay until simulation and benchmark artifacts are attached.",
+      "supportingEvidence": [
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmsvwxtx-74t9",
+          "label": "Status code probe",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        },
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmsvwfro-kt18",
+          "label": "Hardening verification experiment",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        },
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmsvw1ra-jo3q",
+          "label": "Hardening verification experiment",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        }
+      ]
+    },
+    {
+      "id": "finding-full-replay-lineage",
+      "severity": "informational",
+      "title": "Artifact-Complete Replay Lineage Exists",
+      "summary": "2 experiment(s) now expose artifact-complete replay-package lineage. This reflects persisted baseline, simulation, benchmark, and execution evidence, not guaranteed branch-perfect reproduction.",
+      "supportingEvidence": [
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmswmx9x-t9di",
+          "label": "Phase 15 progression smoke",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        },
+        {
+          "sourceType": "replay-package",
+          "sourceId": "replay-mmswmxa1",
+          "label": "full-replay-package",
+          "derivedAt": "2026-03-16T13:04:02.393Z"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "constraint-no-learned-model",
+      "domain": "prediction",
+      "constraint": "All predictions are deterministic structural calculations, not learned probabilistic models.",
+      "implication": "Prediction quality is bounded by the fidelity of static analysis proxies. No neural world model is active.",
+      "evidenceRefs": [
+        {
+          "sourceType": "world-state",
+          "sourceId": "snap-2026-03-16T13:04:02.326Z",
+          "label": "Observed repository state",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "latent-state",
+          "sourceId": "latent-mmt733h2",
+          "label": "Derived structural latent state",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "constraint-calibration-coverage",
+      "domain": "calibration",
+      "constraint": "Calibration loop requires executed interventions with recorded outcomes to produce trend data.",
+      "implication": "Systems with no executed interventions cannot derive calibration scores or movement trends.",
+      "evidenceRefs": [
+        {
+          "sourceType": "memory",
+          "sourceId": "calibration-trend",
+          "label": "Calibration record spanning 3 evaluations",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "constraint-static-analysis",
+      "domain": "observation",
+      "constraint": "Dependency analysis is limited to static import/require resolution.",
+      "implication": "Cross-module runtime event bubbling, dynamic imports, and reflection-based coupling are not captured.",
+      "evidenceRefs": [
+        {
+          "sourceType": "world-state",
+          "sourceId": "snap-2026-03-16T13:04:02.326Z",
+          "label": "Static repository snapshot",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "constraint-strategy-heuristic",
+      "domain": "governance",
+      "constraint": "Strategy compatibility is computed from threshold-gated structural descriptors, not empirical outcome data.",
+      "implication": "Compatibility assessments may diverge from actual intervention success rates as code complexity grows.",
+      "evidenceRefs": [
+        {
+          "sourceType": "latent-state",
+          "sourceId": "latent-mmt733h2",
+          "label": "Threshold-gated latent descriptors",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "memory",
+          "sourceId": "experiment-memory",
+          "label": "Historical session corpus",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "constraint-replay-semantics",
+      "domain": "replay",
+      "constraint": "Full replayability means artifact-complete replay-package lineage, not exact historical branch reconstruction.",
+      "implication": "Consumer surfaces must preserve the distinction between artifact completeness and historical certainty.",
+      "evidenceRefs": [
+        {
+          "sourceType": "experiment",
+          "sourceId": "exp-mmswmx9x-t9di",
+          "label": "Phase 15 progression smoke",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    }
+  ],
+  "recommendedNextSteps": [
+    {
+      "id": "step-structural-remediation",
+      "priority": "high",
+      "action": "Prioritize structural complexity with a structural-refactor intervention.",
+      "suggestedInterventionClass": "structural-refactor",
+      "rationale": "214 files across 11 module boundaries with 1.4 avg edges/file. 18 files at >3 directory depth. Recommended intervention class: structural-refactor.",
+      "blockedBy": null,
+      "evidenceRefs": [
+        {
+          "sourceType": "latent-state",
+          "sourceId": "latent-mmt733h2",
+          "label": "Complexity descriptor",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        },
+        {
+          "sourceType": "world-state",
+          "sourceId": "snap-2026-03-16T13:04:02.326Z",
+          "label": "File and module boundary counts",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "step-promote-baseline-experiments",
+      "priority": "medium",
+      "action": "Attach simulation and benchmark artifacts to baseline-only experiments before interpreting them as replay-ready.",
+      "suggestedInterventionClass": "minimal-touch",
+      "rationale": "Experiment registration alone is not enough for stored-evidence-chain replay. Baseline-only experiments still need persisted simulation and benchmark evidence.",
+      "blockedBy": null,
+      "evidenceRefs": [
+        {
+          "sourceType": "memory",
+          "sourceId": "experiment-memory",
+          "label": "Simulation and benchmark coverage",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "step-export-briefing",
+      "priority": "medium",
+      "action": "Export the current briefing as a persisted artifact for longitudinal comparison.",
+      "suggestedInterventionClass": "minimal-touch",
+      "rationale": "Persisted briefings enable cross-session posture drift detection and historical audit.",
+      "blockedBy": null,
+      "evidenceRefs": [
+        {
+          "sourceType": "memory",
+          "sourceId": "experiment-memory",
+          "label": "Longitudinal session record",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    },
+    {
+      "id": "step-expand-observation",
+      "priority": "low",
+      "action": "Extend observation encoder to capture cross-module event bus routing and dynamic imports.",
+      "suggestedInterventionClass": "structural-refactor",
+      "rationale": "Current static analysis misses runtime coupling, limiting dependency pressure accuracy.",
+      "blockedBy": null,
+      "evidenceRefs": [
+        {
+          "sourceType": "world-state",
+          "sourceId": "snap-2026-03-16T13:04:02.326Z",
+          "label": "Static observation boundary",
+          "derivedAt": "2026-03-16T13:04:02.264Z"
+        }
+      ]
+    }
+  ],
+  "knownLimitations": [
+    "This briefing synthesizes from deterministic structural signals. No learned connectionist model is active.",
+    "Strategy trends are derived from branch-ID heuristics and first-class metadata - not from validated causal inference.",
+    "Evidence sufficiency labels reflect benchmark heuristic coverage, not independent verification.",
+    "Cross-module runtime event bubbling cannot be captured by static AST proxy layers.",
+    "Calibration alignment scores represent structural proximity, not prediction accuracy in the statistical sense.",
+    "Full replay-package lineage does not guarantee branch-perfect or historically exact reproduction beyond what captured artifacts justify."
+  ]
+}

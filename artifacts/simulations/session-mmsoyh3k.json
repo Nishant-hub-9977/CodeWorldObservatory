@@ -1,0 +1,42 @@
+{
+  "id": "session-mmsoyh3k",
+  "requestId": "sim-req-mmsoyh3k",
+  "objective": {
+    "objective": "Test simulation POST fix",
+    "type": "refactor"
+  },
+  "baselineWorldStateId": "ws-1773635793680",
+  "simulatedAt": "2026-03-16T04:36:33.680Z",
+  "branchResults": [
+    {
+      "branchId": "branch-A",
+      "strategyClass": "service-first",
+      "outcomeClass": "review-heavy",
+      "evidenceSufficiency": "insufficient",
+      "governanceBlockers": [
+        "Requires explicit manual review. Risk unacceptably high."
+      ],
+      "structuralNotes": "Score: 0.30 | Validation: HEAVY | Risk: HIGH",
+      "simulationScore": 0.3
+    },
+    {
+      "branchId": "branch-B",
+      "strategyClass": "route-first",
+      "outcomeClass": "structurally-favorable",
+      "evidenceSufficiency": "adequate",
+      "governanceBlockers": [],
+      "structuralNotes": "Score: 0.80 | Validation: MODERATE | Risk: MEDIUM",
+      "simulationScore": 0.8
+    },
+    {
+      "branchId": "branch-C",
+      "strategyClass": "minimal-touch",
+      "outcomeClass": "structurally-favorable",
+      "evidenceSufficiency": "adequate",
+      "governanceBlockers": [],
+      "structuralNotes": "Score: 0.80 | Validation: LOW | Risk: LOW",
+      "simulationScore": 0.8
+    }
+  ],
+  "status": "completed"
+}

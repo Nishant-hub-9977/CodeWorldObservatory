@@ -1,0 +1,210 @@
+{
+  "experiments": [
+    {
+      "experimentId": "exp-mmswmx9x-t9di",
+      "objective": {
+        "title": "Phase 15 progression smoke",
+        "summary": "Validate conservative replay progression across real lineage evidence.",
+        "targetFiles": [
+          "app/api/world-state/snapshot/route.ts",
+          "app/api/simulations/route.ts",
+          "app/api/benchmarks/route.ts",
+          "app/api/executions/route.ts"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Replay moves from insufficient to partial to full only after the corresponding persisted evidence is attached.",
+        "expectedSignal": "Replay status changes only after the relevant artifact classes exist.",
+        "successCriteria": "No premature upgrade before the evidence chain is complete."
+      },
+      "strategy": "minimal-touch",
+      "createdAt": "2026-03-16T08:11:31.701Z",
+      "updatedAt": "2026-03-16T08:11:31.924Z",
+      "status": "draft",
+      "linkedSimulations": [
+        "session-mmswmxf7"
+      ],
+      "linkedBenchmarks": [
+        "benchmark-mmswmxfg"
+      ],
+      "linkedExecutions": [
+        "exec-mmswmxfy"
+      ],
+      "linkedArtifacts": [
+        "artifacts/research/replay-packages/replay-mmswmxa1.json",
+        "artifacts/research/world-state/wss-mmswmxcl.json",
+        "artifacts/simulations/session-mmswmxf7.json",
+        "artifacts/simulations/benchmark-mmswmxfg.json"
+      ],
+      "linkedSnapshots": [
+        "wss-mmswmxcl"
+      ],
+      "linkedReplayPackages": [
+        "replay-mmswmxa1"
+      ],
+      "scenarioId": null
+    },
+    {
+      "experimentId": "exp-mmswm345-h2e1",
+      "objective": {
+        "title": "Phase 15 lineage smoke",
+        "summary": "Validate experiment to simulation, benchmark, execution, and replay package binding.",
+        "targetFiles": [
+          "app/api/simulations/route.ts",
+          "app/api/benchmarks/route.ts",
+          "app/api/executions/route.ts"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Write-time lineage attachment produces evidence-bounded replay progression.",
+        "expectedSignal": "Experiment detail shows linked simulation, benchmark, execution, and replay package artifacts.",
+        "successCriteria": "Replay remains conservative but advances when evidence exists."
+      },
+      "strategy": "minimal-touch",
+      "createdAt": "2026-03-16T08:10:52.609Z",
+      "updatedAt": "2026-03-16T08:10:53.738Z",
+      "status": "draft",
+      "linkedSimulations": [
+        "session-mmswm3xz"
+      ],
+      "linkedBenchmarks": [
+        "benchmark-mmswm3yl"
+      ],
+      "linkedExecutions": [
+        "exec-mmswm3z7"
+      ],
+      "linkedArtifacts": [
+        "artifacts/research/replay-packages/replay-mmswm37m.json",
+        "artifacts/research/world-state/wss-mmswm3vc.json",
+        "artifacts/simulations/session-mmswm3xz.json",
+        "artifacts/simulations/benchmark-mmswm3yl.json"
+      ],
+      "linkedSnapshots": [
+        "wss-mmswm3vc"
+      ],
+      "linkedReplayPackages": [
+        "replay-mmswm37m"
+      ],
+      "scenarioId": null
+    },
+    {
+      "experimentId": "exp-mmsvwxtx-74t9",
+      "objective": {
+        "title": "Status code probe",
+        "summary": "Route verification probe.",
+        "targetFiles": [
+          "app/page.tsx"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Status verification only.",
+        "expectedSignal": "201 response",
+        "successCriteria": "Request succeeds"
+      },
+      "strategy": "minimal-touch",
+      "createdAt": "2026-03-16T07:51:19.365Z",
+      "updatedAt": "2026-03-16T07:51:19.365Z",
+      "status": "draft",
+      "linkedSimulations": [],
+      "linkedBenchmarks": [],
+      "linkedExecutions": [],
+      "linkedArtifacts": [],
+      "linkedSnapshots": [],
+      "linkedReplayPackages": [],
+      "scenarioId": null
+    },
+    {
+      "experimentId": "exp-mmsvwfro-kt18",
+      "objective": {
+        "title": "Hardening verification experiment",
+        "summary": "Verify registry, dataset, replay, and history integrity after the Phase 14.5 pass.",
+        "targetFiles": [
+          "lib/services/research-dataset-store.ts",
+          "lib/services/reproducibility-engine.ts"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Explicit write-time materialization should preserve durable dataset timestamps and conservative replay semantics.",
+        "expectedSignal": "Dataset artifacts are created on writes, remain stable on reads, and replay stays evidence-bounded.",
+        "successCriteria": "Routes return stable lineage metadata without mutating persisted artifacts during readback."
+      },
+      "strategy": "service-first",
+      "createdAt": "2026-03-16T07:50:55.956Z",
+      "updatedAt": "2026-03-16T07:50:56.064Z",
+      "status": "draft",
+      "linkedSimulations": [],
+      "linkedBenchmarks": [],
+      "linkedExecutions": [],
+      "linkedArtifacts": [
+        "artifacts/research/world-state/wss-mmsvwfuf.json"
+      ],
+      "linkedSnapshots": [
+        "wss-mmsvwfuf"
+      ],
+      "linkedReplayPackages": [],
+      "scenarioId": "scn-service-boundary-hardening"
+    },
+    {
+      "experimentId": "exp-mmsvw1ra-jo3q",
+      "objective": {
+        "title": "Hardening verification experiment",
+        "summary": "Verify registry, dataset, replay, and history integrity after the Phase 14.5 pass.",
+        "targetFiles": [
+          "lib/services/research-dataset-store.ts",
+          "lib/services/reproducibility-engine.ts"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Explicit write-time materialization should preserve durable dataset timestamps and conservative replay semantics.",
+        "expectedSignal": "Dataset artifacts are created on writes, remain stable on reads, and replay stays evidence-bounded.",
+        "successCriteria": "Routes return stable lineage metadata without mutating persisted artifacts during readback."
+      },
+      "strategy": "service-first",
+      "createdAt": "2026-03-16T07:50:37.791Z",
+      "updatedAt": "2026-03-16T07:50:38.863Z",
+      "status": "draft",
+      "linkedSimulations": [],
+      "linkedBenchmarks": [],
+      "linkedExecutions": [],
+      "linkedArtifacts": [
+        "artifacts/research/world-state/wss-mmsvw2js.json"
+      ],
+      "linkedSnapshots": [
+        "wss-mmsvw2js"
+      ],
+      "linkedReplayPackages": [],
+      "scenarioId": "scn-service-boundary-hardening"
+    },
+    {
+      "experimentId": "exp-mmsum4gm",
+      "objective": {
+        "title": "Replay readiness probe",
+        "summary": "Establish a first formal experiment for the new infrastructure surfaces.",
+        "targetFiles": [
+          "app/page.tsx",
+          "lib/services/world-state-capture.ts"
+        ]
+      },
+      "hypothesis": {
+        "statement": "Formal experiment registration plus a linked snapshot will create a durable replay package.",
+        "expectedSignal": "Experiment record is persisted with linked historical state.",
+        "successCriteria": "Experiment can be retrieved, linked to a scenario, and included in datasets."
+      },
+      "strategy": "service-first",
+      "createdAt": "2026-03-16T07:14:55.125Z",
+      "updatedAt": "2026-03-16T07:14:57.370Z",
+      "status": "draft",
+      "linkedSimulations": [],
+      "linkedBenchmarks": [],
+      "linkedExecutions": [],
+      "linkedArtifacts": [
+        "artifacts/research/world-state/wss-mmsum66i.json"
+      ],
+      "linkedSnapshots": [
+        "wss-mmsum66i"
+      ],
+      "linkedReplayPackages": [],
+      "scenarioId": "scn-service-boundary-hardening"
+    }
+  ]
+}

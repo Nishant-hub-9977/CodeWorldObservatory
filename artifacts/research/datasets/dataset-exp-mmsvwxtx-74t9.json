@@ -1,0 +1,18 @@
+{
+  "datasetId": "dataset-exp-mmsvwxtx-74t9",
+  "experimentId": "exp-mmsvwxtx-74t9",
+  "scenarioId": null,
+  "simulationResults": [],
+  "benchmarkResults": [],
+  "calibrationData": {
+    "comparisonIds": [],
+    "summary": {
+      "totalEvaluated": 0,
+      "alignmentScore": 0,
+      "movement": "insufficient-evidence",
+      "notes": "Not enough data points to establish a structural baseline."
+    }
+  },
+  "createdAt": "2026-03-16T07:51:19.366Z",
+  "updatedAt": "2026-03-16T07:51:19.365Z"
+}

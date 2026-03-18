@@ -1,0 +1,425 @@
+{
+  "evaluationRecordId": "evaluation-mmu49hvs",
+  "generatedAt": "2026-03-17T04:32:48.328Z",
+  "phaseActive": 18,
+  "evaluatorVersion": "0.16.0-alpha",
+  "source": "export-snapshot",
+  "portfolio": {
+    "generatedAt": "2026-03-17T04:32:48.328Z",
+    "totalExperiments": 6,
+    "strongestExperimentId": "exp-mmswm345-h2e1",
+    "strongestExperimentTitle": "Phase 15 lineage smoke",
+    "strongestComparativeWeight": 0.96,
+    "strongestComparativeWeightLabel": "strong",
+    "highConfidenceComparisonCount": 0,
+    "comparativeCaveat": "Comparative weights rank persisted evidence completeness and empirical depth only. They do not imply causal proof, exact historical replay, or stronger certainty than the attached artifacts justify.",
+    "evaluations": [
+      {
+        "experimentId": "exp-mmswm345-h2e1",
+        "experimentTitle": "Phase 15 lineage smoke",
+        "comparativeWeight": 0.96,
+        "comparativeWeightLabel": "strong",
+        "evidenceCompleteness": "execution-backed",
+        "empiricalDepth": "narrow",
+        "benchmarkCoverage": "single-run",
+        "executionSupport": "single-run",
+        "calibrationDepth": "preliminary",
+        "strategyInterpretation": "supported",
+        "replayability": "full",
+        "lineageStatus": "full-replay-package",
+        "comparativeConfidence": "medium",
+        "comparisonLimitation": "comparison-supported",
+        "portfolioRank": 1,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswmx9x-t9di",
+          "comparedExperimentTitle": "Phase 15 progression smoke",
+          "relation": "roughly-comparable",
+          "confidence": "medium",
+          "rationale": "Phase 15 lineage smoke and Phase 15 progression smoke remain roughly comparable on persisted evidence. Differences are not large enough to justify a stronger ranking."
+        },
+        "missingEvidenceClasses": [],
+        "caveats": [
+          "A persisted replay package is linked, so the stored evidence chain can be reconstructed without inferring missing inputs."
+        ],
+        "rationale": "Phase 15 lineage smoke currently carries strong comparative weight with medium comparison confidence. Evidence completeness is execution-backed, empirical depth is narrow, benchmark coverage is single-run, execution support is single-run, calibration depth is preliminary, and strategy interpretation is supported. Replay maturity remains full-replay-package / full."
+      },
+      {
+        "experimentId": "exp-mmswmx9x-t9di",
+        "experimentTitle": "Phase 15 progression smoke",
+        "comparativeWeight": 0.96,
+        "comparativeWeightLabel": "strong",
+        "evidenceCompleteness": "execution-backed",
+        "empiricalDepth": "narrow",
+        "benchmarkCoverage": "single-run",
+        "executionSupport": "single-run",
+        "calibrationDepth": "preliminary",
+        "strategyInterpretation": "supported",
+        "replayability": "full",
+        "lineageStatus": "full-replay-package",
+        "comparativeConfidence": "medium",
+        "comparisonLimitation": "comparison-supported",
+        "portfolioRank": 2,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswm345-h2e1",
+          "comparedExperimentTitle": "Phase 15 lineage smoke",
+          "relation": "roughly-comparable",
+          "confidence": "medium",
+          "rationale": "Phase 15 lineage smoke and Phase 15 progression smoke remain roughly comparable on persisted evidence. Differences are not large enough to justify a stronger ranking."
+        },
+        "missingEvidenceClasses": [],
+        "caveats": [
+          "A persisted replay package is linked, so the stored evidence chain can be reconstructed without inferring missing inputs."
+        ],
+        "rationale": "Phase 15 progression smoke currently carries strong comparative weight with medium comparison confidence. Evidence completeness is execution-backed, empirical depth is narrow, benchmark coverage is single-run, execution support is single-run, calibration depth is preliminary, and strategy interpretation is supported. Replay maturity remains full-replay-package / full."
+      },
+      {
+        "experimentId": "exp-mmsvwfro-kt18",
+        "experimentTitle": "Hardening verification experiment",
+        "comparativeWeight": 0.24,
+        "comparativeWeightLabel": "limited",
+        "evidenceCompleteness": "baseline-linked",
+        "empiricalDepth": "none",
+        "benchmarkCoverage": "none",
+        "executionSupport": "none",
+        "calibrationDepth": "none",
+        "strategyInterpretation": "supported",
+        "replayability": "insufficient-evidence",
+        "lineageStatus": "baseline-only",
+        "comparativeConfidence": "low",
+        "comparisonLimitation": "comparison-limited",
+        "portfolioRank": 3,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswm345-h2e1",
+          "comparedExperimentTitle": "Phase 15 lineage smoke",
+          "relation": "stronger-evidence",
+          "confidence": "low",
+          "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+        },
+        "missingEvidenceClasses": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "caveats": [
+          "No linked simulation sessions were registered for this experiment.",
+          "No linked benchmark runs were registered for this experiment.",
+          "No replay package is persisted for this experiment yet.",
+          "Missing evidence classes: simulation session, benchmark evaluation, execution evidence, replay package."
+        ],
+        "rationale": "Hardening verification experiment currently carries limited comparative weight with low comparison confidence. Evidence completeness is baseline-linked, empirical depth is none, benchmark coverage is none, execution support is none, calibration depth is none, and strategy interpretation is supported. Replay maturity remains baseline-only / insufficient-evidence. Missing evidence: simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "experimentId": "exp-mmsvw1ra-jo3q",
+        "experimentTitle": "Hardening verification experiment",
+        "comparativeWeight": 0.24,
+        "comparativeWeightLabel": "limited",
+        "evidenceCompleteness": "baseline-linked",
+        "empiricalDepth": "none",
+        "benchmarkCoverage": "none",
+        "executionSupport": "none",
+        "calibrationDepth": "none",
+        "strategyInterpretation": "supported",
+        "replayability": "insufficient-evidence",
+        "lineageStatus": "baseline-only",
+        "comparativeConfidence": "low",
+        "comparisonLimitation": "comparison-limited",
+        "portfolioRank": 4,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswm345-h2e1",
+          "comparedExperimentTitle": "Phase 15 lineage smoke",
+          "relation": "stronger-evidence",
+          "confidence": "low",
+          "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+        },
+        "missingEvidenceClasses": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "caveats": [
+          "No linked simulation sessions were registered for this experiment.",
+          "No linked benchmark runs were registered for this experiment.",
+          "No replay package is persisted for this experiment yet.",
+          "Missing evidence classes: simulation session, benchmark evaluation, execution evidence, replay package."
+        ],
+        "rationale": "Hardening verification experiment currently carries limited comparative weight with low comparison confidence. Evidence completeness is baseline-linked, empirical depth is none, benchmark coverage is none, execution support is none, calibration depth is none, and strategy interpretation is supported. Replay maturity remains baseline-only / insufficient-evidence. Missing evidence: simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "experimentId": "exp-mmsum4gm",
+        "experimentTitle": "Replay readiness probe",
+        "comparativeWeight": 0.24,
+        "comparativeWeightLabel": "limited",
+        "evidenceCompleteness": "baseline-linked",
+        "empiricalDepth": "none",
+        "benchmarkCoverage": "none",
+        "executionSupport": "none",
+        "calibrationDepth": "none",
+        "strategyInterpretation": "supported",
+        "replayability": "insufficient-evidence",
+        "lineageStatus": "baseline-only",
+        "comparativeConfidence": "low",
+        "comparisonLimitation": "comparison-limited",
+        "portfolioRank": 5,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswm345-h2e1",
+          "comparedExperimentTitle": "Phase 15 lineage smoke",
+          "relation": "stronger-evidence",
+          "confidence": "low",
+          "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Replay readiness probe still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+        },
+        "missingEvidenceClasses": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "caveats": [
+          "No linked simulation sessions were registered for this experiment.",
+          "No linked benchmark runs were registered for this experiment.",
+          "No replay package is persisted for this experiment yet.",
+          "Missing evidence classes: simulation session, benchmark evaluation, execution evidence, replay package."
+        ],
+        "rationale": "Replay readiness probe currently carries limited comparative weight with low comparison confidence. Evidence completeness is baseline-linked, empirical depth is none, benchmark coverage is none, execution support is none, calibration depth is none, and strategy interpretation is supported. Replay maturity remains baseline-only / insufficient-evidence. Missing evidence: simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "experimentId": "exp-mmsvwxtx-74t9",
+        "experimentTitle": "Status code probe",
+        "comparativeWeight": 0.1,
+        "comparativeWeightLabel": "limited",
+        "evidenceCompleteness": "intent-only",
+        "empiricalDepth": "none",
+        "benchmarkCoverage": "none",
+        "executionSupport": "none",
+        "calibrationDepth": "none",
+        "strategyInterpretation": "supported",
+        "replayability": "insufficient-evidence",
+        "lineageStatus": "baseline-only",
+        "comparativeConfidence": "low",
+        "comparisonLimitation": "comparison-limited",
+        "portfolioRank": 6,
+        "totalComparedExperiments": 6,
+        "leadingComparison": {
+          "comparedExperimentId": "exp-mmswm345-h2e1",
+          "comparedExperimentTitle": "Phase 15 lineage smoke",
+          "relation": "stronger-evidence",
+          "confidence": "low",
+          "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Status code probe still lacks baseline snapshot, simulation session, benchmark evaluation, execution evidence."
+        },
+        "missingEvidenceClasses": [
+          "baseline snapshot",
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "caveats": [
+          "No persisted world-state snapshot is linked to this experiment.",
+          "No linked simulation sessions were registered for this experiment.",
+          "No linked benchmark runs were registered for this experiment.",
+          "No replay package is persisted for this experiment yet.",
+          "Missing evidence classes: baseline snapshot, simulation session, benchmark evaluation, execution evidence, replay package."
+        ],
+        "rationale": "Status code probe currently carries limited comparative weight with low comparison confidence. Evidence completeness is intent-only, empirical depth is none, benchmark coverage is none, execution support is none, calibration depth is none, and strategy interpretation is supported. Replay maturity remains baseline-only / insufficient-evidence. Missing evidence: baseline snapshot, simulation session, benchmark evaluation, execution evidence, replay package."
+      }
+    ],
+    "comparisonHighlights": [
+      {
+        "comparisonId": "cmp-exp-mmswm345-h2e1-exp-mmswmx9x-t9di",
+        "leftExperimentId": "exp-mmswm345-h2e1",
+        "rightExperimentId": "exp-mmswmx9x-t9di",
+        "leftExperimentTitle": "Phase 15 lineage smoke",
+        "rightExperimentTitle": "Phase 15 progression smoke",
+        "relation": "roughly-comparable",
+        "preferredExperimentId": null,
+        "confidence": "medium",
+        "comparativeDelta": 0,
+        "advantageDimensions": [],
+        "cautionDimensions": [],
+        "rationale": "Phase 15 lineage smoke and Phase 15 progression smoke remain roughly comparable on persisted evidence. Differences are not large enough to justify a stronger ranking."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswm345-h2e1-exp-mmsvwxtx-74t9",
+        "leftExperimentId": "exp-mmswm345-h2e1",
+        "rightExperimentId": "exp-mmsvwxtx-74t9",
+        "leftExperimentTitle": "Phase 15 lineage smoke",
+        "rightExperimentTitle": "Status code probe",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswm345-h2e1",
+        "confidence": "low",
+        "comparativeDelta": 0.86,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "baseline snapshot",
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence"
+        ],
+        "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Status code probe still lacks baseline snapshot, simulation session, benchmark evaluation, execution evidence."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswmx9x-t9di-exp-mmsvwxtx-74t9",
+        "leftExperimentId": "exp-mmswmx9x-t9di",
+        "rightExperimentId": "exp-mmsvwxtx-74t9",
+        "leftExperimentTitle": "Phase 15 progression smoke",
+        "rightExperimentTitle": "Status code probe",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswmx9x-t9di",
+        "confidence": "low",
+        "comparativeDelta": 0.86,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "baseline snapshot",
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence"
+        ],
+        "rationale": "Phase 15 progression smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Status code probe still lacks baseline snapshot, simulation session, benchmark evaluation, execution evidence."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswm345-h2e1-exp-mmsvwfro-kt18",
+        "leftExperimentId": "exp-mmswm345-h2e1",
+        "rightExperimentId": "exp-mmsvwfro-kt18",
+        "leftExperimentTitle": "Phase 15 lineage smoke",
+        "rightExperimentTitle": "Hardening verification experiment",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswm345-h2e1",
+        "confidence": "low",
+        "comparativeDelta": 0.72,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswm345-h2e1-exp-mmsvw1ra-jo3q",
+        "leftExperimentId": "exp-mmswm345-h2e1",
+        "rightExperimentId": "exp-mmsvw1ra-jo3q",
+        "leftExperimentTitle": "Phase 15 lineage smoke",
+        "rightExperimentTitle": "Hardening verification experiment",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswm345-h2e1",
+        "confidence": "low",
+        "comparativeDelta": 0.72,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswm345-h2e1-exp-mmsum4gm",
+        "leftExperimentId": "exp-mmswm345-h2e1",
+        "rightExperimentId": "exp-mmsum4gm",
+        "leftExperimentTitle": "Phase 15 lineage smoke",
+        "rightExperimentTitle": "Replay readiness probe",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswm345-h2e1",
+        "confidence": "low",
+        "comparativeDelta": 0.72,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "rationale": "Phase 15 lineage smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Replay readiness probe still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswmx9x-t9di-exp-mmsvwfro-kt18",
+        "leftExperimentId": "exp-mmswmx9x-t9di",
+        "rightExperimentId": "exp-mmsvwfro-kt18",
+        "leftExperimentTitle": "Phase 15 progression smoke",
+        "rightExperimentTitle": "Hardening verification experiment",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswmx9x-t9di",
+        "confidence": "low",
+        "comparativeDelta": 0.72,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "rationale": "Phase 15 progression smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+      },
+      {
+        "comparisonId": "cmp-exp-mmswmx9x-t9di-exp-mmsvw1ra-jo3q",
+        "leftExperimentId": "exp-mmswmx9x-t9di",
+        "rightExperimentId": "exp-mmsvw1ra-jo3q",
+        "leftExperimentTitle": "Phase 15 progression smoke",
+        "rightExperimentTitle": "Hardening verification experiment",
+        "relation": "stronger-evidence",
+        "preferredExperimentId": "exp-mmswmx9x-t9di",
+        "confidence": "low",
+        "comparativeDelta": 0.72,
+        "advantageDimensions": [
+          "evidence completeness",
+          "empirical depth",
+          "benchmark coverage",
+          "execution support",
+          "calibration depth"
+        ],
+        "cautionDimensions": [
+          "simulation session",
+          "benchmark evaluation",
+          "execution evidence",
+          "replay package"
+        ],
+        "rationale": "Phase 15 progression smoke has the stronger current evidence position because it leads on evidence completeness, empirical depth, benchmark coverage, execution support, calibration depth. Hardening verification experiment still lacks simulation session, benchmark evaluation, execution evidence, replay package."
+      }
+    ]
+  },
+  "doctrineCaveat": "Persisted evaluation snapshots capture bounded comparative interpretation at a point in time. They are derived interpretation artifacts, not raw evidence truth, and do not strengthen replay or causal claims beyond the attached artifacts."
+}

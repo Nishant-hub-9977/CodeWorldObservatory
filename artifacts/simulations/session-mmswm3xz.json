@@ -1,0 +1,43 @@
+{
+  "id": "session-mmswm3xz",
+  "requestId": "sim-req-mmswm3xz",
+  "experimentId": "exp-mmswm345-h2e1",
+  "objective": {
+    "objective": "Phase 15 lineage smoke",
+    "type": "refactor"
+  },
+  "baselineWorldStateId": "ws-1773648653687",
+  "simulatedAt": "2026-03-16T08:10:53.687Z",
+  "branchResults": [
+    {
+      "branchId": "branch-A",
+      "strategyClass": "service-first",
+      "outcomeClass": "review-heavy",
+      "evidenceSufficiency": "insufficient",
+      "governanceBlockers": [
+        "Requires explicit manual review. Risk unacceptably high."
+      ],
+      "structuralNotes": "Score: 0.30 | Validation: HEAVY | Risk: HIGH",
+      "simulationScore": 0.3
+    },
+    {
+      "branchId": "branch-B",
+      "strategyClass": "route-first",
+      "outcomeClass": "structurally-favorable",
+      "evidenceSufficiency": "adequate",
+      "governanceBlockers": [],
+      "structuralNotes": "Score: 0.80 | Validation: MODERATE | Risk: MEDIUM",
+      "simulationScore": 0.8
+    },
+    {
+      "branchId": "branch-C",
+      "strategyClass": "minimal-touch",
+      "outcomeClass": "structurally-favorable",
+      "evidenceSufficiency": "adequate",
+      "governanceBlockers": [],
+      "structuralNotes": "Score: 0.80 | Validation: LOW | Risk: LOW",
+      "simulationScore": 0.8
+    }
+  ],
+  "status": "completed"
+}

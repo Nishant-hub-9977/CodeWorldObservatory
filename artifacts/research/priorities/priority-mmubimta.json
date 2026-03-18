@@ -1,0 +1,82 @@
+{
+  "recordId": "priority-mmubimta",
+  "createdAt": "2026-03-17T07:55:51.934Z",
+  "phaseActive": 21,
+  "systemVersion": "0.21.0-alpha",
+  "prioritizationContext": {
+    "generatedAt": "2026-03-17T07:55:51.934Z",
+    "topPriorities": [
+      {
+        "id": "replay-mature-but-empirically-shallow-exp-mmswmx9x-t9di",
+        "priorityClass": "replay-mature-but-empirically-shallow",
+        "advisoryLevel": "high",
+        "experimentId": "exp-mmswmx9x-t9di",
+        "experimentTitle": "Phase 15 progression smoke",
+        "summary": "Phase 15 progression smoke has replay maturity that outpaces its empirical depth.",
+        "rationale": "Phase 15 progression smoke has full replay semantics and full-replay-package lineage, but its empirical depth remains narrow with single-run benchmark coverage. Replay maturity should not be mistaken for broad empirical support.",
+        "evidenceGaps": [
+          "empirical-depth:narrow",
+          "benchmark-coverage:single-run"
+        ],
+        "recommendedFocus": "Consider adding repeated benchmark or execution-backed evidence before treating replay maturity as broadly supported.",
+        "caveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+      },
+      {
+        "id": "comparison-limited-exp-mmswm345-h2e1",
+        "priorityClass": "comparison-limited",
+        "advisoryLevel": "high",
+        "experimentId": "exp-mmswm345-h2e1",
+        "experimentTitle": "Phase 15 lineage smoke",
+        "summary": "The portfolio remains comparison-limited despite multiple persisted experiments.",
+        "rationale": "There are 6 persisted experiment records, but none of the current comparisons qualify as high-confidence. The portfolio still needs repeated benchmarks, execution-backed evidence, or richer calibration closure before stronger comparative narratives are justified.",
+        "evidenceGaps": [
+          "Hardening verification experiment",
+          "Hardening verification experiment",
+          "Replay readiness probe"
+        ],
+        "recommendedFocus": "Consider strengthening repeated empirical support on the leading experiments before treating the ordering as decisive.",
+        "caveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+      }
+    ],
+    "totalSignals": 2,
+    "advisorySummary": "Current advisory focus centers on phase 15 progression smoke has replay maturity that outpaces its empirical depth. Secondary pressure includes comparison limited.",
+    "prioritizationCaveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+  },
+  "governanceContext": {
+    "generatedAt": "2026-03-17T07:55:51.934Z",
+    "governedRecommendations": [
+      {
+        "text": "Consider adding repeated benchmark or execution-backed evidence before treating replay maturity as broadly supported.",
+        "supportingEvidenceClasses": [
+          "replay-semantics",
+          "lineage-completeness"
+        ],
+        "missingEvidenceClasses": [
+          "empirical-depth:narrow",
+          "benchmark-coverage:single-run"
+        ],
+        "confidenceLimitation": "Advisory level is elevated, but confidence remains bounded by the available evidence classes and snapshot scope. High advisory level reflects gap magnitude, not certainty about the recommended path.",
+        "advisoryBoundary": "This recommendation applies only within the scope of the 'replay-mature-but-empirically-shallow' priority class, bounded by evidence available at generation time. It should be revisited when new experiment data, evaluation snapshots, or replay artifacts become available.",
+        "nonExecutionCaveat": "This recommendation is advisory only. It reflects a structural gap interpretation for 'replay-mature-but-empirically-shallow' and does not authorize, require, or imply any specific action."
+      },
+      {
+        "text": "Consider strengthening repeated empirical support on the leading experiments before treating the ordering as decisive.",
+        "supportingEvidenceClasses": [
+          "portfolio-composition",
+          "comparison-coverage"
+        ],
+        "missingEvidenceClasses": [
+          "Hardening verification experiment",
+          "Hardening verification experiment",
+          "Replay readiness probe"
+        ],
+        "confidenceLimitation": "Advisory level is elevated, but confidence remains bounded by the available evidence classes and snapshot scope. High advisory level reflects gap magnitude, not certainty about the recommended path.",
+        "advisoryBoundary": "This recommendation applies only within the scope of the 'comparison-limited' priority class, bounded by evidence available at generation time. It should be revisited when new experiment data, evaluation snapshots, or replay artifacts become available.",
+        "nonExecutionCaveat": "This recommendation is advisory only. It reflects a structural gap interpretation for 'comparison-limited' and does not authorize, require, or imply any specific action."
+      }
+    ],
+    "governanceSummary": "2 recommendation(s) have been wrapped with explicit governance constraints. Each recommendation includes supporting evidence classes, missing evidence classes, confidence limitations, advisory boundaries, and a non-execution caveat. All recommendations remain advisory interpretations, not directives.",
+    "governanceCaveat": "All recommendations are advisory interpretations of structural evidence gaps. They do not constitute execution authority, causal proof, or validated research direction. Priority rankings remain bounded by snapshot evidence and should not be treated as decision mandates."
+  },
+  "doctrineCaveat": "This priority history record is a persisted interpretation snapshot. It captures the observatory's advisory prioritization posture at a specific point in time. It does not constitute causal proof, execution authority, or evidence stronger than the underlying experiment and evaluation artifacts it references. Repeated appearance of a priority class across snapshots indicates persistent structural posture, not validated truth."
+}

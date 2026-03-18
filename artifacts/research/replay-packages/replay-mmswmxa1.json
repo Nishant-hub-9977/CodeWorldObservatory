@@ -1,0 +1,26 @@
+{
+  "replayPackageId": "replay-mmswmxa1",
+  "experimentId": "exp-mmswmx9x-t9di",
+  "createdAt": "2026-03-16T08:11:31.704Z",
+  "updatedAt": "2026-03-16T08:11:31.923Z",
+  "lineageStatus": "full-replay-package",
+  "snapshotId": "wss-mmswmxcl",
+  "sessionIds": [
+    "session-mmswmxf7"
+  ],
+  "benchmarkIds": [
+    "benchmark-mmswmxfg"
+  ],
+  "executionIds": [
+    "exec-mmswmxfy"
+  ],
+  "artifactPaths": [
+    "artifacts/research/replay-packages/replay-mmswmxa1.json",
+    "artifacts/research/world-state/wss-mmswmxcl.json",
+    "artifacts/simulations/session-mmswmxf7.json",
+    "artifacts/simulations/benchmark-mmswmxfg.json"
+  ],
+  "notes": [
+    "The experiment has a full replay package assembled from persisted baseline, simulation, benchmark, and execution evidence."
+  ]
+}

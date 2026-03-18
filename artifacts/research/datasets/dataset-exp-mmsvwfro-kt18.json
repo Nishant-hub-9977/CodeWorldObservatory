@@ -1,0 +1,18 @@
+{
+  "datasetId": "dataset-exp-mmsvwfro-kt18",
+  "experimentId": "exp-mmsvwfro-kt18",
+  "scenarioId": "scn-service-boundary-hardening",
+  "simulationResults": [],
+  "benchmarkResults": [],
+  "calibrationData": {
+    "comparisonIds": [],
+    "summary": {
+      "totalEvaluated": 0,
+      "alignmentScore": 0,
+      "movement": "insufficient-evidence",
+      "notes": "Not enough data points to establish a structural baseline."
+    }
+  },
+  "createdAt": "2026-03-16T07:50:55.958Z",
+  "updatedAt": "2026-03-16T07:50:56.065Z"
+}

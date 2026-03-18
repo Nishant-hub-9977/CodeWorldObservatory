@@ -1,0 +1,694 @@
+{
+  "id": "manifest-mmu5r261",
+  "exportedAt": "2026-03-17T05:14:27.385Z",
+  "exportedBy": "agent",
+  "systemVersion": "0.19.0-alpha",
+  "briefId": "brief-mmu5r21h",
+  "replayStatusSummary": {
+    "totalExperiments": 6,
+    "baselineOnlyCount": 4,
+    "partialCount": 0,
+    "fullCount": 2,
+    "strongestExperimentId": "exp-mmswmx9x-t9di",
+    "strongestExperimentTitle": "Phase 15 progression smoke",
+    "strongestReplayability": "full",
+    "strongestLineageStatus": "full-replay-package",
+    "evidenceClass": "full-replay-package",
+    "reproducibilityCaveat": "Full replay-package lineage is present for at least one experiment, but that still means artifact-complete lineage rather than exact historical reconstruction."
+  },
+  "comparisonPosture": {
+    "evaluationSnapshotId": "evaluation-mmu5r21h",
+    "strongestExperimentTitle": "Phase 15 lineage smoke",
+    "strongestComparativeWeightLabel": "strong",
+    "highConfidenceComparisonCount": 0,
+    "comparativeCaveat": "Comparative weights rank persisted evidence completeness and empirical depth only. They do not imply causal proof, exact historical replay, or stronger certainty than the attached artifacts justify."
+  },
+  "prioritizationSummary": {
+    "generatedAt": "2026-03-17T05:14:27.221Z",
+    "topPriorities": [
+      {
+        "id": "replay-mature-but-empirically-shallow-exp-mmswmx9x-t9di",
+        "priorityClass": "replay-mature-but-empirically-shallow",
+        "advisoryLevel": "high",
+        "experimentId": "exp-mmswmx9x-t9di",
+        "experimentTitle": "Phase 15 progression smoke",
+        "summary": "Phase 15 progression smoke has replay maturity that outpaces its empirical depth.",
+        "rationale": "Phase 15 progression smoke has full replay semantics and full-replay-package lineage, but its empirical depth remains narrow with single-run benchmark coverage. Replay maturity should not be mistaken for broad empirical support.",
+        "evidenceGaps": [
+          "empirical-depth:narrow",
+          "benchmark-coverage:single-run"
+        ],
+        "recommendedFocus": "Add repeated benchmark or execution-backed evidence before treating replay maturity as broadly supported.",
+        "caveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+      },
+      {
+        "id": "comparison-limited-exp-mmswm345-h2e1",
+        "priorityClass": "comparison-limited",
+        "advisoryLevel": "high",
+        "experimentId": "exp-mmswm345-h2e1",
+        "experimentTitle": "Phase 15 lineage smoke",
+        "summary": "The portfolio remains comparison-limited despite multiple persisted experiments.",
+        "rationale": "There are 6 persisted experiment records, but none of the current comparisons qualify as high-confidence. The portfolio still needs repeated benchmarks, execution-backed evidence, or richer calibration closure before stronger comparative narratives are justified.",
+        "evidenceGaps": [
+          "Hardening verification experiment",
+          "Hardening verification experiment",
+          "Replay readiness probe"
+        ],
+        "recommendedFocus": "Strengthen repeated empirical support on the leading experiments before treating the ordering as decisive.",
+        "caveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+      }
+    ],
+    "totalSignals": 2,
+    "advisorySummary": "Current advisory focus centers on phase 15 progression smoke has replay maturity that outpaces its empirical depth. Secondary pressure includes comparison limited.",
+    "prioritizationCaveat": "Research prioritization ranks structural evidence, replay, calibration, and comparison gaps only. It is advisory, not causal proof, certainty, or a hidden write-side decision system."
+  },
+  "artifacts": [
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu5r21h::artifacts\\research\\briefings\\brief-mmu5r21h.json",
+      "artifactId": "brief-mmu5r21h",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu5r21h.json",
+      "sha256": "c30f778d5ea763be7d074f5388eab64b244bcb68f45e6d2d70d573cc5ad2e8bc",
+      "generatedAt": "2026-03-17T05:14:27.385Z",
+      "sizeBytes": 61105,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "canonicalKey": "export-artifact::dossier::dossier-1773549290773::artifacts\\research\\dossier-1773549290773.json",
+      "artifactId": "dossier-1773549290773",
+      "artifactType": "dossier",
+      "filePath": "artifacts\\research\\dossier-1773549290773.json",
+      "sha256": "7ab59861f371ba8a57e75d2a2865354c79911ee3ab81c8d8292449994169f06b",
+      "generatedAt": "2026-03-15T04:34:50.771Z",
+      "sizeBytes": 4056,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu5r21h::artifacts\\research\\evaluations\\evaluation-mmu5r21h.json",
+      "artifactId": "evaluation-mmu5r21h",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu5r21h.json",
+      "sha256": "47528d4955af7c635eb3cccfa7b8fe7177957859a4b3480da03b329bdc550fdb",
+      "generatedAt": "2026-03-17T05:14:27.221Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "canonicalKey": "export-artifact::replay-package::replay-mmswmxa1::artifacts\\research\\replay-packages\\replay-mmswmxa1.json",
+      "artifactId": "replay-mmswmxa1",
+      "artifactType": "replay-package",
+      "filePath": "artifacts\\research\\replay-packages\\replay-mmswmxa1.json",
+      "sha256": "9ae7f51f550572de8d88fce27d4997f6b755d9e0b31fd29c5a314e719bff1ba4",
+      "generatedAt": "2026-03-16T08:11:31.932Z",
+      "sizeBytes": 777,
+      "inclusionRole": "cited-by-brief"
+    },
+    {
+      "canonicalKey": "export-artifact::benchmark::benchmark-mmswmxfg::artifacts\\simulations\\benchmark-mmswmxfg.json",
+      "artifactId": "benchmark-mmswmxfg",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmswmxfg.json",
+      "sha256": "f94a92fff7ee0c875da67c7a9335e5aac64cfca7ee3c30540ee686446b79162e",
+      "generatedAt": "2026-03-16T08:11:31.905Z",
+      "sizeBytes": 1260,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::benchmark::benchmark-mmswm3yl::artifacts\\simulations\\benchmark-mmswm3yl.json",
+      "artifactId": "benchmark-mmswm3yl",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmswm3yl.json",
+      "sha256": "9ee0ff06aee002a06684dce7c30d0b6ae45bc495df86077c0bdbe290608ce7a9",
+      "generatedAt": "2026-03-16T08:10:53.721Z",
+      "sizeBytes": 1256,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::benchmark::benchmark-mmr9gnwe::artifacts\\simulations\\benchmark-mmr9gnwe.json",
+      "artifactId": "benchmark-mmr9gnwe",
+      "artifactType": "benchmark",
+      "filePath": "artifacts\\simulations\\benchmark-mmr9gnwe.json",
+      "sha256": "18c266c1c0dac675ca0a1ecfe78c1ea97ec2b4b5218c488480132c869a84c116",
+      "generatedAt": "2026-03-15T04:35:02.264Z",
+      "sizeBytes": 1124,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu5qsnw::artifacts\\research\\briefings\\brief-mmu5qsnw.json",
+      "artifactId": "brief-mmu5qsnw",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu5qsnw.json",
+      "sha256": "3da7b03522feae83bbc9ca4000a7089393eed6586fff6c354eadc1edfab1a33b",
+      "generatedAt": "2026-03-17T05:14:15.228Z",
+      "sizeBytes": 61105,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu5qj88::artifacts\\research\\briefings\\brief-mmu5qj88.json",
+      "artifactId": "brief-mmu5qj88",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu5qj88.json",
+      "sha256": "543d2e428f67b2826a0dc81fce8f8b6f59a6faf9c7fe7c45134aec3f8821cf34",
+      "generatedAt": "2026-03-17T05:14:03.123Z",
+      "sizeBytes": 61105,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu5khho::artifacts\\research\\briefings\\brief-mmu5khho.json",
+      "artifactId": "brief-mmu5khho",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu5khho.json",
+      "sha256": "9d861ce38977b4004a7e2aab692cd7c348a965bf327f56c146bd643ff09e2fa4",
+      "generatedAt": "2026-03-17T05:09:20.797Z",
+      "sizeBytes": 61105,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu5gmfx::artifacts\\research\\briefings\\brief-mmu5gmfx.json",
+      "artifactId": "brief-mmu5gmfx",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu5gmfx.json",
+      "sha256": "6119c3d1dbcf47fe3bb9877e79c64a752b626ae3b9b9ef9d8ffb91e56d40c985",
+      "generatedAt": "2026-03-17T05:06:21.456Z",
+      "sizeBytes": 61105,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmu49hvt::artifacts\\research\\briefings\\brief-mmu49hvt.json",
+      "artifactId": "brief-mmu49hvt",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmu49hvt.json",
+      "sha256": "0e2d171f07e86df06bafbe4ff65700477c501313db1955db8c79e0a9253f374d",
+      "generatedAt": "2026-03-17T04:32:48.626Z",
+      "sizeBytes": 48432,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmt76n0s::artifacts\\research\\briefings\\brief-mmt76n0s.json",
+      "artifactId": "brief-mmt76n0s",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmt76n0s.json",
+      "sha256": "234d3ba55811ed8a8193e098700e6f0c2b5ee46b2d3779e28ec95b7a36af0130",
+      "generatedAt": "2026-03-16T13:06:47.833Z",
+      "sizeBytes": 18879,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmt73l90::artifacts\\research\\briefings\\brief-mmt73l90.json",
+      "artifactId": "brief-mmt73l90",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmt73l90.json",
+      "sha256": "a5582b440f16ea58c8d078e49d623cc331419aa550118f1e731039ada0e6ec10",
+      "generatedAt": "2026-03-16T13:04:25.570Z",
+      "sizeBytes": 18879,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmt733dk::artifacts\\research\\briefings\\brief-mmt733dk.json",
+      "artifactId": "brief-mmt733dk",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmt733dk.json",
+      "sha256": "df174e0f1496fc64a4eb56badad1e8dda83b4546d02bb2be2f0fe496be73df84",
+      "generatedAt": "2026-03-16T13:04:02.397Z",
+      "sizeBytes": 18879,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmss81ep::artifacts\\research\\briefings\\brief-mmss81ep.json",
+      "artifactId": "brief-mmss81ep",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmss81ep.json",
+      "sha256": "3020918ab681680db9bbdb551177cf45d9bde01aefd531bc25c4a31267897a75",
+      "generatedAt": "2026-03-16T06:07:58.839Z",
+      "sizeBytes": 13263,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmss76w5::artifacts\\research\\briefings\\brief-mmss76w5.json",
+      "artifactId": "brief-mmss76w5",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmss76w5.json",
+      "sha256": "41ff093978b49f709cfe783cb43a8678525e4084efb5b888732fc9d15a8f9c73",
+      "generatedAt": "2026-03-16T06:07:19.932Z",
+      "sizeBytes": 13263,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmsrzya2::artifacts\\research\\briefings\\brief-mmsrzya2.json",
+      "artifactId": "brief-mmsrzya2",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrzya2.json",
+      "sha256": "bc52753dcc1c60f813f15050e7032e31e342d2fbfe39f04904be270937a0c54d",
+      "generatedAt": "2026-03-16T06:01:41.523Z",
+      "sizeBytes": 13206,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmsrot4j::artifacts\\research\\briefings\\brief-mmsrot4j.json",
+      "artifactId": "brief-mmsrot4j",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrot4j.json",
+      "sha256": "be61ae8ab8f7ded3a04cbb5f97b4f2c4cb9d7e948f254a00ab1427be7d740a8f",
+      "generatedAt": "2026-03-16T05:53:01.671Z",
+      "sizeBytes": 13225,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmsrnj4k::artifacts\\research\\briefings\\brief-mmsrnj4k.json",
+      "artifactId": "brief-mmsrnj4k",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsrnj4k.json",
+      "sha256": "9c1ecac6e59c0735ff1afeeb047a66d2acc6c81a4437e21ceecdabe11e7ad5ca",
+      "generatedAt": "2026-03-16T05:52:02.031Z",
+      "sizeBytes": 13260,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmsqslnt::artifacts\\research\\briefings\\brief-mmsqslnt.json",
+      "artifactId": "brief-mmsqslnt",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsqslnt.json",
+      "sha256": "807fdc5dfdf4e225d615dcd4498dcba2615dda69f9a8c5537421c786100ddbd8",
+      "generatedAt": "2026-03-16T05:27:58.955Z",
+      "sizeBytes": 10000,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::brief::brief-mmsqsgas::artifacts\\research\\briefings\\brief-mmsqsgas.json",
+      "artifactId": "brief-mmsqsgas",
+      "artifactType": "brief",
+      "filePath": "artifacts\\research\\briefings\\brief-mmsqsgas.json",
+      "sha256": "2ded9b9fdcbb41852ad8602c882e499c1d7fd3c9908b4d58204ec959f232aa3a",
+      "generatedAt": "2026-03-16T05:27:51.999Z",
+      "sizeBytes": 10000,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmswmx9x-t9di::artifacts\\research\\datasets\\dataset-exp-mmswmx9x-t9di.json",
+      "artifactId": "dataset-exp-mmswmx9x-t9di",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmswmx9x-t9di.json",
+      "sha256": "6ecee970bfe443ff886616777ddd59efa761ffce94e3f4877342f9f43db243b8",
+      "generatedAt": "2026-03-16T08:11:31.705Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmswm345-h2e1::artifacts\\research\\datasets\\dataset-exp-mmswm345-h2e1.json",
+      "artifactId": "dataset-exp-mmswm345-h2e1",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmswm345-h2e1.json",
+      "sha256": "0a43d7017148fa71f8ce705de87b4c7ce31f36509801c4a6e97c5c2d86f9922e",
+      "generatedAt": "2026-03-16T08:10:52.638Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmsvwxtx-74t9::artifacts\\research\\datasets\\dataset-exp-mmsvwxtx-74t9.json",
+      "artifactId": "dataset-exp-mmsvwxtx-74t9",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvwxtx-74t9.json",
+      "sha256": "5ffc433b27d9730df123abd55113ab87ebc26283eb13f58498d711d0e9b52701",
+      "generatedAt": "2026-03-16T07:51:19.371Z",
+      "sizeBytes": 495,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmsvwfro-kt18::artifacts\\research\\datasets\\dataset-exp-mmsvwfro-kt18.json",
+      "artifactId": "dataset-exp-mmsvwfro-kt18",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvwfro-kt18.json",
+      "sha256": "b197c3a4ec7d7b759df99f437c7037e5c510c4597ffec5e740fadd866438be5a",
+      "generatedAt": "2026-03-16T07:50:56.074Z",
+      "sizeBytes": 523,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmsvw1ra-jo3q::artifacts\\research\\datasets\\dataset-exp-mmsvw1ra-jo3q.json",
+      "artifactId": "dataset-exp-mmsvw1ra-jo3q",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsvw1ra-jo3q.json",
+      "sha256": "6ad8e5ae3d312c63cee04bfdd50ad3defbcb2390bf4bff0a120c17e0f2649eae",
+      "generatedAt": "2026-03-16T07:50:38.874Z",
+      "sizeBytes": 523,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::dataset::dataset-exp-mmsum4gm::artifacts\\research\\datasets\\dataset-exp-mmsum4gm.json",
+      "artifactId": "dataset-exp-mmsum4gm",
+      "artifactType": "dataset",
+      "filePath": "artifacts\\research\\datasets\\dataset-exp-mmsum4gm.json",
+      "sha256": "3cbed07f964170c59f211278c1fb20e352e7c5598adc13bdb6873c4899a37b1e",
+      "generatedAt": "2026-03-16T07:17:55.990Z",
+      "sizeBytes": 470,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu5qsnw::artifacts\\research\\evaluations\\evaluation-mmu5qsnw.json",
+      "artifactId": "evaluation-mmu5qsnw",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu5qsnw.json",
+      "sha256": "82a23f7cc8099952dc7ea694663f14097112b72b18c71b3ff7c00f7ee338f610",
+      "generatedAt": "2026-03-17T05:14:15.069Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu5qj86::artifacts\\research\\evaluations\\evaluation-mmu5qj86.json",
+      "artifactId": "evaluation-mmu5qj86",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu5qj86.json",
+      "sha256": "1f9f68e7dc68cb4c8de14484c6b60471c37206db3b2b430fce69eb0a65be7cad",
+      "generatedAt": "2026-03-17T05:14:02.840Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu5khhn::artifacts\\research\\evaluations\\evaluation-mmu5khhn.json",
+      "artifactId": "evaluation-mmu5khhn",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu5khhn.json",
+      "sha256": "dee9f64dea3b75a835341e24aa3ba93308ae51c642b3295713895e527a0f6ce2",
+      "generatedAt": "2026-03-17T05:09:20.653Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu5gmfx::artifacts\\research\\evaluations\\evaluation-mmu5gmfx.json",
+      "artifactId": "evaluation-mmu5gmfx",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu5gmfx.json",
+      "sha256": "ba9648585ac11a751c70b49608c07e2d430b1be5cd97051acdb51ba32e7fd09f",
+      "generatedAt": "2026-03-17T05:06:20.445Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu49hvs::artifacts\\research\\evaluations\\evaluation-mmu49hvs.json",
+      "artifactId": "evaluation-mmu49hvs",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu49hvs.json",
+      "sha256": "428f4a4c83dada8863c2c306597ef94ee9e4f2188d0c0852e75745a11d4fa630",
+      "generatedAt": "2026-03-17T04:32:48.330Z",
+      "sizeBytes": 22575,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::evaluation-snapshot::evaluation-mmu493il::artifacts\\research\\evaluations\\evaluation-mmu493il.json",
+      "artifactId": "evaluation-mmu493il",
+      "artifactType": "evaluation-snapshot",
+      "filePath": "artifacts\\research\\evaluations\\evaluation-mmu493il.json",
+      "sha256": "7b317f4c9303b034451c2231f72c292636550ff17d38671fc733ceb13808ecfa",
+      "generatedAt": "2026-03-17T04:32:29.711Z",
+      "sizeBytes": 22577,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::replay-package::replay-mmswm37m::artifacts\\research\\replay-packages\\replay-mmswm37m.json",
+      "artifactId": "replay-mmswm37m",
+      "artifactType": "replay-package",
+      "filePath": "artifacts\\research\\replay-packages\\replay-mmswm37m.json",
+      "sha256": "e6625ff17fa61719a99101014be2dc454ba185255848f9216d850ca0b503ae05",
+      "generatedAt": "2026-03-16T08:10:53.746Z",
+      "sizeBytes": 777,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmswmxf7::artifacts\\simulations\\session-mmswmxf7.json",
+      "artifactId": "session-mmswmxf7",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmswmxf7.json",
+      "sha256": "65e4d48b75f40576ff8432db802ba9e1953f436f0042ab17748ee84d1cf52ddc",
+      "generatedAt": "2026-03-16T08:11:31.902Z",
+      "sizeBytes": 1323,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmswm3xz::artifacts\\simulations\\session-mmswm3xz.json",
+      "artifactId": "session-mmswm3xz",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmswm3xz.json",
+      "sha256": "e07a3494e90ae58340d1887ea42bd6738f717495540e1d5d773fbdee5f1b9e60",
+      "generatedAt": "2026-03-16T08:10:53.690Z",
+      "sizeBytes": 1319,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmspqtm8::artifacts\\simulations\\session-mmspqtm8.json",
+      "artifactId": "session-mmspqtm8",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmspqtm8.json",
+      "sha256": "f8bede5434885c0718e64954da64c28665703b16e7981aa001ee39d02da16d78",
+      "generatedAt": "2026-03-16T04:58:36.273Z",
+      "sizeBytes": 1268,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmspqnn7::artifacts\\simulations\\session-mmspqnn7.json",
+      "artifactId": "session-mmspqnn7",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmspqnn7.json",
+      "sha256": "1ed474c69baafc5c576caca9cb520dfa88cf64bb0fa7e81030df9271567bb09e",
+      "generatedAt": "2026-03-16T04:58:28.532Z",
+      "sizeBytes": 1268,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmsoyrf6::artifacts\\simulations\\session-mmsoyrf6.json",
+      "artifactId": "session-mmsoyrf6",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyrf6.json",
+      "sha256": "ab418ab06b61d975b516874046ad4aaa3778aedc3759a0c2f5f15a077e61b229",
+      "generatedAt": "2026-03-16T04:36:47.057Z",
+      "sizeBytes": 1377,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmsoyh3k::artifacts\\simulations\\session-mmsoyh3k.json",
+      "artifactId": "session-mmsoyh3k",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyh3k.json",
+      "sha256": "4ce6c770ad83a294f9355b8d095f3966145de7203c71635f5f13eb3040c0d1cb",
+      "generatedAt": "2026-03-16T04:36:33.681Z",
+      "sizeBytes": 1282,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmsoyazp::artifacts\\simulations\\session-mmsoyazp.json",
+      "artifactId": "session-mmsoyazp",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoyazp.json",
+      "sha256": "e5339ee91546789e6fb5153b2db95391c1aeaee08622a20ca8b30d6cfb4bd2d3",
+      "generatedAt": "2026-03-16T04:36:25.765Z",
+      "sizeBytes": 1281,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmsoy7jq::artifacts\\simulations\\session-mmsoy7jq.json",
+      "artifactId": "session-mmsoy7jq",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmsoy7jq.json",
+      "sha256": "ba61c0094c5b8b8f6b50beaa10a99c3c4d3bce0b4cf90cc760e0275633d7f818",
+      "generatedAt": "2026-03-16T04:36:21.303Z",
+      "sizeBytes": 1281,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::session::session-mmr9gnwd::artifacts\\simulations\\session-mmr9gnwd.json",
+      "artifactId": "session-mmr9gnwd",
+      "artifactType": "session",
+      "filePath": "artifacts\\simulations\\session-mmr9gnwd.json",
+      "sha256": "6c1159b1e9e4db4c532d09fde23f9eafe6038bce3a7cd48cf4c3fa537ccbc800",
+      "generatedAt": "2026-03-15T04:35:02.264Z",
+      "sizeBytes": 1199,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmswmxcl::artifacts\\research\\world-state\\wss-mmswmxcl.json",
+      "artifactId": "wss-mmswmxcl",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmswmxcl.json",
+      "sha256": "9ca2212a3a959d91c08dee10e6c36be87cd58c518f3207f650fea793b662be14",
+      "generatedAt": "2026-03-16T08:11:31.799Z",
+      "sizeBytes": 41177,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmswm3vc::artifacts\\research\\world-state\\wss-mmswm3vc.json",
+      "artifactId": "wss-mmswm3vc",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmswm3vc.json",
+      "sha256": "459c97439d115d80b373fcb12f5d793c514ef8adfc8dc67358d4c05219bb40d3",
+      "generatedAt": "2026-03-16T08:10:53.597Z",
+      "sizeBytes": 40649,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmsvwxxd::artifacts\\research\\world-state\\wss-mmsvwxxd.json",
+      "artifactId": "wss-mmsvwxxd",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvwxxd.json",
+      "sha256": "c89a5a438af8868c20cb7909cb90102223850900212204a6a0558c73f8b96033",
+      "generatedAt": "2026-03-16T07:51:19.485Z",
+      "sizeBytes": 39657,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmsvwfuf::artifacts\\research\\world-state\\wss-mmsvwfuf.json",
+      "artifactId": "wss-mmsvwfuf",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvwfuf.json",
+      "sha256": "f34ac4f3097aa25d01c53707b527e48a4b512ce5e333a5c4071690308161db0d",
+      "generatedAt": "2026-03-16T07:50:56.065Z",
+      "sizeBytes": 39423,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmsvw2js::artifacts\\research\\world-state\\wss-mmsvw2js.json",
+      "artifactId": "wss-mmsvw2js",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsvw2js.json",
+      "sha256": "49d4ae5d4c9350ea4811a61d02c2468b5b96a639242c30f2f521fc49806ff258",
+      "generatedAt": "2026-03-16T07:50:38.830Z",
+      "sizeBytes": 39205,
+      "inclusionRole": "context"
+    },
+    {
+      "canonicalKey": "export-artifact::snapshot::wss-mmsum66i::artifacts\\research\\world-state\\wss-mmsum66i.json",
+      "artifactId": "wss-mmsum66i",
+      "artifactType": "snapshot",
+      "filePath": "artifacts\\research\\world-state\\wss-mmsum66i.json",
+      "sha256": "53ed5bd8dc8376a6cda39033ce5a0fbaeccd185033b4c36becb2909b99583e8f",
+      "generatedAt": "2026-03-16T07:14:57.356Z",
+      "sizeBytes": 38790,
+      "inclusionRole": "context"
+    }
+  ],
+  "evidenceLineage": [
+    {
+      "sourceType": "latent-state",
+      "sourceId": "latent-mmu5r25z",
+      "label": "Latent state derivation",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "world-state",
+      "sourceId": "snap-2026-03-17T05:14:27.299Z",
+      "label": "World state snapshot",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "memory",
+      "sourceId": "experiment-memory",
+      "label": "Experiment memory compilation",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmswmx9x-t9di",
+      "label": "Phase 15 progression smoke",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmswm345-h2e1",
+      "label": "Phase 15 lineage smoke",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvwxtx-74t9",
+      "label": "Status code probe",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "dossier",
+      "sourceId": "dossier-1773549290773",
+      "label": "Latest research dossier",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "replay-package",
+      "sourceId": "replay-mmswmxa1",
+      "label": "full-replay-package",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvwfro-kt18",
+      "label": "Hardening verification experiment (limited)",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "evaluation-snapshot",
+      "sourceId": "evaluation-mmu5r21h",
+      "label": "evaluation-mmu5r21h",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-service-first",
+      "label": "service-first compatibility assessment",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-route-first",
+      "label": "route-first compatibility assessment",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-ui-first",
+      "label": "ui-first compatibility assessment",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-minimal-touch",
+      "label": "minimal-touch compatibility assessment",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "compatibility",
+      "sourceId": "compat-structural-refactor",
+      "label": "structural-refactor compatibility assessment",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "transition-pattern",
+      "sourceId": "tp-001",
+      "label": "Under moderate complexity, contained pressure, and smooth friction, strategy 'mixed' tends to dominate with 'structurally-favorable' outcomes.",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "transition-pattern",
+      "sourceId": "tp-blocker-01",
+      "label": "Governance blocker 'Requires explicit manual review. Risk unacceptably high.' recurs across 9 session branch results, indicating a systemic constraint.",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "memory",
+      "sourceId": "calibration-trend",
+      "label": "Calibration trend derivation",
+      "derivedAt": "2026-03-17T05:14:27.221Z"
+    },
+    {
+      "sourceType": "experiment",
+      "sourceId": "exp-mmsvw1ra-jo3q",
+      "label": "Hardening verification experiment",
+      "derivedAt": "2026-03-17T05:14:27.385Z"
+    }
+  ],
+  "totalArtifacts": 50,
+  "evidenceArtifactCount": 4,
+  "contextualArtifactCount": 46,
+  "totalSizeBytes": 917588,
+  "integrityNote": "4 artifact(s) are cited by this brief and 46 are retained for context. All exported artifacts include SHA-256 hashes. Total export size: 896.1 KB.",
+  "integrityGuarantees": [
+    "Every exported artifact is hashed with SHA-256 at export time.",
+    "Artifacts are labeled as either cited by the brief or included for context.",
+    "Evidence lineage is collected deterministically from sections, findings, constraints, and recommendations.",
+    "Research prioritization remains advisory and ranks structural gaps only; it does not imply causal proof or hidden write-side decisions."
+  ]
+}

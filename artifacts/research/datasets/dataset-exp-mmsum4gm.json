@@ -1,0 +1,17 @@
+{
+  "datasetId": "dataset-exp-mmsum4gm",
+  "experimentId": "exp-mmsum4gm",
+  "scenarioId": "scn-service-boundary-hardening",
+  "simulationResults": [],
+  "benchmarkResults": [],
+  "calibrationData": {
+    "comparisonIds": [],
+    "summary": {
+      "totalEvaluated": 0,
+      "alignmentScore": 0,
+      "movement": "insufficient-evidence",
+      "notes": "Not enough data points to establish a structural baseline."
+    }
+  },
+  "createdAt": "2026-03-16T07:15:47.291Z"
+}
