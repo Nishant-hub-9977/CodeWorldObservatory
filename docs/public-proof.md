@@ -58,7 +58,7 @@ Simulation-first control plane for agentic software engineering. Models reposito
 
 ## Links to include
 
-- Live deployment: _add Vercel URL after deploy_
+- Live deployment: <https://code-world-observatory.vercel.app>
 - Portfolio: <https://architected-ai-systems.lovable.app/>
 - Repository README: [../README.md](../README.md)
 - Quantum annex: [quantum-annex.md](quantum-annex.md)

@@ -6,7 +6,7 @@
 
 ## Quick links
 
-- **Live deployment:** _add Vercel URL after deploy_ — see [docs/deployment.md](docs/deployment.md)
+- **Live deployment:** <https://code-world-observatory.vercel.app> — see [docs/deployment.md](docs/deployment.md)
 - **Portfolio:** [Living Systems Portfolio](https://architected-ai-systems.lovable.app/)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md) (route: `/quantum-annex`)
 - **Public positioning:** [docs/public-proof.md](docs/public-proof.md)
@@ -183,7 +183,7 @@ Vercel renders the web application and exported JSON evidence only. Local quantu
 
 ## Links
 
-- **Live deployment:** _add your Vercel URL here after deploying_
+- **Live deployment:** <https://code-world-observatory.vercel.app>
 - **Portfolio:** [Living Systems Portfolio](https://architected-ai-systems.lovable.app/)
 - **Deployment guide:** [docs/deployment.md](docs/deployment.md)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
