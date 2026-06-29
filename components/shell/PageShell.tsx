@@ -43,6 +43,7 @@ export function PageShell({ children }: PageShellProps) {
                             { label: "Observatory", href: "/#observatory" },
                             { label: "Principles", href: "/#principles" },
                             { label: "Docs", href: "/#docs" },
+                            { label: "Simulator", href: "/intervention-simulator" },
                             { label: "Quantum Annex", href: "/quantum-annex" },
                         ].map((item) => (
                             <a

@@ -196,6 +196,19 @@ Full process — the recommended branch → PR → CI → merge flow, rollback (
 
 ---
 
+## Prediction-versus-Reality Ledger
+
+The **Repository Intervention Simulator** (route: `/intervention-simulator`) turns the repository-as-world thesis into a concrete workflow: observe a repository world, propose an intervention, predict its consequences **before** acting, then compare that prediction against an observed outcome.
+
+- **Deterministic mock intervention scenarios** — predefined proposals with intent, scope, failure modes, and rollback posture. No AI model call; CodeWorld is **not** a trained world model.
+- **Predicted-versus-observed comparison** — a ledger surfaces files, tests, build, lint, and runtime mismatches, with an overall prediction quality and unresolved uncertainty.
+- **Human review state** — every scenario records a human decision; approval sits above any real action.
+- **Advisory-only simulator** — **no real repository writes**, no shell commands, no Git API, no deployment trigger. All data is static and typed.
+
+Details and boundaries: [docs/prediction-reality-ledger.md](docs/prediction-reality-ledger.md).
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
@@ -203,6 +216,7 @@ Full process — the recommended branch → PR → CI → merge flow, rollback (
 - **Deployment guide:** [docs/deployment.md](docs/deployment.md)
 - **Release governance:** [docs/release-governance.md](docs/release-governance.md)
 - **Production verification:** [docs/production-verification.md](docs/production-verification.md)
+- **Prediction-versus-Reality Ledger:** [docs/prediction-reality-ledger.md](docs/prediction-reality-ledger.md) (route: `/intervention-simulator`)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 
