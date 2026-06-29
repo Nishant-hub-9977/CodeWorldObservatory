@@ -181,11 +181,28 @@ Vercel renders the web application and exported JSON evidence only. Local quantu
 
 ---
 
+## Release Governance
+
+CodeWorld Observatory follows a lightweight release discipline so the public deployment stays trustworthy.
+
+- **Continuous Integration** ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs on every pull request and on pushes to `main`, validating **type-check**, **lint**, **build**, and **local evidence generation** (the offline Resource Consequence Ledger script). CI is verification-only — it holds no secrets and never deploys.
+- **Vercel handles production deployment.** The GitHub repository is connected to Vercel, so a merge/push to `main` auto-deploys production.
+- **The local `quantum-lab/` stays outside the runtime.** CI runs the evidence script on its runner only; Vercel never executes Python or quantum libraries.
+
+Full process — the recommended branch → PR → CI → merge flow, rollback (Vercel Instant Rollback), hotfix procedure, and verification checklists:
+
+- **Release governance:** [docs/release-governance.md](docs/release-governance.md)
+- **Production verification:** [docs/production-verification.md](docs/production-verification.md)
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
 - **Portfolio:** [Living Systems Portfolio](https://architected-ai-systems.lovable.app/)
 - **Deployment guide:** [docs/deployment.md](docs/deployment.md)
+- **Release governance:** [docs/release-governance.md](docs/release-governance.md)
+- **Production verification:** [docs/production-verification.md](docs/production-verification.md)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 

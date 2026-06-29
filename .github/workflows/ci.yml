@@ -1,0 +1,60 @@
+name: CI
+
+# Verification-only CI for CodeWorld Observatory.
+# It validates the web surface (type-check, lint, build) and confirms the
+# local-only Resource Consequence Ledger evidence script still runs.
+#
+# This workflow never deploys and never requires secrets. Production
+# deployment is handled exclusively by Vercel's GitHub integration on
+# pushes to `main` (see docs/release-governance.md).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+
+jobs:
+  verify:
+    name: Verify (type-check · lint · build · evidence)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Type-check
+        run: npm run type-check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Generate Resource Consequence Ledger evidence (local-only)
+        run: python quantum-lab/experiments/resource_consequence_placeholder.py
