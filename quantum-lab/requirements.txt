@@ -1,0 +1,9 @@
+# Quantum Lab — local-only dependencies
+# The Q1 placeholder requires NONE of these; it uses the Python standard library only.
+# Uncomment selectively for local research. Never install into the Vercel runtime.
+
+# cirq
+# qsimcirq
+# qualtran
+# openfermion
+# tensorflow-quantum

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "annex": "Quantum Research Annex",
+  "description": "External open-source references studied for resource-estimation and simulation-first reasoning. These are independent third-party projects. CodeWorld Observatory does not bundle, vendor, redistribute, or modify them, and claims no affiliation, partnership, or endorsement.",
+  "classification": "external-open-source-reference",
+  "references": [
+    {
+      "name": "Cirq",
+      "maintainer": "quantumlib (Google Quantum AI)",
+      "url": "https://github.com/quantumlib/Cirq",
+      "kind": "external-open-source-reference",
+      "studied_for": "Circuit construction and simulation primitives as a mental model for intervention composition."
+    },
+    {
+      "name": "qsim",
+      "maintainer": "quantumlib (Google Quantum AI)",
+      "url": "https://github.com/quantumlib/qsim",
+      "kind": "external-open-source-reference",
+      "studied_for": "High-performance simulation patterns for heavier consequence spaces."
+    },
+    {
+      "name": "Qualtran",
+      "maintainer": "quantumlib (Google Quantum AI)",
+      "url": "https://github.com/quantumlib/qualtran",
+      "kind": "external-open-source-reference",
+      "studied_for": "Explicit resource estimation and algorithm decomposition discipline."
+    },
+    {
+      "name": "OpenFermion",
+      "maintainer": "quantumlib (Google Quantum AI)",
+      "url": "https://github.com/quantumlib/OpenFermion",
+      "kind": "external-open-source-reference",
+      "studied_for": "Future scientific branch — fermionic systems and Hamiltonians."
+    },
+    {
+      "name": "TensorFlow Quantum",
+      "maintainer": "tensorflow",
+      "url": "https://github.com/tensorflow/quantum",
+      "kind": "external-open-source-reference",
+      "studied_for": "Future hybrid quantum-classical research branch (not in app runtime)."
+    }
+  ],
+  "boundary": "This annex is a research and interpretation layer. It does not claim quantum advantage, does not run production quantum workloads, does not imply affiliation with Google, and does not modify CodeWorld's core simulation-first repository governance thesis."
+}

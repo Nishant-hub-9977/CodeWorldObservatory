@@ -46,3 +46,11 @@ Thumbs.db
 
 # Data artifacts (exclude large raw data)
 /data/raw/
+
+# Quantum Research Annex — external reference repos (study only, never committed)
+external/google-quantum/
+
+# Quantum lab local results & Python virtualenv
+quantum-lab/.venv/
+quantum-lab/__pycache__/
+quantum-lab/experiments/__pycache__/

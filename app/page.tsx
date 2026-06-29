@@ -137,6 +137,13 @@ export default function ObservatoryHomePage() {
                             >
                                 Read Principles
                             </a>
+                            <a
+                                href="/quantum-annex"
+                                className="inline-flex items-center gap-1.5 px-2 py-2.5 text-sm font-medium text-text-muted hover:text-accent transition-colors duration-200"
+                            >
+                                Quantum Annex
+                                <span aria-hidden="true" className="text-xs">→</span>
+                            </a>
                         </div>
                     </div>
 

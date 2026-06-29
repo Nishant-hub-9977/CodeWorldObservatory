@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "annex": "Quantum Research Annex",
+  "purpose": "Conceptual reference map of Google Quantum AI open-source tools and their interpretation within CodeWorld Observatory. External references only — not bundled application code.",
+  "boundary": "This annex is a research and interpretation layer. It does not claim quantum advantage, does not run production quantum workloads, does not imply affiliation with Google, and does not modify CodeWorld's core simulation-first repository governance thesis.",
+  "tools": [
+    {
+      "name": "Cirq",
+      "category": "circuit-construction-and-simulation",
+      "role_in_quantum_stack": "Reference for quantum circuit construction, manipulation, simulation, and noisy intermediate-scale quantum (NISQ) experimentation.",
+      "codeworld_interpretation": "Analog for explicit construction of an intervention plan from primitive operations before any execution — circuits as composable, inspectable change graphs.",
+      "usage_status": "reference",
+      "boundary_note": "Studied externally. Not imported into the web app. Optional local research dependency only.",
+      "official_repo_url": "https://github.com/quantumlib/Cirq"
+    },
+    {
+      "name": "qsim",
+      "category": "high-performance-simulation",
+      "role_in_quantum_stack": "Reference for high-performance simulation of quantum circuits when Cirq-level experiments become computationally heavier.",
+      "codeworld_interpretation": "Analog for scaling simulation-before-write reasoning when intervention consequence spaces grow large — predicting outcomes before committing.",
+      "usage_status": "reference",
+      "boundary_note": "Heavy simulation is local-only. Never executed inside the Vercel web runtime.",
+      "official_repo_url": "https://github.com/quantumlib/qsim"
+    },
+    {
+      "name": "Qualtran",
+      "category": "algorithm-and-resource-estimation",
+      "role_in_quantum_stack": "Reference for representing algorithms, decompositions, and resource requirements with explicit accounting.",
+      "codeworld_interpretation": "Strongest conceptual fit. Maps directly to CodeWorld's structured intervention accounting — the Resource Consequence Ledger inherits its discipline of explicit, decomposable resource estimation.",
+      "usage_status": "reference",
+      "boundary_note": "Conceptual inspiration for software resource accounting. No quantum claims are made.",
+      "official_repo_url": "https://github.com/quantumlib/qualtran"
+    },
+    {
+      "name": "OpenFermion",
+      "category": "scientific-fermionic-systems",
+      "role_in_quantum_stack": "Reference for chemistry, materials, fermionic systems, Hamiltonians, and scientific simulation.",
+      "codeworld_interpretation": "Future scientific branch only. Reserved for later research into domain-specific consequence modeling. Not part of Q1.",
+      "usage_status": "future",
+      "boundary_note": "Future scientific branch. Not used in the web app or Q1 lab scaffold.",
+      "official_repo_url": "https://github.com/quantumlib/OpenFermion"
+    },
+    {
+      "name": "TensorFlow Quantum",
+      "category": "hybrid-quantum-classical-ml",
+      "role_in_quantum_stack": "Reference for hybrid quantum-classical machine learning research.",
+      "codeworld_interpretation": "Future hybrid research branch only. Must not be added to the web app runtime.",
+      "usage_status": "future",
+      "boundary_note": "Future hybrid branch. Explicitly excluded from the application runtime.",
+      "official_repo_url": "https://github.com/tensorflow/quantum"
+    }
+  ]
+}

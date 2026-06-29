@@ -1,0 +1,29 @@
+{
+  "run_id": "qx-run-1782746311",
+  "experiment_name": "Resource Consequence Ledger \u2014 interpretation placeholder",
+  "source": "quantum-lab/experiments/resource_consequence_placeholder.py",
+  "assumptions": [
+    "Resource accounting discipline (Qualtran-inspired) maps onto software interventions.",
+    "No quantum hardware or simulator is required for this placeholder."
+  ],
+  "predicted_resources": {
+    "files_affected": 6,
+    "dependency_zones_touched": 2,
+    "test_surfaces_predicted_to_fail": 1
+  },
+  "observed_result": {
+    "files_affected": 6,
+    "dependency_zones_touched": 2,
+    "test_surfaces_failed": 0,
+    "optional_quantum_tools_detected": []
+  },
+  "uncertainty": "high \u2014 placeholder data, not a scientific measurement",
+  "limitations": [
+    "No real quantum simulation performed.",
+    "No quantum advantage claimed.",
+    "Not affiliated with Google."
+  ],
+  "human_approval_state": "pending",
+  "simulation_status": "simulated-before-write",
+  "timestamp": "2026-06-29T15:18:31.224194+00:00"
+}

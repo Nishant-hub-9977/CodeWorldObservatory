@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "annex": "Quantum Research Annex",
+  "description": "Initial placeholder experiments only. No scientific claims. These define the interpretation surface where resource-estimation thinking is mapped onto software intervention governance.",
+  "experiments": [
+    {
+      "id": "qx-placeholder-001",
+      "name": "Resource Consequence Ledger — interpretation placeholder",
+      "status": "placeholder",
+      "objective": "Demonstrate how explicit resource accounting maps onto a software intervention's predicted consequences.",
+      "tools_referenced": ["Qualtran"],
+      "claims": "none",
+      "produces": "quantum-lab/results/sample_result.json",
+      "notes": "Lightweight, no quantum dependencies required. Local-only."
+    },
+    {
+      "id": "qx-placeholder-002",
+      "name": "Simulation-before-write cost framing — interpretation placeholder",
+      "status": "placeholder",
+      "objective": "Frame simulation cost vs. intervention risk as an accounting tradeoff inspired by circuit simulation scaling.",
+      "tools_referenced": ["Cirq", "qsim"],
+      "claims": "none",
+      "produces": "n/a",
+      "notes": "Conceptual placeholder. Not executed in the web runtime."
+    }
+  ],
+  "boundary": "This annex is a research and interpretation layer. It does not claim quantum advantage, does not run production quantum workloads, does not imply affiliation with Google, and does not modify CodeWorld's core simulation-first repository governance thesis."
+}

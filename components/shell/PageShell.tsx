@@ -40,9 +40,10 @@ export function PageShell({ children }: PageShellProps) {
 
                     <div className="flex items-center gap-6">
                         {[
-                            { label: "Observatory", href: "#observatory" },
-                            { label: "Principles", href: "#principles" },
-                            { label: "Docs", href: "#docs" },
+                            { label: "Observatory", href: "/#observatory" },
+                            { label: "Principles", href: "/#principles" },
+                            { label: "Docs", href: "/#docs" },
+                            { label: "Quantum Annex", href: "/quantum-annex" },
                         ].map((item) => (
                             <a
                                 key={item.href}
