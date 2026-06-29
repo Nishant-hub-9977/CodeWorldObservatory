@@ -197,14 +197,30 @@ export class ExportManifestBuilder {
             .filter(f => f.startsWith("manifest-") && f.endsWith(".json"));
         if (files.length === 0) return null;
 
-        files.sort((a, b) => {
-            const statA = fs.statSync(path.join(MANIFEST_DIR, a));
-            const statB = fs.statSync(path.join(MANIFEST_DIR, b));
-            return statB.mtimeMs - statA.mtimeMs;
-        });
+        // Order newest-first by id. Manifest ids encode their creation time, so
+        // this is deterministic even in immutable deploy environments (e.g.
+        // Vercel) where every checked-out file shares an identical mtime — which
+        // made the previous mtime-based sort non-deterministic in production and
+        // could surface a legacy manifest missing current-schema fields.
+        files.sort((a, b) => b.localeCompare(a));
 
-        const data = fs.readFileSync(path.join(MANIFEST_DIR, files[0]), "utf-8");
-        return JSON.parse(data) as ExportManifest;
+        // Prefer the newest manifest that matches the current schema so the UI
+        // never receives a legacy artifact missing required fields such as
+        // replayStatusSummary. Fall back to the newest readable manifest.
+        let newestReadable: ExportManifest | null = null;
+        for (const file of files) {
+            try {
+                const parsed = JSON.parse(
+                    fs.readFileSync(path.join(MANIFEST_DIR, file), "utf-8")
+                ) as ExportManifest;
+                if (newestReadable === null) newestReadable = parsed;
+                if (parsed?.replayStatusSummary) return parsed;
+            } catch {
+                // Skip unreadable/corrupt manifest and continue scanning.
+            }
+        }
+
+        return newestReadable;
     }
 
     // ─── Internal Helpers ─────────────────────────────────────────

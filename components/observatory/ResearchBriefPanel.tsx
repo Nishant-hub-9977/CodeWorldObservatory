@@ -114,22 +114,22 @@ export function ResearchBriefPanel() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-[10px] font-mono text-text-muted">
                     <div className="rounded-md border border-border-subtle bg-surface-hover p-3">
                         <p className="uppercase tracking-widest">evidence class</p>
-                        <p className="text-text-primary mt-1">{brief.replayStatusSummary.evidenceClass}</p>
+                        <p className="text-text-primary mt-1">{brief.replayStatusSummary?.evidenceClass ?? "\u2014"}</p>
                     </div>
                     <div className="rounded-md border border-border-subtle bg-surface-hover p-3">
                         <p className="uppercase tracking-widest">baseline-only</p>
-                        <p className="text-text-primary mt-1">{brief.replayStatusSummary.baselineOnlyCount}</p>
+                        <p className="text-text-primary mt-1">{brief.replayStatusSummary?.baselineOnlyCount ?? "\u2014"}</p>
                     </div>
                     <div className="rounded-md border border-border-subtle bg-surface-hover p-3">
                         <p className="uppercase tracking-widest">partial</p>
-                        <p className="text-text-primary mt-1">{brief.replayStatusSummary.partialCount}</p>
+                        <p className="text-text-primary mt-1">{brief.replayStatusSummary?.partialCount ?? "\u2014"}</p>
                     </div>
                     <div className="rounded-md border border-border-subtle bg-surface-hover p-3">
                         <p className="uppercase tracking-widest">full</p>
-                        <p className="text-text-primary mt-1">{brief.replayStatusSummary.fullCount}</p>
+                        <p className="text-text-primary mt-1">{brief.replayStatusSummary?.fullCount ?? "\u2014"}</p>
                     </div>
                 </div>
-                <p className="text-[10px] font-mono text-text-muted mt-3 leading-relaxed">{brief.replayStatusSummary.reproducibilityCaveat}</p>
+                <p className="text-[10px] font-mono text-text-muted mt-3 leading-relaxed">{brief.replayStatusSummary?.reproducibilityCaveat ?? "Replay status summary unavailable for this brief."}</p>
             </div>
 
             <div className="px-5 py-3 border-b border-border-subtle bg-surface-hover">

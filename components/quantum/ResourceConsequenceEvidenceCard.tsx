@@ -17,8 +17,8 @@ const EVIDENCE_BOUNDARY =
 
 type BadgeVariant = "signal" | "caution" | "verified" | "risk" | "muted";
 
-function approvalVariant(state: string): BadgeVariant {
-    switch (state.toLowerCase()) {
+function approvalVariant(state: string | undefined | null): BadgeVariant {
+    switch ((state ?? "").trim().toLowerCase()) {
         case "approved":
             return "verified";
         case "rejected":
@@ -26,11 +26,14 @@ function approvalVariant(state: string): BadgeVariant {
         case "pending":
             return "caution";
         default:
+            // Unknown / missing approval states fall back to a neutral,
+            // non-alarming institutional style rather than crashing.
             return "muted";
     }
 }
 
-function formatTimestamp(iso: string): string {
+function formatTimestamp(iso: string | undefined | null): string {
+    if (!iso) return "\u2014";
     try {
         return new Date(iso).toISOString().replace("T", " ").replace(/\.\d+Z$/, "Z");
     } catch {
@@ -70,7 +73,10 @@ export function ResourceConsequenceEvidenceCard({
 }) {
     const pr = evidence.predicted_resources;
     const ob = evidence.observed_result;
-    const toolsDetected = ob.optional_quantum_tools_detected;
+    const toolsDetected = ob?.optional_quantum_tools_detected ?? [];
+    const approvalLabel = evidence.human_approval_state?.trim() || "unknown";
+    const assumptions = evidence.assumptions ?? [];
+    const limitations = evidence.limitations ?? [];
 
     return (
         <article className="obs-panel flex flex-col gap-5">
@@ -89,8 +95,8 @@ export function ResourceConsequenceEvidenceCard({
                         Human Approval State
                     </span>
                     <StatusBadge
-                        label={evidence.human_approval_state}
-                        variant={approvalVariant(evidence.human_approval_state)}
+                        label={approvalLabel}
+                        variant={approvalVariant(approvalLabel)}
                     />
                 </div>
             </div>
@@ -109,17 +115,17 @@ export function ResourceConsequenceEvidenceCard({
                 <div className="rounded-md border border-border-subtle bg-surface-elevated p-1">
                     <SectionLabel className="px-3 pt-2">Predicted Resources</SectionLabel>
                     <div className="grid grid-cols-3 gap-1">
-                        <MetricCell label="Files" value={pr.files_affected} />
-                        <MetricCell label="Dep Zones" value={pr.dependency_zones_touched} />
-                        <MetricCell label="Test Fails" value={pr.test_surfaces_predicted_to_fail} />
+                        <MetricCell label="Files" value={pr?.files_affected ?? "\u2014"} />
+                        <MetricCell label="Dep Zones" value={pr?.dependency_zones_touched ?? "\u2014"} />
+                        <MetricCell label="Test Fails" value={pr?.test_surfaces_predicted_to_fail ?? "\u2014"} />
                     </div>
                 </div>
                 <div className="rounded-md border border-border-subtle bg-surface-elevated p-1">
                     <SectionLabel className="px-3 pt-2">Observed Result</SectionLabel>
                     <div className="grid grid-cols-3 gap-1">
-                        <MetricCell label="Files" value={ob.files_affected} />
-                        <MetricCell label="Dep Zones" value={ob.dependency_zones_touched} />
-                        <MetricCell label="Test Fails" value={ob.test_surfaces_failed} />
+                        <MetricCell label="Files" value={ob?.files_affected ?? "\u2014"} />
+                        <MetricCell label="Dep Zones" value={ob?.dependency_zones_touched ?? "\u2014"} />
+                        <MetricCell label="Test Fails" value={ob?.test_surfaces_failed ?? "\u2014"} />
                     </div>
                     <p className="px-3 pb-2 text-[10px] font-mono text-text-muted">
                         Optional quantum tools detected:{" "}
@@ -131,13 +137,13 @@ export function ResourceConsequenceEvidenceCard({
             {/* Uncertainty */}
             <div className="rounded-md border border-border-subtle bg-surface-elevated px-4 py-3">
                 <SectionLabel className="!mb-1">Uncertainty</SectionLabel>
-                <p className="text-xs leading-relaxed text-text-secondary">{evidence.uncertainty}</p>
+                <p className="text-xs leading-relaxed text-text-secondary">{evidence.uncertainty ?? "\u2014"}</p>
             </div>
 
             {/* Assumptions & Limitations */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <EvidenceList label="Assumptions" items={evidence.assumptions} />
-                <EvidenceList label="Limitations" items={evidence.limitations} />
+                <EvidenceList label="Assumptions" items={assumptions} />
+                <EvidenceList label="Limitations" items={limitations} />
             </div>
 
             <ObsDivider />

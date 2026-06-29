@@ -106,6 +106,44 @@ export function ExportManifestPanel() {
 
     if (!manifest) return null;
 
+    // Defensive: manifests created before the current export schema (legacy
+    // artifacts) lack replayStatusSummary and other required fields. Rather
+    // than crash on missing properties, render a neutral institutional
+    // fallback that preserves the panel chrome and the re-export action.
+    if (!manifest.replayStatusSummary) {
+        return (
+            <div className="rounded-lg border border-border-subtle bg-surface overflow-hidden shadow-2xl backdrop-blur-xl">
+                <div className="p-4 flex items-center justify-between border-b border-border-subtle bg-surface">
+                    <div className="flex items-center space-x-3">
+                        <Package className="w-5 h-5 text-accent" />
+                        <h2 className="text-lg font-mono font-bold tracking-tight text-text-primary">
+                            Export Manifest
+                        </h2>
+                        <span className="hidden sm:inline-block ml-2 px-2 py-0.5 rounded border font-mono text-xs text-text-muted bg-surface-hover border-border-subtle">
+                            {manifest.id}
+                        </span>
+                    </div>
+                    <button
+                        onClick={handleExport}
+                        disabled={isExporting}
+                        className="flex items-center space-x-2 px-3 py-1.5 rounded-md bg-surface-hover hover:bg-surface-active border border-border-subtle text-text-primary font-mono text-xs transition-colors disabled:opacity-50"
+                    >
+                        <RefreshCw className={`w-3 h-3 ${isExporting ? "animate-spin" : ""}`} />
+                        <span>{isExporting ? "EXPORTING" : "RE-EXPORT"}</span>
+                    </button>
+                </div>
+                <div className="p-8 flex flex-col items-center justify-center gap-3 text-center">
+                    <p className="text-sm text-text-muted font-mono">
+                        This manifest predates the current export schema.
+                    </p>
+                    <p className="text-[11px] text-text-muted/70 font-mono max-w-md leading-relaxed">
+                        Re-export the briefing to generate a current, fully-detailed manifest with replay lineage, comparative posture, and integrity guarantees.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
     assertUniqueKeys(
         "ExportManifestPanel.artifacts",
         manifest.artifacts.map(artifact => artifact.canonicalKey)
