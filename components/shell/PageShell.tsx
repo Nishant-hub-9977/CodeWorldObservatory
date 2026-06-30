@@ -45,6 +45,7 @@ export function PageShell({ children }: PageShellProps) {
                             { label: "Docs", href: "/#docs" },
                             { label: "Simulator", href: "/intervention-simulator" },
                             { label: "Snapshot", href: "/repository-snapshot" },
+                            { label: "Evidence Pack", href: "/evidence-pack" },
                             { label: "Quantum Annex", href: "/quantum-annex" },
                         ].map((item) => (
                             <a

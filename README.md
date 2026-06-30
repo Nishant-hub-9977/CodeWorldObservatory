@@ -236,6 +236,19 @@ Details and boundaries: [docs/snapshot-simulator-bridge.md](docs/snapshot-simula
 
 ---
 
+## External Evidence Pack Boundary
+
+The **External Evidence Pack Boundary** (route: `/evidence-pack`) demonstrates how CodeWorld could review repository evidence from another project without creating an upload, GitHub, or execution surface.
+
+- **Static external evidence-pack sample** — committed JSON represents a hypothetical external repository snapshot, not live or private repository data.
+- **Schema validation and normalization** — required fields are checked, optional fields are normalized, and unsupported capabilities are rejected or flagged.
+- **Comparison against CodeWorld** — the sample is compared with the current static CodeWorld repository snapshot: files, edges, routes, consequence-bearing edges, unresolved imports, dominant families, risk surfaces, and validation status.
+- **Read-only boundary** — advisory-only, no runtime scanning, no upload storage, no GitHub writes, no shell execution, and no repository mutation.
+
+Details and boundaries: [docs/external-evidence-pack.md](docs/external-evidence-pack.md).
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
@@ -246,6 +259,7 @@ Details and boundaries: [docs/snapshot-simulator-bridge.md](docs/snapshot-simula
 - **Prediction-versus-Reality Ledger:** [docs/prediction-reality-ledger.md](docs/prediction-reality-ledger.md) (route: `/intervention-simulator`)
 - **Repository Snapshot Evidence:** [docs/repository-snapshot.md](docs/repository-snapshot.md) (route: `/repository-snapshot`)
 - **Snapshot-to-Simulator Bridge:** [docs/snapshot-simulator-bridge.md](docs/snapshot-simulator-bridge.md)
+- **External Evidence Pack Boundary:** [docs/external-evidence-pack.md](docs/external-evidence-pack.md) (route: `/evidence-pack`)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 

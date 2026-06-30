@@ -3,39 +3,39 @@
   "generator": "scripts/generate-repository-snapshot.mjs",
   "repositoryName": "codeworld-observatory",
   "boundary": "Static, read-only approximation of repository structure produced locally by scripts/generate-repository-snapshot.mjs. No code is executed, no files are mutated, no Git write APIs are called. This is not a complete runtime dependency graph.",
-  "digest": "sha256:e61927cf37f2db3b83740fdcbda713d27c2dc344fbd952e88b4a54721ec4009f",
+  "digest": "sha256:e5ca8e891ef8bf321fffa1379d5edd1747c912303479e9d2dea6b5b613fe608d",
   "summary": {
-    "fileCount": 234,
-    "totalLines": 31989,
-    "totalBytes": 1529353,
-    "edgeCount": 555,
+    "fileCount": 246,
+    "totalLines": 33215,
+    "totalBytes": 1587294,
+    "edgeCount": 582,
     "unresolvedImportCount": 4,
-    "externalImportCount": 143,
+    "externalImportCount": 149,
     "families": {
       "asset": 1,
-      "component": 37,
+      "component": 42,
       "config": 6,
-      "data": 2,
-      "documentation": 55,
+      "data": 3,
+      "documentation": 56,
       "layout": 1,
-      "module": 124,
-      "route": 4,
+      "module": 128,
+      "route": 5,
       "script": 2,
       "style": 1,
       "workflow": 1
     },
     "domains": {
-      "core-observatory": 203,
+      "core-observatory": 215,
       "intervention-simulator": 19,
       "quantum-annex": 6,
       "release-governance": 6
     },
     "edgeKinds": {
-      "consequence": 35,
-      "governance": 15,
+      "consequence": 44,
+      "governance": 16,
       "research": 6,
       "simulator": 72,
-      "structural": 427
+      "structural": 444
     }
   },
   "files": [
@@ -725,6 +725,30 @@
       "docLinks": []
     },
     {
+      "path": "app/evidence-pack/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "core-observatory",
+      "lines": 168,
+      "bytes": 9356,
+      "imports": [
+        "components/evidence-pack/EvidencePackBoundaryPanel.tsx",
+        "components/evidence-pack/EvidencePackComparison.tsx",
+        "components/evidence-pack/EvidencePackRiskSurface.tsx",
+        "components/evidence-pack/EvidencePackSummary.tsx",
+        "components/evidence-pack/EvidencePackValidationPanel.tsx",
+        "components/ui/ObsCommon.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/evidence-pack/derived.ts",
+        "lib/evidence-pack/evidence-pack.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
       "path": "app/globals.css",
       "ext": ".css",
       "family": "style",
@@ -864,6 +888,92 @@
       "unresolvedImports": [],
       "externalImports": [
         "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/evidence-pack/EvidencePackBoundaryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 64,
+      "bytes": 3083,
+      "imports": [
+        "components/ui/ObsCommon.tsx"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/evidence-pack/EvidencePackComparison.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 80,
+      "bytes": 4725,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/evidence-pack/derived.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/evidence-pack/EvidencePackRiskSurface.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 96,
+      "bytes": 5809,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/evidence-pack/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/evidence-pack/EvidencePackSummary.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 79,
+      "bytes": 4810,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/evidence-pack/derived.ts",
+        "lib/evidence-pack/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/evidence-pack/EvidencePackValidationPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 82,
+      "bytes": 4905,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/evidence-pack/derived.ts",
+        "lib/evidence-pack/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
       ],
       "docLinks": []
     },
@@ -1451,8 +1561,8 @@
       "ext": ".tsx",
       "family": "component",
       "domain": "core-observatory",
-      "lines": 109,
-      "bytes": 6040,
+      "lines": 110,
+      "bytes": 6121,
       "imports": [
         "lib/constants/observatory-status.ts",
         "lib/constants/observatory.ts",
@@ -1522,6 +1632,18 @@
       "domain": "core-observatory",
       "lines": 148,
       "bytes": 5408,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "data/external-evidence-pack.json",
+      "ext": ".json",
+      "family": "data",
+      "domain": "core-observatory",
+      "lines": 105,
+      "bytes": 3346,
       "imports": [],
       "unresolvedImports": [],
       "externalImports": [],
@@ -1630,6 +1752,18 @@
       "domain": "core-observatory",
       "lines": 30,
       "bytes": 1259,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/external-evidence-pack.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 126,
+      "bytes": 4231,
       "imports": [],
       "unresolvedImports": [],
       "externalImports": [],
@@ -2150,6 +2284,63 @@
         "lib/types/future-state.ts",
         "lib/types/intervention.ts",
         "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/evidence-pack/derived.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 115,
+      "bytes": 4962,
+      "imports": [
+        "lib/evidence-pack/types.ts",
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/snapshot.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/evidence-pack/evidence-pack.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 9,
+      "bytes": 572,
+      "imports": [
+        "data/external-evidence-pack.json",
+        "lib/evidence-pack/validate.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/evidence-pack/types.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 91,
+      "bytes": 2814,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/evidence-pack/validate.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 196,
+      "bytes": 8055,
+      "imports": [
+        "lib/evidence-pack/types.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [],
@@ -3723,11 +3914,12 @@
       "ext": ".md",
       "family": "documentation",
       "domain": "release-governance",
-      "lines": 262,
-      "bytes": 12351,
+      "lines": 276,
+      "bytes": 13543,
       "imports": [
         ".github/workflows/ci.yml",
         "docs/deployment.md",
+        "docs/external-evidence-pack.md",
         "docs/prediction-reality-ledger.md",
         "docs/production-verification.md",
         "docs/public-proof.md",
@@ -3742,6 +3934,7 @@
       "docLinks": [
         ".github/workflows/ci.yml",
         "docs/deployment.md",
+        "docs/external-evidence-pack.md",
         "docs/prediction-reality-ledger.md",
         "docs/production-verification.md",
         "docs/public-proof.md",
@@ -4447,6 +4640,51 @@
       "kind": "structural"
     },
     {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/evidence-pack/EvidencePackBoundaryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/evidence-pack/EvidencePackComparison.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/evidence-pack/EvidencePackRiskSurface.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/evidence-pack/EvidencePackSummary.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/evidence-pack/EvidencePackValidationPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "lib/evidence-pack/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/evidence-pack/page.tsx",
+      "to": "lib/evidence-pack/evidence-pack.ts",
+      "kind": "structural"
+    },
+    {
       "from": "app/intervention-simulator/page.tsx",
       "to": "components/interventions/HumanAuthorityPanel.tsx",
       "kind": "simulator"
@@ -4670,6 +4908,61 @@
       "from": "app/repository-snapshot/page.tsx",
       "to": "lib/repository-snapshot/snapshot.ts",
       "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackBoundaryPanel.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackComparison.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackComparison.tsx",
+      "to": "lib/evidence-pack/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackRiskSurface.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackRiskSurface.tsx",
+      "to": "lib/evidence-pack/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackSummary.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackSummary.tsx",
+      "to": "lib/evidence-pack/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackSummary.tsx",
+      "to": "lib/evidence-pack/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackValidationPanel.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackValidationPanel.tsx",
+      "to": "lib/evidence-pack/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/evidence-pack/EvidencePackValidationPanel.tsx",
+      "to": "lib/evidence-pack/types.ts",
+      "kind": "structural"
     },
     {
       "from": "components/interventions/HumanAuthorityPanel.tsx",
@@ -5219,6 +5512,36 @@
     {
       "from": "lib/data/mock-observatory-data.ts",
       "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/evidence-pack/derived.ts",
+      "to": "lib/evidence-pack/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/evidence-pack/derived.ts",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "consequence"
+    },
+    {
+      "from": "lib/evidence-pack/derived.ts",
+      "to": "lib/repository-snapshot/snapshot.ts",
+      "kind": "consequence"
+    },
+    {
+      "from": "lib/evidence-pack/evidence-pack.ts",
+      "to": "data/external-evidence-pack.json",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/evidence-pack/evidence-pack.ts",
+      "to": "lib/evidence-pack/validate.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/evidence-pack/validate.ts",
+      "to": "lib/evidence-pack/types.ts",
       "kind": "structural"
     },
     {
@@ -6579,6 +6902,11 @@
     {
       "from": "README.md",
       "to": "docs/deployment.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/external-evidence-pack.md",
       "kind": "governance"
     },
     {

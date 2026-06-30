@@ -1,0 +1,105 @@
+{
+  "pack_id": "external-pack-sample-service-control-plane-001",
+  "source_type": "external_static_sample",
+  "repository_label": "Hypothetical Service Control Plane",
+  "generated_by": "offline-static-pack-generator-sample",
+  "schema_version": "external-evidence-pack/1.0.0",
+  "file_count": 86,
+  "edge_count": 142,
+  "route_count": 7,
+  "component_count": 24,
+  "data_module_count": 12,
+  "docs_count": 15,
+  "unresolved_import_count": 3,
+  "consequence_bearing_edges": [
+    {
+      "from": "app/routes/admin-dashboard.tsx",
+      "to": "components/shell/AppShell.tsx",
+      "reason": "Shared shell target is reachable from multiple route surfaces."
+    },
+    {
+      "from": "app/routes/customer-insights.tsx",
+      "to": "lib/data/customer-store.ts",
+      "reason": "Data store target feeds multiple reporting routes."
+    },
+    {
+      "from": "components/workflows/ApprovalPanel.tsx",
+      "to": "lib/policy/review-state.ts",
+      "reason": "Human review state is shared by approval and audit surfaces."
+    }
+  ],
+  "file_families": {
+    "route": 7,
+    "component": 24,
+    "module": 22,
+    "documentation": 15,
+    "data": 12,
+    "config": 4,
+    "workflow": 2
+  },
+  "domains": {
+    "product_surface": 31,
+    "data_access": 18,
+    "governance": 14,
+    "documentation": 15,
+    "release_operations": 8
+  },
+  "risk_surfaces": [
+    {
+      "id": "shared-shell",
+      "label": "Shared shell and navigation",
+      "severity": "HIGH",
+      "files": [
+        "components/shell/AppShell.tsx",
+        "components/navigation/PrimaryNav.tsx"
+      ],
+      "reason": "A shell change can alter multiple route surfaces."
+    },
+    {
+      "id": "data-store",
+      "label": "Central customer data store",
+      "severity": "MEDIUM",
+      "files": [
+        "lib/data/customer-store.ts",
+        "lib/data/reporting-cache.ts"
+      ],
+      "reason": "A data access change can widen the reporting review surface."
+    },
+    {
+      "id": "review-policy",
+      "label": "Human review policy state",
+      "severity": "MEDIUM",
+      "files": [
+        "lib/policy/review-state.ts",
+        "docs/review-boundary.md"
+      ],
+      "reason": "Policy state changes require human review before any action."
+    }
+  ],
+  "limitations": [
+    "Static sample only; not generated from a live repository during rendering.",
+    "Import edges are approximate and do not claim runtime dependency completeness.",
+    "Unsupported capabilities are rejected and displayed as boundary evidence.",
+    "Human review is required before any real repository decision."
+  ],
+  "unsupported_fields": [
+    {
+      "field": "requested_capabilities.github_write",
+      "status": "rejected",
+      "reason": "Evidence packs may not request GitHub write access."
+    },
+    {
+      "field": "requested_capabilities.runtime_filesystem_scan",
+      "status": "rejected",
+      "reason": "Evidence packs may not trigger runtime filesystem scanning."
+    },
+    {
+      "field": "requested_capabilities.upload_storage",
+      "status": "rejected",
+      "reason": "Q9 uses committed static samples only and does not provide upload storage."
+    }
+  ],
+  "human_review_required": true,
+  "advisory_only": true,
+  "no_repository_mutation": true
+}
