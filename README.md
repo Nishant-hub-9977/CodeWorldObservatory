@@ -209,6 +209,20 @@ Details and boundaries: [docs/prediction-reality-ledger.md](docs/prediction-real
 
 ---
 
+## Repository Snapshot Evidence
+
+The **Repository Snapshot** (route: `/repository-snapshot`) is a real, read-only capture of this repository's own structure, rendered as static dependency-graph evidence.
+
+- **Local read-only generation** — [`scripts/generate-repository-snapshot.mjs`](scripts/generate-repository-snapshot.mjs) (Node standard library only) scans curated source families and emits [`data/repository-snapshot.json`](data/repository-snapshot.json). The app imports the artifact through a typed wrapper and **never scans the filesystem at request time**.
+- **Static dependency graph evidence** — file families, domains, most-connected files, and a deterministic content digest. It is a static approximation, **not** a complete runtime dependency graph.
+- **Consequence-bearing edge classification** — edges are ranked by cross-route blast radius, so the few shared dependencies that ripple across multiple routes stand out from ordinary structural edges.
+- **Relationship to the prediction-versus-reality workflow** — the snapshot supplies the structural ground truth the Intervention Simulator's predictions should eventually consult.
+- **Advisory-only, no mutation** — no repository writes, no shell commands, no GitHub API, no tokens, no runtime scanning.
+
+Regenerate with `npm run snapshot:repo`. Details and boundaries: [docs/repository-snapshot.md](docs/repository-snapshot.md).
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
@@ -217,6 +231,7 @@ Details and boundaries: [docs/prediction-reality-ledger.md](docs/prediction-real
 - **Release governance:** [docs/release-governance.md](docs/release-governance.md)
 - **Production verification:** [docs/production-verification.md](docs/production-verification.md)
 - **Prediction-versus-Reality Ledger:** [docs/prediction-reality-ledger.md](docs/prediction-reality-ledger.md) (route: `/intervention-simulator`)
+- **Repository Snapshot Evidence:** [docs/repository-snapshot.md](docs/repository-snapshot.md) (route: `/repository-snapshot`)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 

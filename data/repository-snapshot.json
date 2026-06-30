@@ -1,0 +1,6454 @@
+{
+  "schemaVersion": "1.0.0",
+  "generator": "scripts/generate-repository-snapshot.mjs",
+  "repositoryName": "codeworld-observatory",
+  "boundary": "Static, read-only approximation of repository structure produced locally by scripts/generate-repository-snapshot.mjs. No code is executed, no files are mutated, no Git write APIs are called. This is not a complete runtime dependency graph.",
+  "digest": "sha256:ae5dda725730850b3a1146ecae3c4717c0db5c6de5c854de508e2cd2e8f9ac40",
+  "summary": {
+    "fileCount": 229,
+    "totalLines": 31117,
+    "totalBytes": 1486037,
+    "edgeCount": 538,
+    "unresolvedImportCount": 4,
+    "externalImportCount": 141,
+    "families": {
+      "asset": 1,
+      "component": 35,
+      "config": 6,
+      "data": 2,
+      "documentation": 54,
+      "layout": 1,
+      "module": 122,
+      "route": 4,
+      "script": 2,
+      "style": 1,
+      "workflow": 1
+    },
+    "domains": {
+      "core-observatory": 202,
+      "intervention-simulator": 15,
+      "quantum-annex": 6,
+      "release-governance": 6
+    },
+    "edgeKinds": {
+      "consequence": 18,
+      "governance": 14,
+      "research": 6,
+      "simulator": 61,
+      "structural": 439
+    }
+  },
+  "files": [
+    {
+      "path": ".github/agents/codeworld-observatory.agent.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "release-governance",
+      "lines": 205,
+      "bytes": 8373,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "ext": ".yml",
+      "family": "workflow",
+      "domain": "release-governance",
+      "lines": 63,
+      "bytes": 1572,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/benchmarks/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 89,
+      "bytes": 3677,
+      "imports": [
+        "lib/services/benchmark-harness.ts",
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/futures-generator.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/services/session-store.ts",
+        "lib/services/simulation-request-builder.ts",
+        "lib/services/simulation-runner.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/datasets/[id]/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 21,
+      "bytes": 767,
+      "imports": [
+        "lib/services/research-dataset-store.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/datasets/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 13,
+      "bytes": 463,
+      "imports": [
+        "lib/services/research-dataset-store.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/executions/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 175,
+      "bytes": 7184,
+      "imports": [
+        "lib/services/artifact-ledger.ts",
+        "lib/services/execution-store.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/prediction-reality-comparator.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/types/artifact.ts",
+        "lib/types/execution.ts",
+        "lib/types/future-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/experiments/[id]/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 21,
+      "bytes": 777,
+      "imports": [
+        "lib/services/experiment-detail-builder.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/experiments/register/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 63,
+      "bytes": 2798,
+      "imports": [
+        "lib/services/experiment-registry.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/services/research-dataset-store.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/experiments/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 13,
+      "bytes": 465,
+      "imports": [
+        "lib/services/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/futures/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 27,
+      "bytes": 1254,
+      "imports": [
+        "lib/services/futures-generator.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/world-state-capturer.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/interventions/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 127,
+      "bytes": 4945,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/latent-state/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 28,
+      "bytes": 1091,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/latent-state-encoder.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/mcp/contracts/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 18,
+      "bytes": 561,
+      "imports": [
+        "lib/services/mcp-contracts.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/mcp/evaluate/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 32,
+      "bytes": 1066,
+      "imports": [
+        "lib/services/simulation-gate.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/prototype/se-jepa/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 29,
+      "bytes": 966,
+      "imports": [
+        "lib/services/state-transition-chain.ts",
+        "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/brief/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 22,
+      "bytes": 771,
+      "imports": [
+        "lib/services/research-brief-generator.ts",
+        "lib/types/research-export.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/comparisons/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 26,
+      "bytes": 1070,
+      "imports": [
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/types/experiment-evaluation-record.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/dossier/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 25,
+      "bytes": 992,
+      "imports": [
+        "lib/services/dossier-generator.ts",
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/evaluations/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 47,
+      "bytes": 1758,
+      "imports": [
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/types/experiment-evaluation-record.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/export/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 70,
+      "bytes": 2680,
+      "imports": [
+        "lib/services/briefing-snapshot-writer.ts",
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/services/export-manifest-builder.ts",
+        "lib/services/export-snapshot-coordinator.ts",
+        "lib/services/research-brief-generator.ts",
+        "lib/types/research-export.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/governance-synthesis/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 62,
+      "bytes": 3392,
+      "imports": [
+        "lib/services/comparative-governance-synthesizer.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/priority-drift-analyzer.ts",
+        "lib/services/priority-history-analyzer.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/services/snapshot-comparator.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/memory/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 21,
+      "bytes": 732,
+      "imports": [
+        "lib/services/experiment-memory.ts",
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/priorities/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 39,
+      "bytes": 2303,
+      "imports": [
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/types/research-prioritization.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/priority-drift/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 46,
+      "bytes": 2633,
+      "imports": [
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/priority-drift-analyzer.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/types/research-priority-drift.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/priority-history/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 83,
+      "bytes": 3861,
+      "imports": [
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/priority-history-analyzer.ts",
+        "lib/services/priority-history-store.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/services/snapshot-comparator.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/replay/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 26,
+      "bytes": 1142,
+      "imports": [
+        "lib/services/experiment-registry.ts",
+        "lib/services/reproducibility-engine.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/statistics/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 16,
+      "bytes": 580,
+      "imports": [
+        "lib/services/statistical-evaluator.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/timeline/export/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 24,
+      "bytes": 896,
+      "imports": [
+        "lib/services/research-timeline-builder.ts",
+        "lib/types/research-timeline.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/timeline/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 23,
+      "bytes": 791,
+      "imports": [
+        "lib/services/research-timeline-builder.ts",
+        "lib/types/research-timeline.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/research/trends/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 52,
+      "bytes": 2920,
+      "imports": [
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/experiment-memory.ts",
+        "lib/services/session-comparator.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/scenarios/library/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 13,
+      "bytes": 464,
+      "imports": [
+        "lib/services/scenario-library.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/scenarios/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 38,
+      "bytes": 1571,
+      "imports": [
+        "lib/services/research-dataset-store.ts",
+        "lib/services/scenario-library.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/simulations/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 144,
+      "bytes": 6237,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/futures-generator.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/services/session-store.ts",
+        "lib/services/simulation-request-builder.ts",
+        "lib/services/simulation-runner.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/snapshot/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 54,
+      "bytes": 2104,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/world-state-capturer.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/strategy-compatibility/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 31,
+      "bytes": 1348,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/latent-state-encoder.ts",
+        "lib/services/strategy-compatibility-analyzer.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/transition-patterns/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 25,
+      "bytes": 869,
+      "imports": [
+        "lib/services/transition-pattern-analyzer.ts",
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/world-state/history/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 13,
+      "bytes": 488,
+      "imports": [
+        "lib/services/world-state-capture.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/world-state/snapshot/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 21,
+      "bytes": 1000,
+      "imports": [
+        "lib/services/replay-package-builder.ts",
+        "lib/services/world-state-capture.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/globals.css",
+      "ext": ".css",
+      "family": "style",
+      "domain": "core-observatory",
+      "lines": 507,
+      "bytes": 12461,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "app/icon.svg",
+      "ext": ".svg",
+      "family": "asset",
+      "domain": "core-observatory",
+      "lines": 17,
+      "bytes": 782,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "app/intervention-simulator/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "intervention-simulator",
+      "lines": 126,
+      "bytes": 8573,
+      "imports": [
+        "components/interventions/HumanAuthorityPanel.tsx",
+        "components/interventions/InterventionSimulator.tsx",
+        "components/interventions/RepositoryStateCard.tsx",
+        "components/ui/ObsCommon.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/interventions/mock-repository-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/layout.tsx",
+      "ext": ".tsx",
+      "family": "layout",
+      "domain": "core-observatory",
+      "lines": 52,
+      "bytes": 1966,
+      "imports": [
+        "app/globals.css",
+        "components/shell/PageShell.tsx",
+        "lib/theme/theme-provider.tsx"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next",
+        "next/font/google"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "core-observatory",
+      "lines": 330,
+      "bytes": 17966,
+      "imports": [
+        "components/observatory/ArtifactLedgerPanel.tsx",
+        "components/observatory/BenchmarkHarnessPanel.tsx",
+        "components/observatory/ExperimentRegistryPanel.tsx",
+        "components/observatory/ExportManifestPanel.tsx",
+        "components/observatory/FuturesPanel.tsx",
+        "components/observatory/InterventionsPanel.tsx",
+        "components/observatory/LatentStatePanel.tsx",
+        "components/observatory/PredictionRealityPanel.tsx",
+        "components/observatory/PrototypeMappingPanel.tsx",
+        "components/observatory/ResearchBriefPanel.tsx",
+        "components/observatory/ResearchDossierPanel.tsx",
+        "components/observatory/ResearchMemoryPanel.tsx",
+        "components/observatory/ResearchStatisticsPanel.tsx",
+        "components/observatory/ResearchTimelinePanel.tsx",
+        "components/observatory/ScenarioLibraryPanel.tsx",
+        "components/observatory/StrategyCompatibilityPanel.tsx",
+        "components/observatory/TransitionPatternsPanel.tsx",
+        "components/observatory/UncertaintyPanel.tsx",
+        "components/observatory/WorldStatePanel.tsx",
+        "components/ui/PrincipleCard.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/constants/observatory-status.ts",
+        "lib/constants/observatory.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "app/quantum-annex/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "quantum-annex",
+      "lines": 276,
+      "bytes": 15733,
+      "imports": [
+        "components/quantum/ResourceConsequenceEvidenceCard.tsx",
+        "components/ui/ObsCommon.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/quantum/sample-result.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/repository-snapshot/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "core-observatory",
+      "lines": 173,
+      "bytes": 10546,
+      "imports": [
+        "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+        "components/repository-snapshot/DependencyGraphEvidence.tsx",
+        "components/repository-snapshot/FileFamilyBreakdown.tsx",
+        "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+        "components/repository-snapshot/SnapshotBoundaryPanel.tsx",
+        "components/ui/ObsCommon.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/repository-snapshot/snapshot.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/HumanAuthorityPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 54,
+      "bytes": 2783,
+      "imports": [
+        "components/ui/ObsCommon.tsx"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/InterventionScenarioCard.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 206,
+      "bytes": 10337,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/interventions/intervention-scenarios.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/InterventionSimulator.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 58,
+      "bytes": 2640,
+      "imports": [
+        "components/interventions/InterventionScenarioCard.tsx",
+        "components/interventions/PredictionRealityLedger.tsx",
+        "lib/interventions/intervention-scenarios.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/PredictionRealityLedger.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 169,
+      "bytes": 8031,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/prediction-reality-ledger.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/RepositoryStateCard.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 188,
+      "bytes": 8727,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/interventions/mock-repository-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ArtifactLedgerPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 206,
+      "bytes": 8723,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/artifact.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/BenchmarkHarnessPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 108,
+      "bytes": 5184,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ExperimentRegistryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 507,
+      "bytes": 31199,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/constants/observatory-status.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/governance-synthesis.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ExportManifestPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 362,
+      "bytes": 22617,
+      "imports": [
+        "lib/types/research-export.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/FuturesPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 181,
+      "bytes": 8113,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/future-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/InterventionsPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 393,
+      "bytes": 16471,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/intervention.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/LatentStatePanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 171,
+      "bytes": 8095,
+      "imports": [
+        "lib/types/latent-state.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ObservatoryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 69,
+      "bytes": 2334,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/PredictionRealityPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 178,
+      "bytes": 8195,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/execution.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/PrototypeMappingPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 104,
+      "bytes": 4973,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ResearchBriefPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 405,
+      "bytes": 26004,
+      "imports": [
+        "lib/types/research-export.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ResearchDossierPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 262,
+      "bytes": 14024,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/types/governance-synthesis.ts",
+        "lib/types/research-memory.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ResearchMemoryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 213,
+      "bytes": 13233,
+      "imports": [
+        "lib/types/research-memory.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ResearchStatisticsPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 249,
+      "bytes": 13238,
+      "imports": [
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ResearchTimelinePanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 496,
+      "bytes": 34648,
+      "imports": [
+        "lib/types/research-timeline.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/ScenarioLibraryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 186,
+      "bytes": 10841,
+      "imports": [
+        "lib/types/experiment-registry.ts",
+        "lib/types/research-dataset.ts",
+        "lib/types/scenario.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/StrategyCompatibilityPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 158,
+      "bytes": 7679,
+      "imports": [
+        "lib/types/latent-state.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/TransitionPatternsPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 142,
+      "bytes": 7278,
+      "imports": [
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/UncertaintyPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 168,
+      "bytes": 6966,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/future-state.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/observatory/WorldStatePanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 305,
+      "bytes": 13069,
+      "imports": [
+        "components/observatory/ObservatoryPanel.tsx",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/quantum/ResourceConsequenceEvidenceCard.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "quantum-annex",
+      "lines": 158,
+      "bytes": 7449,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/quantum/sample-result.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 118,
+      "bytes": 6670,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/repository-snapshot/DependencyGraphEvidence.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 137,
+      "bytes": 7448,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/repository-snapshot/FileFamilyBreakdown.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 103,
+      "bytes": 5551,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 72,
+      "bytes": 4253,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/repository-snapshot/SnapshotBoundaryPanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 67,
+      "bytes": 3352,
+      "imports": [
+        "components/ui/ObsCommon.tsx"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/shell/PageShell.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 109,
+      "bytes": 6040,
+      "imports": [
+        "lib/constants/observatory-status.ts",
+        "lib/constants/observatory.ts",
+        "lib/theme/theme-provider.tsx"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/ui/ObsCommon.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 108,
+      "bytes": 3354,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/ui/PrincipleCard.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 35,
+      "bytes": 1267,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "components/ui/SectionHeader.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "core-observatory",
+      "lines": 30,
+      "bytes": 919,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "data/artifact-ledger.json",
+      "ext": ".json",
+      "family": "data",
+      "domain": "core-observatory",
+      "lines": 144,
+      "bytes": 4583,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "data/executions.json",
+      "ext": ".json",
+      "family": "data",
+      "domain": "core-observatory",
+      "lines": 148,
+      "bytes": 5408,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/ami-strategic-context.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 72,
+      "bytes": 4943,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/antigravity-operating-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 126,
+      "bytes": 7932,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/architecture.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 824,
+      "bytes": 45957,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/benchmark-philosophy.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 158,
+      "bytes": 9430,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/build-phases.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 670,
+      "bytes": 41124,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/constitution.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 145,
+      "bytes": 5665,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/deployment.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 111,
+      "bytes": 3990,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/evaluation-persistence-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 66,
+      "bytes": 2358,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/experiment-registry-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 30,
+      "bytes": 1259,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/latent-state-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 159,
+      "bytes": 6391,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/prediction-reality-ledger.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "intervention-simulator",
+      "lines": 128,
+      "bytes": 5960,
+      "imports": [
+        "docs/production-verification.md",
+        "docs/release-governance.md",
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/mock-repository-state.ts",
+        "lib/interventions/prediction-reality-ledger.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        "docs/production-verification.md",
+        "docs/release-governance.md",
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/mock-repository-state.ts",
+        "lib/interventions/prediction-reality-ledger.ts"
+      ]
+    },
+    {
+      "path": "docs/production-verification.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "release-governance",
+      "lines": 116,
+      "bytes": 4593,
+      "imports": [
+        "docs/release-governance.md"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        "docs/release-governance.md"
+      ]
+    },
+    {
+      "path": "docs/project-charter.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 137,
+      "bytes": 12538,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/public-proof.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 65,
+      "bytes": 4457,
+      "imports": [
+        "README.md",
+        "docs/deployment.md",
+        "docs/quantum-annex.md"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        "README.md",
+        "docs/deployment.md",
+        "docs/quantum-annex.md"
+      ]
+    },
+    {
+      "path": "docs/quantum-annex.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "quantum-annex",
+      "lines": 78,
+      "bytes": 4347,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/release-governance.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "release-governance",
+      "lines": 174,
+      "bytes": 7253,
+      "imports": [
+        ".github/workflows/ci.yml",
+        "docs/production-verification.md",
+        "docs/public-proof.md",
+        "docs/quantum-annex.md"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        ".github/workflows/ci.yml",
+        "docs/production-verification.md",
+        "docs/public-proof.md",
+        "docs/quantum-annex.md"
+      ]
+    },
+    {
+      "path": "docs/repository-snapshot.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 144,
+      "bytes": 6412,
+      "imports": [
+        "docs/prediction-reality-ledger.md",
+        "docs/release-governance.md",
+        "lib/repository-snapshot/snapshot.ts",
+        "scripts/generate-repository-snapshot.mjs"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        "docs/prediction-reality-ledger.md",
+        "docs/release-governance.md",
+        "lib/repository-snapshot/snapshot.ts",
+        "scripts/generate-repository-snapshot.mjs"
+      ]
+    },
+    {
+      "path": "docs/reproducibility-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 38,
+      "bytes": 2768,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/research-dossier-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 136,
+      "bytes": 7454,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/research-export-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 142,
+      "bytes": 4894,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/research-prioritization-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 34,
+      "bytes": 1410,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/research-timeline-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 90,
+      "bytes": 3506,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/research/gemini-se-jepa-source.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 176,
+      "bytes": 28338,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/scenario-library-model.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 34,
+      "bytes": 1080,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/se-jepa-mapping.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 207,
+      "bytes": 12532,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/simulation-before-write-law.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 175,
+      "bytes": 10782,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/ui-system.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 193,
+      "bytes": 6894,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/world-model-thesis.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 136,
+      "bytes": 9197,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "eslint.config.mjs",
+      "ext": ".mjs",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 32,
+      "bytes": 1367,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "eslint-config-next/core-web-vitals",
+        "eslint/config"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "evals/benchmark-dimensions.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 103,
+      "bytes": 3880,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/experiment-memory-dimensions.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 112,
+      "bytes": 6367,
+      "imports": [
+        "evals/benchmark-dimensions.md",
+        "evals/prediction-vs-reality-metrics.md",
+        "evals/research-dossier-metrics.md",
+        "evals/simulation-session-metrics.md"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        "evals/benchmark-dimensions.md",
+        "evals/prediction-vs-reality-metrics.md",
+        "evals/research-dossier-metrics.md",
+        "evals/simulation-session-metrics.md"
+      ]
+    },
+    {
+      "path": "evals/export-lineage-integrity.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 121,
+      "bytes": 4235,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/latent-state-dimensions.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 103,
+      "bytes": 3967,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/prediction-vs-reality-metrics.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 175,
+      "bytes": 5251,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/README.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 56,
+      "bytes": 2024,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/research-brief-quality.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 126,
+      "bytes": 5384,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/research-dossier-metrics.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 33,
+      "bytes": 2373,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/se-jepa-prototype-metrics.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 36,
+      "bytes": 2674,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/simulation-session-metrics.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 42,
+      "bytes": 2629,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/strategy-compatibility-metrics.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 130,
+      "bytes": 5830,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/strategy-shift-detection.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 31,
+      "bytes": 969,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "evals/timeline-coherence.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 31,
+      "bytes": 1057,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/constants/governance.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 93,
+      "bytes": 5887,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/constants/observatory-status.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 10,
+      "bytes": 1666,
+      "imports": [
+        "lib/constants/observatory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/constants/observatory.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 123,
+      "bytes": 5266,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/data/mock-observatory-data.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 298,
+      "bytes": 12459,
+      "imports": [
+        "lib/types/artifact.ts",
+        "lib/types/future-state.ts",
+        "lib/types/intervention.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/interventions/intervention-scenarios.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 388,
+      "bytes": 17335,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/interventions/mock-repository-state.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 138,
+      "bytes": 4763,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/interventions/prediction-reality-ledger.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 197,
+      "bytes": 7583,
+      "imports": [
+        "lib/interventions/intervention-scenarios.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/quantum/sample-result.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "quantum-annex",
+      "lines": 31,
+      "bytes": 1122,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/repository-snapshot/derived.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 207,
+      "bytes": 7086,
+      "imports": [
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/repository-snapshot/snapshot.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 11,
+      "bytes": 722,
+      "imports": [
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/repository-snapshot/types.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 77,
+      "bytes": 2183,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/action-representation.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 31,
+      "bytes": 1226,
+      "imports": [
+        "lib/types/intervention.ts",
+        "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/artifact-ledger.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 61,
+      "bytes": 2158,
+      "imports": [
+        "lib/data/mock-observatory-data.ts",
+        "lib/types/artifact.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/benchmark-harness.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 87,
+      "bytes": 3712,
+      "imports": [
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/blocker-pattern-detector.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 39,
+      "bytes": 1709,
+      "imports": [
+        "lib/types/research-timeline.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/briefing-snapshot-writer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 78,
+      "bytes": 3132,
+      "imports": [
+        "lib/types/research-export.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/calibration-tracker.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 107,
+      "bytes": 4686,
+      "imports": [
+        "lib/types/execution.ts",
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/calibration-trajectory-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 77,
+      "bytes": 3293,
+      "imports": [
+        "lib/services/calibration-tracker.ts",
+        "lib/types/execution.ts",
+        "lib/types/research-timeline.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/comparative-governance-synthesizer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 539,
+      "bytes": 23019,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/constants/observatory-status.ts",
+        "lib/constants/observatory.ts",
+        "lib/types/governance-synthesis.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/dependency-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 172,
+      "bytes": 5786,
+      "imports": [
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [
+        "../bar/baz",
+        "./foo",
+        "./items",
+        "./module"
+      ],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/dossier-generator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 329,
+      "bytes": 20548,
+      "imports": [
+        "lib/constants/observatory.ts",
+        "lib/services/comparative-governance-synthesizer.ts",
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/experiment-memory.ts",
+        "lib/services/priority-drift-analyzer.ts",
+        "lib/services/priority-history-analyzer.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/services/session-comparator.ts",
+        "lib/services/snapshot-comparator.ts",
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/evaluation-snapshot-store.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 176,
+      "bytes": 9877,
+      "imports": [
+        "lib/constants/observatory.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/types/experiment-evaluation-record.ts",
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/evidence-weighted-evaluator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 503,
+      "bytes": 23221,
+      "imports": [
+        "lib/services/statistical-evaluator.ts",
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/execution-store.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 62,
+      "bytes": 2268,
+      "imports": [
+        "lib/types/execution.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/experiment-detail-builder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 116,
+      "bytes": 5320,
+      "imports": [
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/execution-store.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/services/reproducibility-engine.ts",
+        "lib/services/research-dataset-store.ts",
+        "lib/services/session-store.ts",
+        "lib/services/world-state-capture.ts",
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/experiment-memory.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 242,
+      "bytes": 11450,
+      "imports": [
+        "lib/services/calibration-tracker.ts",
+        "lib/types/research-memory.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/experiment-registry.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 208,
+      "bytes": 9126,
+      "imports": [
+        "lib/types/experiment-registry.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/export-manifest-builder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 390,
+      "bytes": 15313,
+      "imports": [
+        "lib/constants/observatory.ts",
+        "lib/types/research-export.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "crypto",
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/export-snapshot-coordinator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 47,
+      "bytes": 2917,
+      "imports": [
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/priority-history-store.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/future-prototype-mapper.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 48,
+      "bytes": 2309,
+      "imports": [
+        "lib/types/future-state.ts",
+        "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/futures-generator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 102,
+      "bytes": 4403,
+      "imports": [
+        "lib/services/uncertainty-analyzer.ts",
+        "lib/types/future-state.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/intervention-planner.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 272,
+      "bytes": 13359,
+      "imports": [
+        "lib/services/scope-analyzer.ts",
+        "lib/types/intervention.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/latent-state-encoder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 318,
+      "bytes": 15085,
+      "imports": [
+        "lib/types/latent-state.ts",
+        "lib/types/simulation.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/latent-transition-chain.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 167,
+      "bytes": 6996,
+      "imports": [
+        "lib/services/action-representation.ts",
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/execution-store.ts",
+        "lib/services/future-prototype-mapper.ts",
+        "lib/services/futures-generator.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/latent-state-encoder.ts",
+        "lib/services/observation-encoder.ts",
+        "lib/services/strategy-compatibility-analyzer.ts",
+        "lib/services/transition-pattern-analyzer.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/intervention.ts",
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/mcp-contracts.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 94,
+      "bytes": 5160,
+      "imports": [
+        "lib/types/mcp.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/observation-encoder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 45,
+      "bytes": 1817,
+      "imports": [
+        "lib/types/se-jepa.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/prediction-reality-comparator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 82,
+      "bytes": 3842,
+      "imports": [
+        "lib/types/execution.ts",
+        "lib/types/future-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/priority-drift-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 260,
+      "bytes": 10993,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/services/dossier-generator.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/priority-history-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 306,
+      "bytes": 14001,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/services/priority-history-store.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/priority-history-store.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 112,
+      "bytes": 4967,
+      "imports": [
+        "lib/constants/observatory-status.ts",
+        "lib/constants/observatory.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/recommendation-governance.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 133,
+      "bytes": 6818,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/replay-package-builder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 94,
+      "bytes": 5155,
+      "imports": [
+        "lib/services/execution-store.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/session-store.ts",
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/reproducibility-engine.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 111,
+      "bytes": 5343,
+      "imports": [
+        "lib/services/experiment-registry.ts",
+        "lib/services/replay-package-builder.ts",
+        "lib/services/world-state-capture.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/research-brief-generator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 1061,
+      "bytes": 65364,
+      "imports": [
+        "lib/constants/observatory.ts",
+        "lib/services/comparative-governance-synthesizer.ts",
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/dossier-generator.ts",
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/experiment-memory.ts",
+        "lib/services/latent-state-encoder.ts",
+        "lib/services/priority-drift-analyzer.ts",
+        "lib/services/priority-history-analyzer.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/services/snapshot-comparator.ts",
+        "lib/services/strategy-compatibility-analyzer.ts",
+        "lib/services/transition-pattern-analyzer.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/intervention.ts",
+        "lib/types/latent-state.ts",
+        "lib/types/research-export.ts",
+        "lib/types/research-memory.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/research-dataset-store.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 137,
+      "bytes": 6545,
+      "imports": [
+        "lib/services/calibration-tracker.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/types/execution.ts",
+        "lib/types/research-dataset.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/research-prioritization-engine.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 202,
+      "bytes": 11088,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/research-export.ts",
+        "lib/types/research-prioritization.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/research-timeline-builder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 447,
+      "bytes": 25547,
+      "imports": [
+        "lib/constants/observatory.ts",
+        "lib/services/blocker-pattern-detector.ts",
+        "lib/services/calibration-trajectory-analyzer.ts",
+        "lib/services/comparative-governance-synthesizer.ts",
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/evaluation-snapshot-store.ts",
+        "lib/services/evidence-weighted-evaluator.ts",
+        "lib/services/experiment-detail-builder.ts",
+        "lib/services/experiment-memory.ts",
+        "lib/services/latent-state-encoder.ts",
+        "lib/services/priority-drift-analyzer.ts",
+        "lib/services/priority-history-analyzer.ts",
+        "lib/services/recommendation-governance.ts",
+        "lib/services/research-prioritization-engine.ts",
+        "lib/services/snapshot-comparator.ts",
+        "lib/services/strategy-compatibility-analyzer.ts",
+        "lib/services/strategy-shift-detector.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/intervention.ts",
+        "lib/types/research-timeline.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/scenario-library.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 49,
+      "bytes": 2306,
+      "imports": [
+        "lib/services/experiment-registry.ts",
+        "lib/types/scenario.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/scope-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 200,
+      "bytes": 7599,
+      "imports": [
+        "lib/types/intervention.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/session-comparator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 206,
+      "bytes": 10079,
+      "imports": [
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/session-store.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 80,
+      "bytes": 3002,
+      "imports": [
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/simulation-gate.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 61,
+      "bytes": 3140,
+      "imports": [
+        "lib/services/artifact-ledger.ts",
+        "lib/services/futures-generator.ts",
+        "lib/types/mcp.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/simulation-request-builder.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 40,
+      "bytes": 1481,
+      "imports": [
+        "lib/types/future-state.ts",
+        "lib/types/intervention.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/simulation-runner.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 81,
+      "bytes": 3122,
+      "imports": [
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/snapshot-comparator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 434,
+      "bytes": 17193,
+      "imports": [
+        "lib/constants/governance.ts",
+        "lib/services/priority-history-store.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/state-transition-chain.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 96,
+      "bytes": 4632,
+      "imports": [
+        "lib/services/action-representation.ts",
+        "lib/services/execution-store.ts",
+        "lib/services/future-prototype-mapper.ts",
+        "lib/services/futures-generator.ts",
+        "lib/services/intervention-planner.ts",
+        "lib/services/observation-encoder.ts",
+        "lib/services/scope-analyzer.ts",
+        "lib/types/intervention.ts",
+        "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/statistical-evaluator.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 167,
+      "bytes": 7433,
+      "imports": [
+        "lib/types/execution.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/strategy-compatibility-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 279,
+      "bytes": 12299,
+      "imports": [
+        "lib/types/intervention.ts",
+        "lib/types/latent-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/strategy-shift-detector.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 35,
+      "bytes": 1443,
+      "imports": [
+        "lib/types/research-timeline.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/transition-pattern-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 274,
+      "bytes": 12121,
+      "imports": [
+        "lib/types/intervention.ts",
+        "lib/types/latent-state.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/uncertainty-analyzer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 97,
+      "bytes": 4327,
+      "imports": [
+        "lib/types/future-state.ts",
+        "lib/types/intervention.ts",
+        "lib/utils/observatory-key.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/world-state-capture.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 100,
+      "bytes": 4248,
+      "imports": [
+        "lib/services/dependency-analyzer.ts",
+        "lib/services/experiment-registry.ts",
+        "lib/services/world-state-capturer.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/services/world-state-capturer.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 184,
+      "bytes": 6127,
+      "imports": [
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "crypto",
+        "fs",
+        "path"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/theme/theme-provider.tsx",
+      "ext": ".tsx",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 77,
+      "bytes": 2613,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/artifact.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 77,
+      "bytes": 2700,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/execution.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 63,
+      "bytes": 2045,
+      "imports": [
+        "lib/types/future-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/experiment-evaluation-record.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 72,
+      "bytes": 2668,
+      "imports": [
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/experiment-evaluation.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 83,
+      "bytes": 3129,
+      "imports": [
+        "lib/types/experiment-registry.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/experiment-registry.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 125,
+      "bytes": 3581,
+      "imports": [
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/intervention.ts",
+        "lib/types/research-dataset.ts",
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/future-state.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 106,
+      "bytes": 3626,
+      "imports": [
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/governance-synthesis.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 123,
+      "bytes": 5581,
+      "imports": [
+        "lib/types/research-prioritization.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/intervention.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 145,
+      "bytes": 5952,
+      "imports": [
+        "lib/types/world-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/latent-state.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 158,
+      "bytes": 6788,
+      "imports": [
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/mcp.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 76,
+      "bytes": 2213,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-dataset.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 23,
+      "bytes": 584,
+      "imports": [
+        "lib/types/research-memory.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-export.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 209,
+      "bytes": 8169,
+      "imports": [
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/governance-synthesis.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts",
+        "lib/types/research-priority-history.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-memory.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 102,
+      "bytes": 3470,
+      "imports": [
+        "lib/types/governance-synthesis.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-prioritization.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 34,
+      "bytes": 1010,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-priority-drift.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 71,
+      "bytes": 3020,
+      "imports": [
+        "lib/types/research-prioritization.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-priority-history.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 161,
+      "bytes": 6581,
+      "imports": [
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/research-timeline.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 129,
+      "bytes": 4681,
+      "imports": [
+        "lib/types/execution.ts",
+        "lib/types/experiment-evaluation.ts",
+        "lib/types/experiment-registry.ts",
+        "lib/types/governance-synthesis.ts",
+        "lib/types/intervention.ts",
+        "lib/types/latent-state.ts",
+        "lib/types/research-prioritization.ts",
+        "lib/types/research-priority-drift.ts",
+        "lib/types/research-priority-history.ts",
+        "lib/types/simulation.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/scenario.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 20,
+      "bytes": 523,
+      "imports": [
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/se-jepa.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 78,
+      "bytes": 2730,
+      "imports": [
+        "lib/types/execution.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/simulation.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 96,
+      "bytes": 3633,
+      "imports": [
+        "lib/types/future-state.ts",
+        "lib/types/intervention.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/types/world-state.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 131,
+      "bytes": 4389,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/utils/observatory-key.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 51,
+      "bytes": 1724,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "mcp/mcp-tools-spec.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 291,
+      "bytes": 7648,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "mcp/README.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 44,
+      "bytes": 2001,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "mcp/server-plan.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 113,
+      "bytes": 3610,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "next.config.ts",
+      "ext": ".ts",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 8,
+      "bytes": 162,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "package.json",
+      "ext": ".json",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 32,
+      "bytes": 798,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "postcss.config.mjs",
+      "ext": ".mjs",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 9,
+      "bytes": 178,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "postcss-load-config"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "prompts/antigravity-master-prompt-v1.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 100,
+      "bytes": 3809,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "prompts/implementation-pass-phase1.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 91,
+      "bytes": 2956,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "prompts/ui-pass-observatory.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 79,
+      "bytes": 3460,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "quantum-lab/experiments/resource_consequence_placeholder.py",
+      "ext": ".py",
+      "family": "script",
+      "domain": "quantum-annex",
+      "lines": 75,
+      "bytes": 2774,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "quantum-lab/README.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "quantum-annex",
+      "lines": 31,
+      "bytes": 1289,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "README.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "release-governance",
+      "lines": 248,
+      "bytes": 11188,
+      "imports": [
+        ".github/workflows/ci.yml",
+        "docs/deployment.md",
+        "docs/prediction-reality-ledger.md",
+        "docs/production-verification.md",
+        "docs/public-proof.md",
+        "docs/quantum-annex.md",
+        "docs/release-governance.md",
+        "docs/repository-snapshot.md",
+        "scripts/generate-repository-snapshot.mjs"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": [
+        ".github/workflows/ci.yml",
+        "docs/deployment.md",
+        "docs/prediction-reality-ledger.md",
+        "docs/production-verification.md",
+        "docs/public-proof.md",
+        "docs/quantum-annex.md",
+        "docs/release-governance.md",
+        "docs/repository-snapshot.md",
+        "scripts/generate-repository-snapshot.mjs"
+      ]
+    },
+    {
+      "path": "scripts/generate-repository-snapshot.mjs",
+      "ext": ".mjs",
+      "family": "script",
+      "domain": "release-governance",
+      "lines": 456,
+      "bytes": 18402,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "node:crypto",
+        "node:fs",
+        "node:path",
+        "node:url",
+        "x"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "skills/artifact-auditor/SKILL.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 46,
+      "bytes": 2007,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "skills/counterfactual-planner/SKILL.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 55,
+      "bytes": 2662,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "skills/repo-state-capturer/SKILL.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 50,
+      "bytes": 2093,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "skills/world-model-governor/SKILL.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 62,
+      "bytes": 3214,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "tailwind.config.ts",
+      "ext": ".ts",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 77,
+      "bytes": 3705,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [
+        "tailwindcss"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "tsconfig.json",
+      "ext": ".json",
+      "family": "config",
+      "domain": "core-observatory",
+      "lines": 41,
+      "bytes": 739,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/benchmark-harness.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/session-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/simulation-request-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/simulation-runner.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/benchmarks/route.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/datasets/[id]/route.ts",
+      "to": "lib/services/research-dataset-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/datasets/route.ts",
+      "to": "lib/services/research-dataset-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/services/artifact-ledger.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/services/execution-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/services/prediction-reality-comparator.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/types/artifact.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/executions/route.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/experiments/[id]/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/experiments/register/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/experiments/register/route.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/experiments/register/route.ts",
+      "to": "lib/services/research-dataset-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/experiments/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/futures/route.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/futures/route.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/futures/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/interventions/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/interventions/route.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/interventions/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/interventions/route.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/latent-state/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/latent-state/route.ts",
+      "to": "lib/services/latent-state-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/latent-state/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/latent-state/route.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/mcp/contracts/route.ts",
+      "to": "lib/services/mcp-contracts.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/mcp/evaluate/route.ts",
+      "to": "lib/services/simulation-gate.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/prototype/se-jepa/route.ts",
+      "to": "lib/services/state-transition-chain.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/prototype/se-jepa/route.ts",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/brief/route.ts",
+      "to": "lib/services/research-brief-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/brief/route.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/comparisons/route.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/comparisons/route.ts",
+      "to": "lib/types/experiment-evaluation-record.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/dossier/route.ts",
+      "to": "lib/services/dossier-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/dossier/route.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/evaluations/route.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/evaluations/route.ts",
+      "to": "lib/types/experiment-evaluation-record.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/services/briefing-snapshot-writer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/services/export-manifest-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/services/export-snapshot-coordinator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/services/research-brief-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/export/route.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/comparative-governance-synthesizer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/priority-drift-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/priority-history-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/governance-synthesis/route.ts",
+      "to": "lib/services/snapshot-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/memory/route.ts",
+      "to": "lib/services/experiment-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/memory/route.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priorities/route.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priorities/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priorities/route.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priorities/route.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/services/priority-drift-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-drift/route.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/priority-history-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/priority-history-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/services/snapshot-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/priority-history/route.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/replay/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/replay/route.ts",
+      "to": "lib/services/reproducibility-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/statistics/route.ts",
+      "to": "lib/services/statistical-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/timeline/export/route.ts",
+      "to": "lib/services/research-timeline-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/timeline/export/route.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/timeline/route.ts",
+      "to": "lib/services/research-timeline-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/timeline/route.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/trends/route.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/trends/route.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/trends/route.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/trends/route.ts",
+      "to": "lib/services/experiment-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/research/trends/route.ts",
+      "to": "lib/services/session-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/scenarios/library/route.ts",
+      "to": "lib/services/scenario-library.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/scenarios/route.ts",
+      "to": "lib/services/research-dataset-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/scenarios/route.ts",
+      "to": "lib/services/scenario-library.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/session-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/simulation-request-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/simulation-runner.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/simulations/route.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/api/snapshot/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/snapshot/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/strategy-compatibility/route.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/strategy-compatibility/route.ts",
+      "to": "lib/services/latent-state-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/strategy-compatibility/route.ts",
+      "to": "lib/services/strategy-compatibility-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/strategy-compatibility/route.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/strategy-compatibility/route.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/transition-patterns/route.ts",
+      "to": "lib/services/transition-pattern-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/transition-patterns/route.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/world-state/history/route.ts",
+      "to": "lib/services/world-state-capture.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/world-state/snapshot/route.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/world-state/snapshot/route.ts",
+      "to": "lib/services/world-state-capture.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "components/interventions/HumanAuthorityPanel.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "components/interventions/InterventionSimulator.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "components/interventions/RepositoryStateCard.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/intervention-simulator/page.tsx",
+      "to": "lib/interventions/mock-repository-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "app/globals.css",
+      "kind": "structural"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "components/shell/PageShell.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "lib/theme/theme-provider.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ArtifactLedgerPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/BenchmarkHarnessPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ExperimentRegistryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ExportManifestPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/FuturesPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/InterventionsPanel.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/LatentStatePanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/PredictionRealityPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/PrototypeMappingPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ResearchBriefPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ResearchDossierPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ResearchMemoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ResearchStatisticsPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ResearchTimelinePanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/ScenarioLibraryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/StrategyCompatibilityPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/TransitionPatternsPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/UncertaintyPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/observatory/WorldStatePanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/ui/PrincipleCard.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/constants/observatory-status.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/quantum-annex/page.tsx",
+      "to": "components/quantum/ResourceConsequenceEvidenceCard.tsx",
+      "kind": "research"
+    },
+    {
+      "from": "app/quantum-annex/page.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/quantum-annex/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/quantum-annex/page.tsx",
+      "to": "lib/quantum/sample-result.ts",
+      "kind": "research"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/repository-snapshot/DependencyGraphEvidence.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/repository-snapshot/FileFamilyBreakdown.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/repository-snapshot/SnapshotBoundaryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/repository-snapshot/page.tsx",
+      "to": "lib/repository-snapshot/snapshot.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/interventions/HumanAuthorityPanel.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/InterventionScenarioCard.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/InterventionScenarioCard.tsx",
+      "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "components/interventions/InterventionScenarioCard.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "components/interventions/PredictionRealityLedger.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/PredictionRealityLedger.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/PredictionRealityLedger.tsx",
+      "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/PredictionRealityLedger.tsx",
+      "to": "lib/interventions/prediction-reality-ledger.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/RepositoryStateCard.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/RepositoryStateCard.tsx",
+      "to": "lib/interventions/mock-repository-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/observatory/ArtifactLedgerPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ArtifactLedgerPanel.tsx",
+      "to": "lib/types/artifact.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ArtifactLedgerPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/BenchmarkHarnessPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/BenchmarkHarnessPanel.tsx",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExperimentRegistryPanel.tsx",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExperimentRegistryPanel.tsx",
+      "to": "lib/constants/observatory-status.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExperimentRegistryPanel.tsx",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExperimentRegistryPanel.tsx",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExperimentRegistryPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExportManifestPanel.tsx",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ExportManifestPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/FuturesPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/FuturesPanel.tsx",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/InterventionsPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/observatory/InterventionsPanel.tsx",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/observatory/InterventionsPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/observatory/LatentStatePanel.tsx",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/LatentStatePanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/PredictionRealityPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/PredictionRealityPanel.tsx",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/PrototypeMappingPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/PrototypeMappingPanel.tsx",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchBriefPanel.tsx",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchBriefPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchDossierPanel.tsx",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchDossierPanel.tsx",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchDossierPanel.tsx",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchDossierPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchMemoryPanel.tsx",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchMemoryPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchStatisticsPanel.tsx",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchTimelinePanel.tsx",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ResearchTimelinePanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ScenarioLibraryPanel.tsx",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ScenarioLibraryPanel.tsx",
+      "to": "lib/types/research-dataset.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/ScenarioLibraryPanel.tsx",
+      "to": "lib/types/scenario.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/StrategyCompatibilityPanel.tsx",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/StrategyCompatibilityPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/TransitionPatternsPanel.tsx",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/UncertaintyPanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/UncertaintyPanel.tsx",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/UncertaintyPanel.tsx",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/WorldStatePanel.tsx",
+      "to": "components/observatory/ObservatoryPanel.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "components/observatory/WorldStatePanel.tsx",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/quantum/ResourceConsequenceEvidenceCard.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/quantum/ResourceConsequenceEvidenceCard.tsx",
+      "to": "lib/quantum/sample-result.ts",
+      "kind": "research"
+    },
+    {
+      "from": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/repository-snapshot/SnapshotBoundaryPanel.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/shell/PageShell.tsx",
+      "to": "lib/constants/observatory-status.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/shell/PageShell.tsx",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "components/shell/PageShell.tsx",
+      "to": "lib/theme/theme-provider.tsx",
+      "kind": "structural"
+    },
+    {
+      "from": "docs/prediction-reality-ledger.md",
+      "to": "docs/production-verification.md",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/prediction-reality-ledger.md",
+      "to": "docs/release-governance.md",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/prediction-reality-ledger.md",
+      "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/prediction-reality-ledger.md",
+      "to": "lib/interventions/mock-repository-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/prediction-reality-ledger.md",
+      "to": "lib/interventions/prediction-reality-ledger.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/production-verification.md",
+      "to": "docs/release-governance.md",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/public-proof.md",
+      "to": "docs/deployment.md",
+      "kind": "structural"
+    },
+    {
+      "from": "docs/public-proof.md",
+      "to": "docs/quantum-annex.md",
+      "kind": "research"
+    },
+    {
+      "from": "docs/public-proof.md",
+      "to": "README.md",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/release-governance.md",
+      "to": ".github/workflows/ci.yml",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/release-governance.md",
+      "to": "docs/production-verification.md",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/release-governance.md",
+      "to": "docs/public-proof.md",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/release-governance.md",
+      "to": "docs/quantum-annex.md",
+      "kind": "research"
+    },
+    {
+      "from": "docs/repository-snapshot.md",
+      "to": "docs/prediction-reality-ledger.md",
+      "kind": "simulator"
+    },
+    {
+      "from": "docs/repository-snapshot.md",
+      "to": "docs/release-governance.md",
+      "kind": "governance"
+    },
+    {
+      "from": "docs/repository-snapshot.md",
+      "to": "lib/repository-snapshot/snapshot.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "docs/repository-snapshot.md",
+      "to": "scripts/generate-repository-snapshot.mjs",
+      "kind": "governance"
+    },
+    {
+      "from": "evals/experiment-memory-dimensions.md",
+      "to": "evals/benchmark-dimensions.md",
+      "kind": "structural"
+    },
+    {
+      "from": "evals/experiment-memory-dimensions.md",
+      "to": "evals/prediction-vs-reality-metrics.md",
+      "kind": "structural"
+    },
+    {
+      "from": "evals/experiment-memory-dimensions.md",
+      "to": "evals/research-dossier-metrics.md",
+      "kind": "structural"
+    },
+    {
+      "from": "evals/experiment-memory-dimensions.md",
+      "to": "evals/simulation-session-metrics.md",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/constants/observatory-status.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/data/mock-observatory-data.ts",
+      "to": "lib/types/artifact.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/data/mock-observatory-data.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/data/mock-observatory-data.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/data/mock-observatory-data.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/interventions/prediction-reality-ledger.ts",
+      "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/repository-snapshot/derived.ts",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/repository-snapshot/snapshot.ts",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/action-representation.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/action-representation.ts",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/artifact-ledger.ts",
+      "to": "lib/data/mock-observatory-data.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/artifact-ledger.ts",
+      "to": "lib/types/artifact.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/benchmark-harness.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/blocker-pattern-detector.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/blocker-pattern-detector.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/briefing-snapshot-writer.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/calibration-tracker.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/calibration-tracker.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/calibration-trajectory-analyzer.ts",
+      "to": "lib/services/calibration-tracker.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/calibration-trajectory-analyzer.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/calibration-trajectory-analyzer.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/constants/observatory-status.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/comparative-governance-synthesizer.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dependency-analyzer.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/comparative-governance-synthesizer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/experiment-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/priority-drift-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/priority-history-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/session-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/services/snapshot-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/dossier-generator.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evaluation-snapshot-store.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evaluation-snapshot-store.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evaluation-snapshot-store.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evaluation-snapshot-store.ts",
+      "to": "lib/types/experiment-evaluation-record.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evaluation-snapshot-store.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evidence-weighted-evaluator.ts",
+      "to": "lib/services/statistical-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evidence-weighted-evaluator.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/evidence-weighted-evaluator.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/execution-store.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/execution-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/reproducibility-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/research-dataset-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/session-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/services/world-state-capture.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-detail-builder.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-memory.ts",
+      "to": "lib/services/calibration-tracker.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-memory.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-memory.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-registry.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/experiment-registry.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/export-manifest-builder.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-manifest-builder.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-manifest-builder.ts",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/services/priority-history-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/export-snapshot-coordinator.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/future-prototype-mapper.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/future-prototype-mapper.ts",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/futures-generator.ts",
+      "to": "lib/services/uncertainty-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/futures-generator.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/futures-generator.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/intervention-planner.ts",
+      "to": "lib/services/scope-analyzer.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/intervention-planner.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/intervention-planner.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/latent-state-encoder.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-state-encoder.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-state-encoder.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/action-representation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/execution-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/future-prototype-mapper.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/latent-state-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/observation-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/strategy-compatibility-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/transition-pattern-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/latent-transition-chain.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/mcp-contracts.ts",
+      "to": "lib/types/mcp.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/observation-encoder.ts",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/observation-encoder.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/prediction-reality-comparator.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/prediction-reality-comparator.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/priority-drift-analyzer.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-drift-analyzer.ts",
+      "to": "lib/services/dossier-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-drift-analyzer.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-drift-analyzer.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-analyzer.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-analyzer.ts",
+      "to": "lib/services/priority-history-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-analyzer.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-analyzer.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-store.ts",
+      "to": "lib/constants/observatory-status.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-store.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-store.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-store.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/priority-history-store.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/recommendation-governance.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/recommendation-governance.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/recommendation-governance.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/replay-package-builder.ts",
+      "to": "lib/services/execution-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/replay-package-builder.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/replay-package-builder.ts",
+      "to": "lib/services/session-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/replay-package-builder.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/reproducibility-engine.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/reproducibility-engine.ts",
+      "to": "lib/services/replay-package-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/reproducibility-engine.ts",
+      "to": "lib/services/world-state-capture.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/reproducibility-engine.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/reproducibility-engine.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/comparative-governance-synthesizer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/dossier-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/experiment-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/latent-state-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/priority-drift-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/priority-history-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/snapshot-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/strategy-compatibility-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/transition-pattern-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-brief-generator.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-dataset-store.ts",
+      "to": "lib/services/calibration-tracker.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-dataset-store.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-dataset-store.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-dataset-store.ts",
+      "to": "lib/types/research-dataset.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-dataset-store.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-prioritization-engine.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-prioritization-engine.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-prioritization-engine.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-prioritization-engine.ts",
+      "to": "lib/types/research-export.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-prioritization-engine.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/constants/observatory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/blocker-pattern-detector.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/calibration-trajectory-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/comparative-governance-synthesizer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/evaluation-snapshot-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/evidence-weighted-evaluator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/experiment-detail-builder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/experiment-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/latent-state-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/priority-drift-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/priority-history-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/recommendation-governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/research-prioritization-engine.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/snapshot-comparator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/strategy-compatibility-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/strategy-shift-detector.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/research-timeline-builder.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/scenario-library.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/scenario-library.ts",
+      "to": "lib/types/scenario.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/scope-analyzer.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/scope-analyzer.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/session-comparator.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/session-store.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-gate.ts",
+      "to": "lib/services/artifact-ledger.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-gate.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-gate.ts",
+      "to": "lib/types/mcp.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-request-builder.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-request-builder.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/simulation-request-builder.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/simulation-runner.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/snapshot-comparator.ts",
+      "to": "lib/constants/governance.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/snapshot-comparator.ts",
+      "to": "lib/services/priority-history-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/snapshot-comparator.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/snapshot-comparator.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/action-representation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/execution-store.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/future-prototype-mapper.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/futures-generator.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/intervention-planner.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/observation-encoder.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/services/scope-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/state-transition-chain.ts",
+      "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/statistical-evaluator.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/statistical-evaluator.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/strategy-compatibility-analyzer.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/strategy-compatibility-analyzer.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/strategy-shift-detector.ts",
+      "to": "lib/types/research-timeline.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/transition-pattern-analyzer.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/transition-pattern-analyzer.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/transition-pattern-analyzer.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/uncertainty-analyzer.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/uncertainty-analyzer.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/services/uncertainty-analyzer.ts",
+      "to": "lib/utils/observatory-key.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capture.ts",
+      "to": "lib/services/dependency-analyzer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capture.ts",
+      "to": "lib/services/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capture.ts",
+      "to": "lib/services/world-state-capturer.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capture.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capture.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/services/world-state-capturer.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/execution.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-evaluation-record.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-evaluation-record.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-evaluation.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-registry.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-registry.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/experiment-registry.ts",
+      "to": "lib/types/research-dataset.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/experiment-registry.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/future-state.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/governance-synthesis.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/intervention.ts",
+      "to": "lib/types/world-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/latent-state.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/research-dataset.ts",
+      "to": "lib/types/research-memory.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-export.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-memory.ts",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-memory.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-memory.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-priority-drift.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-priority-history.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-priority-history.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/experiment-evaluation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/experiment-registry.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/governance-synthesis.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/latent-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/research-prioritization.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/research-priority-drift.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/research-priority-history.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/research-timeline.ts",
+      "to": "lib/types/simulation.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/scenario.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/se-jepa.ts",
+      "to": "lib/types/execution.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/se-jepa.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/types/simulation.ts",
+      "to": "lib/types/future-state.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/types/simulation.ts",
+      "to": "lib/types/intervention.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "README.md",
+      "to": ".github/workflows/ci.yml",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/deployment.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/prediction-reality-ledger.md",
+      "kind": "simulator"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/production-verification.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/public-proof.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/quantum-annex.md",
+      "kind": "research"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/release-governance.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/repository-snapshot.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "scripts/generate-repository-snapshot.mjs",
+      "kind": "governance"
+    }
+  ]
+}

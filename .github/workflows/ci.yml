@@ -58,3 +58,6 @@ jobs:
 
       - name: Generate Resource Consequence Ledger evidence (local-only)
         run: python quantum-lab/experiments/resource_consequence_placeholder.py
+
+      - name: Generate repository snapshot (read-only, local-only)
+        run: npm run snapshot:repo
