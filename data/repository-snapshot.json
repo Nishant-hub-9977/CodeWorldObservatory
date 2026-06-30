@@ -3,39 +3,39 @@
   "generator": "scripts/generate-repository-snapshot.mjs",
   "repositoryName": "codeworld-observatory",
   "boundary": "Static, read-only approximation of repository structure produced locally by scripts/generate-repository-snapshot.mjs. No code is executed, no files are mutated, no Git write APIs are called. This is not a complete runtime dependency graph.",
-  "digest": "sha256:e5ca8e891ef8bf321fffa1379d5edd1747c912303479e9d2dea6b5b613fe608d",
+  "digest": "sha256:e2f5a88b18f97248e44a81d4128f5cf2317ca7679c4d6b67b995068c9c1bd85f",
   "summary": {
-    "fileCount": 246,
-    "totalLines": 33215,
-    "totalBytes": 1587294,
-    "edgeCount": 582,
+    "fileCount": 253,
+    "totalLines": 33714,
+    "totalBytes": 1609206,
+    "edgeCount": 592,
     "unresolvedImportCount": 4,
-    "externalImportCount": 149,
+    "externalImportCount": 156,
     "families": {
       "asset": 1,
       "component": 42,
       "config": 6,
       "data": 3,
-      "documentation": 56,
+      "documentation": 57,
       "layout": 1,
-      "module": 128,
-      "route": 5,
+      "module": 133,
+      "route": 6,
       "script": 2,
       "style": 1,
       "workflow": 1
     },
     "domains": {
-      "core-observatory": 215,
+      "core-observatory": 222,
       "intervention-simulator": 19,
       "quantum-annex": 6,
       "release-governance": 6
     },
     "edgeKinds": {
-      "consequence": 44,
-      "governance": 16,
+      "consequence": 46,
+      "governance": 17,
       "research": 6,
       "simulator": 72,
-      "structural": 444
+      "structural": 451
     }
   },
   "files": [
@@ -292,6 +292,22 @@
       "imports": [
         "lib/services/state-transition-chain.ts",
         "lib/types/se-jepa.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "next/server"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/api/registry/health/route.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 8,
+      "bytes": 311,
+      "imports": [
+        "lib/registry/health.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [
@@ -864,6 +880,25 @@
       ],
       "unresolvedImports": [],
       "externalImports": [
+        "next"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "app/registry-boundary/page.tsx",
+      "ext": ".tsx",
+      "family": "route",
+      "domain": "core-observatory",
+      "lines": 196,
+      "bytes": 11518,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "components/ui/SectionHeader.tsx",
+        "lib/registry/health.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react",
         "next"
       ],
       "docLinks": []
@@ -1561,8 +1596,8 @@
       "ext": ".tsx",
       "family": "component",
       "domain": "core-observatory",
-      "lines": 110,
-      "bytes": 6121,
+      "lines": 111,
+      "bytes": 6201,
       "imports": [
         "lib/constants/observatory-status.ts",
         "lib/constants/observatory.ts",
@@ -1776,6 +1811,18 @@
       "domain": "core-observatory",
       "lines": 159,
       "bytes": 6391,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "docs/neon-registry-boundary.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 131,
+      "bytes": 4240,
       "imports": [],
       "unresolvedImports": [],
       "externalImports": [],
@@ -2423,6 +2470,69 @@
       "domain": "quantum-annex",
       "lines": 31,
       "bytes": 1122,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/registry/db.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 10,
+      "bytes": 267,
+      "imports": [
+        "lib/registry/env.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "@neondatabase/serverless",
+        "server-only"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/registry/env.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 20,
+      "bytes": 578,
+      "imports": [
+        "lib/registry/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "server-only"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/registry/health.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 82,
+      "bytes": 2584,
+      "imports": [
+        "lib/registry/db.ts",
+        "lib/registry/env.ts",
+        "lib/registry/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "server-only"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "lib/registry/types.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "core-observatory",
+      "lines": 35,
+      "bytes": 1180,
       "imports": [],
       "unresolvedImports": [],
       "externalImports": [],
@@ -3828,8 +3938,8 @@
       "ext": ".json",
       "family": "config",
       "domain": "core-observatory",
-      "lines": 32,
-      "bytes": 798,
+      "lines": 33,
+      "bytes": 841,
       "imports": [],
       "unresolvedImports": [],
       "externalImports": [],
@@ -3914,12 +4024,13 @@
       "ext": ".md",
       "family": "documentation",
       "domain": "release-governance",
-      "lines": 276,
-      "bytes": 13543,
+      "lines": 291,
+      "bytes": 14654,
       "imports": [
         ".github/workflows/ci.yml",
         "docs/deployment.md",
         "docs/external-evidence-pack.md",
+        "docs/neon-registry-boundary.md",
         "docs/prediction-reality-ledger.md",
         "docs/production-verification.md",
         "docs/public-proof.md",
@@ -3935,6 +4046,7 @@
         ".github/workflows/ci.yml",
         "docs/deployment.md",
         "docs/external-evidence-pack.md",
+        "docs/neon-registry-boundary.md",
         "docs/prediction-reality-ledger.md",
         "docs/production-verification.md",
         "docs/public-proof.md",
@@ -4242,6 +4354,11 @@
     {
       "from": "app/api/prototype/se-jepa/route.ts",
       "to": "lib/types/se-jepa.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "app/api/registry/health/route.ts",
+      "to": "lib/registry/health.ts",
       "kind": "structural"
     },
     {
@@ -4868,6 +4985,21 @@
       "from": "app/quantum-annex/page.tsx",
       "to": "lib/quantum/sample-result.ts",
       "kind": "research"
+    },
+    {
+      "from": "app/registry-boundary/page.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/registry-boundary/page.tsx",
+      "to": "components/ui/SectionHeader.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "app/registry-boundary/page.tsx",
+      "to": "lib/registry/health.ts",
+      "kind": "structural"
     },
     {
       "from": "app/repository-snapshot/page.tsx",
@@ -5578,6 +5710,31 @@
       "from": "lib/interventions/snapshot-risk.ts",
       "to": "lib/interventions/snapshot-bridge.ts",
       "kind": "simulator"
+    },
+    {
+      "from": "lib/registry/db.ts",
+      "to": "lib/registry/env.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/registry/env.ts",
+      "to": "lib/registry/types.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/registry/health.ts",
+      "to": "lib/registry/db.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/registry/health.ts",
+      "to": "lib/registry/env.ts",
+      "kind": "structural"
+    },
+    {
+      "from": "lib/registry/health.ts",
+      "to": "lib/registry/types.ts",
+      "kind": "structural"
     },
     {
       "from": "lib/repository-snapshot/derived.ts",
@@ -6907,6 +7064,11 @@
     {
       "from": "README.md",
       "to": "docs/external-evidence-pack.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/neon-registry-boundary.md",
       "kind": "governance"
     },
     {

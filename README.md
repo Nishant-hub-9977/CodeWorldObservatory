@@ -249,6 +249,20 @@ Details and boundaries: [docs/external-evidence-pack.md](docs/external-evidence-
 
 ---
 
+## Neon Reserved Registry Boundary
+
+The **Neon Reserved Registry Boundary** (route: `/registry-boundary`) reserves server-only database infrastructure for future registry work without enabling persistence.
+
+- **Server-only infrastructure** - `DATABASE_URL` is read only on the server and is never exposed through a public environment variable.
+- **Connection preflight only** - Q10 can report configured/unconfigured/connected status with safe metadata only.
+- **No persistence yet** - no evidence packs are stored, no writes exist, no upload storage exists, no tables are created, and no migrations are added.
+- **No public credentials** - database credentials must stay in local/Vercel server-side environment configuration, never in client-visible output.
+- **Future schema after approval** - Q11 may propose schema and migrations separately after human review.
+
+Details and boundaries: [docs/neon-registry-boundary.md](docs/neon-registry-boundary.md).
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
@@ -260,6 +274,7 @@ Details and boundaries: [docs/external-evidence-pack.md](docs/external-evidence-
 - **Repository Snapshot Evidence:** [docs/repository-snapshot.md](docs/repository-snapshot.md) (route: `/repository-snapshot`)
 - **Snapshot-to-Simulator Bridge:** [docs/snapshot-simulator-bridge.md](docs/snapshot-simulator-bridge.md)
 - **External Evidence Pack Boundary:** [docs/external-evidence-pack.md](docs/external-evidence-pack.md) (route: `/evidence-pack`)
+- **Neon Reserved Registry Boundary:** [docs/neon-registry-boundary.md](docs/neon-registry-boundary.md) (route: `/registry-boundary`)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 
