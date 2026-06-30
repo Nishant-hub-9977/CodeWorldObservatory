@@ -18,6 +18,8 @@ import {
     type InterventionScenario,
     type RollbackPosture,
 } from "@/lib/interventions/intervention-scenarios";
+import type { SnapshotRiskSummary as SnapshotRiskSummaryData } from "@/lib/interventions/snapshot-risk";
+import { SnapshotRiskSummary } from "./SnapshotRiskSummary";
 
 type BadgeVariant = "signal" | "caution" | "verified" | "risk" | "muted";
 
@@ -66,7 +68,13 @@ function Bullets({ items, dot = "bg-text-muted" }: { items: string[]; dot?: stri
     );
 }
 
-export function InterventionScenarioCard({ scenario }: { scenario: InterventionScenario }) {
+export function InterventionScenarioCard({
+    scenario,
+    snapshotRisk,
+}: {
+    scenario: InterventionScenario;
+    snapshotRisk: SnapshotRiskSummaryData;
+}) {
     const p = scenario.prediction;
     const o = scenario.observed;
 
@@ -147,6 +155,7 @@ export function InterventionScenarioCard({ scenario }: { scenario: InterventionS
                     <MetricCell label="Lint" value={p.expectedLintImpact} />
                     <MetricCell label="Runtime Risk" value={p.expectedRuntimeRisk} />
                 </div>
+                <SnapshotRiskSummary risk={snapshotRisk} />
                 <div className="flex flex-col gap-1">
                     <SectionLabel className="!mb-1">Uncertainty</SectionLabel>
                     <p className="text-xs leading-relaxed text-text-secondary">{p.uncertainty}</p>

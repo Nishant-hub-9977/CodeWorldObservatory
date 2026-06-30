@@ -12,6 +12,14 @@ import type {
     InterventionPrediction,
     ObservedOutcome,
 } from "./intervention-scenarios";
+import {
+    getSnapshotEvidenceForScenario,
+    type ScenarioSnapshotEvidence,
+} from "./snapshot-bridge";
+import {
+    deriveSnapshotRisk,
+    type SnapshotRiskSummary,
+} from "./snapshot-risk";
 
 export type MismatchSeverity = "none" | "minor" | "notable";
 
@@ -33,6 +41,8 @@ export interface PredictionRealityLedgerData {
     scenarioId: string;
     scenarioTitle: string;
     rows: LedgerRow[];
+    snapshotEvidence: ScenarioSnapshotEvidence;
+    snapshotRisk: SnapshotRiskSummary;
     predictionQuality: PredictionQuality;
     unresolvedUncertainty: string;
     humanDecisionState: InterventionScenario["humanDecisionState"];
@@ -107,11 +117,98 @@ function deriveQuality(rows: LedgerRow[], predictedTotal: number, actualTotal: n
     return predictedTotal > actualTotal ? "slight-overestimate" : "slight-underestimate";
 }
 
+function pathMatches(predictedPath: string, actualPath: string): boolean {
+    if (predictedPath === actualPath) return true;
+    const wildcardIndex = predictedPath.indexOf("*");
+    if (wildcardIndex >= 0) {
+        return actualPath.startsWith(predictedPath.slice(0, wildcardIndex));
+    }
+    return false;
+}
+
+function overlapCount(expectedPaths: string[], actualPaths: string[]): number {
+    return expectedPaths.filter((expectedPath) =>
+        actualPaths.some((actualPath) => pathMatches(expectedPath, actualPath)),
+    ).length;
+}
+
+function yesNo(value: boolean): string {
+    return value ? "yes" : "no";
+}
+
+function buildSnapshotRows(
+    scenario: InterventionScenario,
+    snapshotEvidence: ScenarioSnapshotEvidence,
+    snapshotRisk: SnapshotRiskSummary,
+): LedgerRow[] {
+    const predictedMatchCount = overlapCount(
+        scenario.prediction.predictedFilePaths,
+        snapshotEvidence.matchedFiles,
+    );
+    const observedMatchCount = overlapCount(
+        scenario.observed.actualFilePaths,
+        snapshotEvidence.matchedFiles,
+    );
+    const hasStaticAlignment = snapshotEvidence.staticDependencyEvidenceAvailable &&
+        (predictedMatchCount > 0 || observedMatchCount > 0);
+    const alignmentMismatch: MismatchSeverity = hasStaticAlignment
+        ? snapshotRisk.widenedMismatchSurface
+            ? "minor"
+            : "none"
+        : "notable";
+
+    return [
+        {
+            dimension: "Snapshot Evidence Used",
+            predicted: `${scenario.prediction.predictedFilesTouched} predicted file(s)`,
+            observed: `${snapshotEvidence.matchedFiles.length} snapshot-matched file(s)`,
+            mismatch: alignmentMismatch,
+            note: snapshotEvidence.staticDependencyEvidenceAvailable
+                ? "Static repository evidence was available and attached to the prediction."
+                : "No static snapshot evidence was available for this scenario mapping.",
+        },
+        {
+            dimension: "Static Graph Alignment",
+            predicted: `${predictedMatchCount} predicted path match(es)`,
+            observed: `${observedMatchCount} observed path match(es)`,
+            mismatch: alignmentMismatch,
+            note: snapshotRisk.widenedMismatchSurface
+                ? "Snapshot evidence widened the review surface beyond the mock prediction."
+                : snapshotRisk.narrowedMismatchSurface
+                    ? "Snapshot evidence narrowed the review surface to an isolated static surface."
+                    : "Snapshot evidence aligned with the predicted or observed file surface.",
+        },
+        {
+            dimension: "Route Blast Radius",
+            predicted: scenario.prediction.predictedDependencyZones.join(", "),
+            observed: `${snapshotEvidence.routeBlastRadius} route(s) exposed`,
+            mismatch: snapshotEvidence.routeBlastRadius >= 3 ? "minor" : "none",
+            note: "Route exposure is estimated from static snapshot evidence and shared infrastructure classification.",
+        },
+        {
+            dimension: "Shared Infrastructure Exposure",
+            predicted: `${scenario.prediction.expectedRuntimeRisk} runtime risk`,
+            observed: yesNo(snapshotEvidence.sharedInfrastructureTouched),
+            mismatch: snapshotEvidence.sharedInfrastructureTouched ? "minor" : "none",
+            note: "Shared shell, layout, or UI primitives widen review even when file count is small.",
+        },
+        {
+            dimension: "Evidence Confidence",
+            predicted: "static snapshot enrichment",
+            observed: snapshotRisk.evidenceConfidence,
+            mismatch: snapshotRisk.evidenceConfidence === "LIMITED" ? "minor" : "none",
+            note: snapshotRisk.staticApproximationCaveat,
+        },
+    ];
+}
+
 export function buildPredictionRealityLedger(
     scenario: InterventionScenario,
 ): PredictionRealityLedgerData {
     const p = scenario.prediction;
     const o = scenario.observed;
+    const snapshotEvidence = getSnapshotEvidenceForScenario(scenario.id);
+    const snapshotRisk = deriveSnapshotRisk(snapshotEvidence);
 
     const filesMismatch = numericMismatch(p.predictedFilesTouched, o.actualFilesTouched);
     const testsMismatch = numericMismatch(p.testsLikelyToFail, o.actualFailingTests);
@@ -125,7 +222,7 @@ export function buildPredictionRealityLedger(
         runtimeMismatch === "minor",
     );
 
-    const rows: LedgerRow[] = [
+    const coreRows: LedgerRow[] = [
         {
             dimension: "Files touched",
             predicted: String(p.predictedFilesTouched),
@@ -180,12 +277,15 @@ export function buildPredictionRealityLedger(
 
     const predictedTotal = p.predictedFilesTouched + p.testsLikelyToFail;
     const actualTotal = o.actualFilesTouched + o.actualFailingTests;
-    const predictionQuality = deriveQuality(rows, predictedTotal, actualTotal);
+    const predictionQuality = deriveQuality(coreRows, predictedTotal, actualTotal);
+    const rows = [...coreRows, ...buildSnapshotRows(scenario, snapshotEvidence, snapshotRisk)];
 
     return {
         scenarioId: scenario.id,
         scenarioTitle: scenario.title,
         rows,
+        snapshotEvidence,
+        snapshotRisk,
         predictionQuality,
         unresolvedUncertainty: p.uncertainty,
         humanDecisionState: scenario.humanDecisionState,

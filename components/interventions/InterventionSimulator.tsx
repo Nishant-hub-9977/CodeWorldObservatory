@@ -10,14 +10,19 @@
 
 import { useState } from "react";
 import { INTERVENTION_SCENARIOS } from "@/lib/interventions/intervention-scenarios";
+import { getSnapshotEvidenceForScenario } from "@/lib/interventions/snapshot-bridge";
+import { deriveSnapshotRisk } from "@/lib/interventions/snapshot-risk";
 import { InterventionScenarioCard } from "./InterventionScenarioCard";
 import { PredictionRealityLedger } from "./PredictionRealityLedger";
+import { SnapshotEvidencePanel } from "./SnapshotEvidencePanel";
 
 export function InterventionSimulator() {
     const [selectedId, setSelectedId] = useState<string>(INTERVENTION_SCENARIOS[0].id);
     const selected =
         INTERVENTION_SCENARIOS.find((scenario) => scenario.id === selectedId) ??
         INTERVENTION_SCENARIOS[0];
+    const snapshotEvidence = getSnapshotEvidenceForScenario(selected.id);
+    const snapshotRisk = deriveSnapshotRisk(snapshotEvidence);
 
     return (
         <div className="flex flex-col gap-6">
@@ -49,7 +54,10 @@ export function InterventionSimulator() {
             </div>
 
             {/* Selected scenario detail */}
-            <InterventionScenarioCard scenario={selected} />
+            <InterventionScenarioCard scenario={selected} snapshotRisk={snapshotRisk} />
+
+            {/* Static snapshot evidence bridge */}
+            <SnapshotEvidencePanel evidence={snapshotEvidence} risk={snapshotRisk} />
 
             {/* Prediction-versus-Reality ledger */}
             <PredictionRealityLedger scenario={selected} />

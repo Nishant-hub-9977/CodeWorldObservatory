@@ -223,6 +223,19 @@ Regenerate with `npm run snapshot:repo`. Details and boundaries: [docs/repositor
 
 ---
 
+## Snapshot-to-Simulator Bridge
+
+The **Snapshot-to-Simulator Bridge** connects the Q6 simulator to Q7 static repository evidence. The Intervention Simulator still uses deterministic scenarios, but prediction cards now show route blast radius, shared infrastructure exposure, consequence-bearing edge count, static edge involvement, and evidence confidence from the committed repository snapshot.
+
+- **Q6 consumes Q7 evidence** — snapshot data is imported through the existing typed wrapper, not scanned at request time.
+- **Prediction enrichment** — simulator cards and the prediction-versus-reality ledger show snapshot risk, static graph alignment, and shared-infrastructure exposure.
+- **Read-only and deterministic** — no real repository writes, no shell commands, no GitHub writes, no tokens, no runtime filesystem scanning.
+- **Advisory-only and human-reviewed** — snapshot risk is evidence for review, not authority to act.
+
+Details and boundaries: [docs/snapshot-simulator-bridge.md](docs/snapshot-simulator-bridge.md).
+
+---
+
 ## Links
 
 - **Live deployment:** <https://code-world-observatory.vercel.app>
@@ -232,6 +245,7 @@ Regenerate with `npm run snapshot:repo`. Details and boundaries: [docs/repositor
 - **Production verification:** [docs/production-verification.md](docs/production-verification.md)
 - **Prediction-versus-Reality Ledger:** [docs/prediction-reality-ledger.md](docs/prediction-reality-ledger.md) (route: `/intervention-simulator`)
 - **Repository Snapshot Evidence:** [docs/repository-snapshot.md](docs/repository-snapshot.md) (route: `/repository-snapshot`)
+- **Snapshot-to-Simulator Bridge:** [docs/snapshot-simulator-bridge.md](docs/snapshot-simulator-bridge.md)
 - **Public positioning & proof language:** [docs/public-proof.md](docs/public-proof.md)
 - **Quantum Research Annex:** [docs/quantum-annex.md](docs/quantum-annex.md)
 

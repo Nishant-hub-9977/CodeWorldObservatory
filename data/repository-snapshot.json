@@ -3,39 +3,39 @@
   "generator": "scripts/generate-repository-snapshot.mjs",
   "repositoryName": "codeworld-observatory",
   "boundary": "Static, read-only approximation of repository structure produced locally by scripts/generate-repository-snapshot.mjs. No code is executed, no files are mutated, no Git write APIs are called. This is not a complete runtime dependency graph.",
-  "digest": "sha256:ae5dda725730850b3a1146ecae3c4717c0db5c6de5c854de508e2cd2e8f9ac40",
+  "digest": "sha256:e61927cf37f2db3b83740fdcbda713d27c2dc344fbd952e88b4a54721ec4009f",
   "summary": {
-    "fileCount": 229,
-    "totalLines": 31117,
-    "totalBytes": 1486037,
-    "edgeCount": 538,
+    "fileCount": 234,
+    "totalLines": 31989,
+    "totalBytes": 1529353,
+    "edgeCount": 555,
     "unresolvedImportCount": 4,
-    "externalImportCount": 141,
+    "externalImportCount": 143,
     "families": {
       "asset": 1,
-      "component": 35,
+      "component": 37,
       "config": 6,
       "data": 2,
-      "documentation": 54,
+      "documentation": 55,
       "layout": 1,
-      "module": 122,
+      "module": 124,
       "route": 4,
       "script": 2,
       "style": 1,
       "workflow": 1
     },
     "domains": {
-      "core-observatory": 202,
-      "intervention-simulator": 15,
+      "core-observatory": 203,
+      "intervention-simulator": 19,
       "quantum-annex": 6,
       "release-governance": 6
     },
     "edgeKinds": {
-      "consequence": 18,
-      "governance": 14,
+      "consequence": 35,
+      "governance": 15,
       "research": 6,
-      "simulator": 61,
-      "structural": 439
+      "simulator": 72,
+      "structural": 427
     }
   },
   "files": [
@@ -888,11 +888,13 @@
       "ext": ".tsx",
       "family": "component",
       "domain": "intervention-simulator",
-      "lines": 206,
-      "bytes": 10337,
+      "lines": 215,
+      "bytes": 10643,
       "imports": [
+        "components/interventions/SnapshotRiskSummary.tsx",
         "components/ui/ObsCommon.tsx",
-        "lib/interventions/intervention-scenarios.ts"
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/snapshot-risk.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [],
@@ -903,12 +905,15 @@
       "ext": ".tsx",
       "family": "component",
       "domain": "intervention-simulator",
-      "lines": 58,
-      "bytes": 2640,
+      "lines": 66,
+      "bytes": 3175,
       "imports": [
         "components/interventions/InterventionScenarioCard.tsx",
         "components/interventions/PredictionRealityLedger.tsx",
-        "lib/interventions/intervention-scenarios.ts"
+        "components/interventions/SnapshotEvidencePanel.tsx",
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/snapshot-bridge.ts",
+        "lib/interventions/snapshot-risk.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [
@@ -942,6 +947,41 @@
       "imports": [
         "components/ui/ObsCommon.tsx",
         "lib/interventions/mock-repository-state.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/SnapshotEvidencePanel.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 169,
+      "bytes": 10147,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/interventions/snapshot-bridge.ts",
+        "lib/interventions/snapshot-risk.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [
+        "lucide-react"
+      ],
+      "docLinks": []
+    },
+    {
+      "path": "components/interventions/SnapshotRiskSummary.tsx",
+      "ext": ".tsx",
+      "family": "component",
+      "domain": "intervention-simulator",
+      "lines": 90,
+      "bytes": 4614,
+      "imports": [
+        "components/ui/ObsCommon.tsx",
+        "lib/interventions/snapshot-risk.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [
@@ -1844,6 +1884,18 @@
       "docLinks": []
     },
     {
+      "path": "docs/snapshot-simulator-bridge.md",
+      "ext": ".md",
+      "family": "documentation",
+      "domain": "core-observatory",
+      "lines": 128,
+      "bytes": 4820,
+      "imports": [],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
       "path": "docs/ui-system.md",
       "ext": ".md",
       "family": "documentation",
@@ -2132,10 +2184,42 @@
       "ext": ".ts",
       "family": "module",
       "domain": "intervention-simulator",
-      "lines": 197,
-      "bytes": 7583,
+      "lines": 297,
+      "bytes": 12035,
       "imports": [
-        "lib/interventions/intervention-scenarios.ts"
+        "lib/interventions/intervention-scenarios.ts",
+        "lib/interventions/snapshot-bridge.ts",
+        "lib/interventions/snapshot-risk.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/interventions/snapshot-bridge.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 258,
+      "bytes": 12568,
+      "imports": [
+        "lib/repository-snapshot/derived.ts",
+        "lib/repository-snapshot/snapshot.ts",
+        "lib/repository-snapshot/types.ts"
+      ],
+      "unresolvedImports": [],
+      "externalImports": [],
+      "docLinks": []
+    },
+    {
+      "path": "lib/interventions/snapshot-risk.ts",
+      "ext": ".ts",
+      "family": "module",
+      "domain": "intervention-simulator",
+      "lines": 96,
+      "bytes": 4711,
+      "imports": [
+        "lib/interventions/snapshot-bridge.ts"
       ],
       "unresolvedImports": [],
       "externalImports": [],
@@ -3639,8 +3723,8 @@
       "ext": ".md",
       "family": "documentation",
       "domain": "release-governance",
-      "lines": 248,
-      "bytes": 11188,
+      "lines": 262,
+      "bytes": 12351,
       "imports": [
         ".github/workflows/ci.yml",
         "docs/deployment.md",
@@ -3650,6 +3734,7 @@
         "docs/quantum-annex.md",
         "docs/release-governance.md",
         "docs/repository-snapshot.md",
+        "docs/snapshot-simulator-bridge.md",
         "scripts/generate-repository-snapshot.mjs"
       ],
       "unresolvedImports": [],
@@ -3663,6 +3748,7 @@
         "docs/quantum-annex.md",
         "docs/release-governance.md",
         "docs/repository-snapshot.md",
+        "docs/snapshot-simulator-bridge.md",
         "scripts/generate-repository-snapshot.mjs"
       ]
     },
@@ -4583,12 +4669,17 @@
     {
       "from": "app/repository-snapshot/page.tsx",
       "to": "lib/repository-snapshot/snapshot.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/interventions/HumanAuthorityPanel.tsx",
       "to": "components/ui/ObsCommon.tsx",
       "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/InterventionScenarioCard.tsx",
+      "to": "components/interventions/SnapshotRiskSummary.tsx",
+      "kind": "simulator"
     },
     {
       "from": "components/interventions/InterventionScenarioCard.tsx",
@@ -4598,6 +4689,11 @@
     {
       "from": "components/interventions/InterventionScenarioCard.tsx",
       "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionScenarioCard.tsx",
+      "to": "lib/interventions/snapshot-risk.ts",
       "kind": "simulator"
     },
     {
@@ -4612,7 +4708,22 @@
     },
     {
       "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "components/interventions/SnapshotEvidencePanel.tsx",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
       "to": "lib/interventions/intervention-scenarios.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "lib/interventions/snapshot-bridge.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/InterventionSimulator.tsx",
+      "to": "lib/interventions/snapshot-risk.ts",
       "kind": "simulator"
     },
     {
@@ -4638,6 +4749,31 @@
     {
       "from": "components/interventions/RepositoryStateCard.tsx",
       "to": "lib/interventions/mock-repository-state.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/SnapshotEvidencePanel.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/SnapshotEvidencePanel.tsx",
+      "to": "lib/interventions/snapshot-bridge.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/SnapshotEvidencePanel.tsx",
+      "to": "lib/interventions/snapshot-risk.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "components/interventions/SnapshotRiskSummary.tsx",
+      "to": "components/ui/ObsCommon.tsx",
+      "kind": "consequence"
+    },
+    {
+      "from": "components/interventions/SnapshotRiskSummary.tsx",
+      "to": "lib/interventions/snapshot-risk.ts",
       "kind": "simulator"
     },
     {
@@ -4883,12 +5019,12 @@
     {
       "from": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
       "to": "lib/repository-snapshot/derived.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/ConsequenceBearingEdges.tsx",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
@@ -4898,12 +5034,12 @@
     {
       "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
       "to": "lib/repository-snapshot/derived.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/DependencyGraphEvidence.tsx",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
@@ -4913,12 +5049,12 @@
     {
       "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
       "to": "lib/repository-snapshot/derived.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/FileFamilyBreakdown.tsx",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
@@ -4928,12 +5064,12 @@
     {
       "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
       "to": "lib/repository-snapshot/derived.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/RepositorySnapshotSummary.tsx",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "components/repository-snapshot/SnapshotBoundaryPanel.tsx",
@@ -5033,7 +5169,7 @@
     {
       "from": "docs/repository-snapshot.md",
       "to": "lib/repository-snapshot/snapshot.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "docs/repository-snapshot.md",
@@ -5091,14 +5227,44 @@
       "kind": "simulator"
     },
     {
+      "from": "lib/interventions/prediction-reality-ledger.ts",
+      "to": "lib/interventions/snapshot-bridge.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/interventions/prediction-reality-ledger.ts",
+      "to": "lib/interventions/snapshot-risk.ts",
+      "kind": "simulator"
+    },
+    {
+      "from": "lib/interventions/snapshot-bridge.ts",
+      "to": "lib/repository-snapshot/derived.ts",
+      "kind": "consequence"
+    },
+    {
+      "from": "lib/interventions/snapshot-bridge.ts",
+      "to": "lib/repository-snapshot/snapshot.ts",
+      "kind": "consequence"
+    },
+    {
+      "from": "lib/interventions/snapshot-bridge.ts",
+      "to": "lib/repository-snapshot/types.ts",
+      "kind": "consequence"
+    },
+    {
+      "from": "lib/interventions/snapshot-risk.ts",
+      "to": "lib/interventions/snapshot-bridge.ts",
+      "kind": "simulator"
+    },
+    {
       "from": "lib/repository-snapshot/derived.ts",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "lib/repository-snapshot/snapshot.ts",
       "to": "lib/repository-snapshot/types.ts",
-      "kind": "structural"
+      "kind": "consequence"
     },
     {
       "from": "lib/services/action-representation.ts",
@@ -6443,6 +6609,11 @@
     {
       "from": "README.md",
       "to": "docs/repository-snapshot.md",
+      "kind": "governance"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/snapshot-simulator-bridge.md",
       "kind": "governance"
     },
     {
